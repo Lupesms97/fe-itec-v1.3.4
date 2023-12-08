@@ -1,0 +1,105 @@
+
+
+.home-content{
+  margin:5vw
+}
+
+.carousel-inner img {
+  height: 80vh;
+}
+/* .carousel-container{
+    margin-top:10vh
+} */
+.why-us{
+  border-radius:1.5rem;
+  margin-bottom:5vh;
+  overflow:hidden;
+  color: grey;
+}
+.rainbow-line {
+  
+  margin-left:-1vw!important;
+  width:103%!important;
+  height: 1vh;
+  background: rgb(158, 35, 97);
+  background: linear-gradient(
+    90deg,
+    rgba(128, 159, 64, 1) 18%,
+    rgba(29, 61, 116, 1) 39%,
+    rgba(158, 35, 97, 1) 83%
+  ); /* Cor rosa de sua escolha */
+}
+.why-us p{
+  font-size:1.2rem
+}
+.why-us span{
+  font-weight:bold;
+  font-size:1.3rem;
+  color:#809F40
+}
+.custom-btn-home{
+  height:8vh;
+  border-radius:2rem;
+  width:25%;
+  color:white;
+  background:  #409D00;
+}
+.custom-btn-home a{
+  color:white;
+  font-weight:bold;
+}
+.custom-btn-home:hover{
+  background:#3CB371;
+  transition: 1s;
+}
+.marginb{
+ margin-bottom:40vh!important
+}
+
+/* ------------------ CAT NEWS --------------- */
+.cat-news h3,span{
+  font-size:2.5rem;
+  
+}
+.cat-news h3{
+  color:black;
+}
+.cat-news span{
+  color:#2B9C07
+}
+.cat-news{
+  background-color: #baf5bf ;
+  padding:5vh
+}
+.div-style img{
+  height:auto;
+  width:10vw;
+}
+.cat-news input{
+  border-radius:2rem
+}
+@media(max-width:768px){
+  .home-content{
+    margin:5vw
+  }
+  .cat-news{
+    padding: 5vh 0;
+    margin: 5vh 0;
+  }
+  .cat-news h3{
+    padding: 0;
+  }
+  .custom-btn-home{
+    margin:0 auto;
+    width:80%;
+  }
+  .cat-news .input-field{
+    margin: 5vh 0!important;
+  }
+  .why-us{
+    border-radius:2rem;
+  }
+  .carousel-inner img {
+    height: 100vh;
+  }
+}

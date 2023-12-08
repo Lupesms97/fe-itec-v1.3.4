@@ -1,0 +1,59 @@
+.navbar-brand img{
+  height:10vh!important;
+  
+}
+
+.navbars-container{
+  background-color:#1F272B
+}
+.tn{
+  width:100%;
+  z-index:999;
+  background: rgba(233, 236, 242, 0.3)
+
+}
+.nav-link{
+  font-weight: 500;
+  color:white;
+}
+.nav-link:hover{
+  background-color:#9ff29b
+}
+.sub-nav p{
+
+  font-size:0.8rem
+}
+.sub-nav i{
+  color:#25D366;
+  font-size:1.2rem
+}
+.sub-nav .fa-phone{
+  margin-top:0.4vh;
+  font-size:0.9rem!important
+}
+.icons i{
+  color:white;
+}
+.icons .fa-whatsapp:hover{
+  color:#25D366;
+}
+.icons .fa-instagram:hover{
+  color:#f75ed4;
+}
+.icons .fa-linkedin:hover{
+  color:#5b5bfc;
+}
+.icon-burger{
+  color:white;
+}
+@media(max-width:768px){
+  .navbar-brand img{
+    width:40vw;
+    height:10vh!important
+  }
+  .icon-burger{
+    font-size:1.8rem;
+    color:white;
+    
+  }
+}

@@ -1,0 +1,81 @@
+<section class="container container-blog text-center box-shadow d-none d-lg-block desktop">
+    <div class="row color-title-blog py-4 d-flex">
+        <div class="col">
+            <h2 class="text-start">
+                {{title}}<span > {{titleOnSpan}}</span>
+            </h2>
+        </div>
+        <div class="col">
+            <h2 class="text-end">
+                <a href="">
+                    <i class="fa-solid fa-chevron-right" style="font-size: 2rem;"></i>
+                </a>
+            </h2>
+
+        </div>
+    </div>
+    <div class="row blog-row">
+        <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+            <div class="card d-flex position-relative flex-column animated-icon" *ngFor="let new of news">
+                <div class='imgContainer'>
+                    <img src='{{new.background}}'>
+                    <h6 class="py-3 title-witouth-hover">{{new.title}}</h6>
+                </div>
+                <div class="content">
+                    <h2>{{new.title}}</h2>
+                    <p>{{new.description}}</p>
+                    <button href="#" class="btn custom-btn"><a href="">Ver</a>&nbsp;<i class="fa-solid fa-hand-point-right animated-icon"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Seção para telas pequenas e médias -->
+<section class="container text-center box-shadow-custom mobile d-lg-none d-md-block">
+  <div class="row color-title-blog py-4 d-flex">
+    <div class="col">
+      <h2 class="text-start">
+        {{title}}<span > {{titleOnSpan}}</span>
+      </h2>
+    </div>
+    <div class="col">
+      <h2 class="text-end">
+        <a href="#">
+          <i class="fa-solid fa-chevron-right" style="font-size: 2rem;"></i>
+        </a>
+      </h2>
+    </div>
+  </div>
+  <div class="container">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let new of news; let i = index" [class.active]="i === 0">
+          <div class="row">
+            <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+              <div class="card">
+                <div class="card-img-wrapper">
+                  <img class="card-img-top" src="{{new.background}}" alt="{{new.title}} Image">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title mt-3">{{new.title}}</h5>
+                  <div class="card-content mt-2">
+                    <p class="card-text">{{new.description}}</p>
+                    <button href="#" class="btn custom-btn"><a href="">Ver</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section> 

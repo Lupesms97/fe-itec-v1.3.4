@@ -1,0 +1,28 @@
+h3,span{
+    font-size:2.5rem;
+    
+}
+h3{
+    color:black;
+}
+span{
+    color:#2B9C07
+}
+.div-style{
+    background-color: #baf5bf ;
+    padding:5vh
+}
+.div-style img{
+    height:auto;
+    width:10vw;
+}
+@media(max-width:768px){
+    .div-style img{
+        height:30vh;
+        width:70%;
+    }
+    h3,span{
+        font-size:1.8rem;
+        
+    }
+}

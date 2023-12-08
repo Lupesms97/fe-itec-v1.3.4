@@ -1,0 +1,57 @@
+/*** Testimonial ***/
+section{
+    background-color:pink
+}
+.carousel-inner .carousel-item{
+    width:70%!important;
+    height:40vh;    
+    margin-left:20%;
+    
+}
+.carousel-innner .carousel-item img{
+    height:15vh!important
+}
+.carousel-innner .text-carousel p{
+    margin-top:50vh!important
+}
+.icons i{
+    color:gold!important
+}
+
+/*** Testimonial ***/
+
+
+/* Adicionando media query para estilos específicos de telas menores */
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item {
+        width: 100%!important;
+        margin-left: 0;
+    }
+
+    .carousel-inner .text-carousel p {
+        margin-top: 20px!important; /* Ajustado o espaçamento superior em telas menores */
+    }
+    section {
+        background-color: pink;
+    }
+    
+    .carousel-inner .carousel-item {
+        width: 100%!important; /* Alterado para ocupar 100% da largura em telas menores */
+        height: auto; /* Ajustado para altura automática */
+        margin-left: 0; /* Removido o deslocamento à esquerda */
+    
+    }
+    
+    .carousel-inner .carousel-item img {
+        max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
+        width: 60vw; /* Ajusta a largura da imagem automaticamente */
+    }
+    
+    .carousel-inner .text-carousel {
+        padding-top: 20px; /* Adicionado espaço superior */
+    }
+    
+    .icons i {
+        color: gold!important;
+    }
+}

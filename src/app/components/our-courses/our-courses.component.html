@@ -1,0 +1,159 @@
+<!-- ======= Features Section ======= -->
+<section id="features" class="features box-shadow">
+  <div class="container-fluid" data-aos="fade-up">
+    <div >
+        <h6 class="text-center color-background p-3 color-title">NOSSOS CURSOS</h6>
+    </div>
+
+    <ul class="nav nav-tabs row gy-4 d-flex pb-5 nav-hover">
+      <li
+        class="nav-item col-6 col-md-4 col-lg-3 with-divider text-center"
+        (mouseover)="activateTab('#tab-1')"
+      >
+        <a class="nav-link show" data-bs-toggle="tab" data-bs-target="#tab-1">
+          <img src="../../../assets/online.png" alt="" />
+          <p>Cursos Técnicos</p>
+        </a>
+      </li>
+      <!-- End Tab 1 Nav -->
+
+      <li
+        class="nav-item col-6 col-md-4 col-lg-3 with-divider text-center"
+        (mouseover)="activateTab('#tab-2')"
+      >
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+          <img src="../../../assets/ead.png" alt="" />
+          <p>EAD</p>
+        </a>
+      </li>
+      <!-- End Tab 2 Nav -->
+
+      <li
+        class="nav-item col-6 col-md-4 col-lg-3 with-divider text-center"
+        (mouseover)="activateTab('#tab-3')"
+      >
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+          <img src="../../../assets/profissionalizante.png" alt="" />
+          <p>Ensino Profissionalizante</p>
+        </a>
+      </li>
+      <!-- End Tab 3 Nav -->
+
+      <li
+        class="nav-item col-6 col-md-4 col-lg-3 text-center"
+        (mouseover)="activateTab('#tab-4')"
+        
+      >
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+          <img src="../../../assets/superior.png" alt="" />
+          <p>Ensino Superior</p>
+        </a>
+      </li>
+      <!-- End Tab 4 Nav -->
+    </ul>
+
+    <div class="tab-content px-5">
+      <div class="tab-pane" id="tab-1">
+        <div class="row gy-4">
+          <div
+            class="col-lg-12 mb-5 text-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3 class="pb-5">CURSOS TÉCNICOS</h3>
+            <div class="row">
+              <ng-container *ngFor="let curso of cursosLivres">
+                <div class="col-lg-3 col-md-6">
+                  <button class="btn custom-btn c-livres-class animated-button">
+                    {{ curso }}
+                  </button>
+                </div>
+              </ng-container>
+              <div class="col-lg-3 col-md-6">
+                <button class="btn custom-btn e-superior-class animated-button">
+                  Outros Cursos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Tab Content 1 -->
+
+      <div class="tab-pane" id="tab-2">
+        <div class="row gy-4">
+          <div class="col-lg-12 mb-5 text-center">
+            <h3 class="pb-5">EAD</h3>
+            <div class="row">
+              <ng-container *ngFor="let curso of cursosEAD">
+                <div class="col-lg-3 col-md-6">
+                  <button class="btn custom-btn ead-class animated-button">
+                    {{ curso }}
+                  </button>
+                </div>
+              </ng-container>
+              <div class="col-lg-3 col-md-6">
+                <button class="btn custom-btn e-superior-class animated-button">
+                  Outros Cursos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Tab Content 2 -->
+
+
+      <div class="tab-pane" id="tab-3">
+        <div class="row gy-4">
+          <div class="col-lg-12 mb-5 text-center">
+            <h3 class="pb-5 text-truncate">ENSINO PROFISSIONALIZANTE</h3>
+            <div class="row">
+              <ng-container *ngFor="let curso of cursosProfissionalizantes">
+                <div class="col-lg-3 col-md-6">
+                  <button
+                    class="btn custom-btn e-prof-class animated-button"
+                  >
+                    {{ curso }}
+                  </button>
+                </div>
+              </ng-container>
+              <div class="col-lg-3 col-md-6">
+                <button class="btn custom-btn e-prof-class animated-button">
+                  Outros Cursos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Tab Content 3 -->
+
+      <div class="tab-pane" id="tab-4">
+        <div class="row gy-4">
+          <div class="col-lg-12 mb-5 text-center">
+            <h3 class="pb-5">ENSINO SUPERIOR</h3>
+            <div class="row">
+              <ng-container *ngFor="let curso of cursosEnsinoSuperior">
+                <div class="col-lg-3 col-md-6">
+                  <button
+                    class="btn custom-btn e-superior-class animated-button"
+                  >
+                    {{ curso }}
+                  </button>
+                </div>
+              </ng-container>
+              <div class="col-lg-3 col-md-6">
+                <button class="btn custom-btn e-superior-class animated-button">
+                  Outros Cursos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Tab Content 4 -->
+    </div>
+  </div>
+</section>
+<!-- End Features Section -->

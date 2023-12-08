@@ -1,0 +1,106 @@
+.container-fluid .navbar {
+  height: 12vh;
+  background-color: #3CB371;
+  padding-bottom:1vh;
+}
+
+.with-divider {
+  border-right: 1px solid white; /* Adiciona uma borda branca à direita */
+  padding-right: 15px; /* Adiciona um espaço à direita para separar o conteúdo da borda */
+  height: 9vh;
+  
+}
+.container-fluid .navbar span {
+  font-size: 1.6rem;
+}
+/* .container-fluid {
+  height: 5%;
+  background: rgb(158, 35, 97);
+  background: linear-gradient(
+    90deg,
+    rgba(158, 35, 97, 1) 18%,
+    rgba(29, 61, 116, 1) 49%,
+    rgba(128, 159, 64, 1) 83%
+  );
+} */
+.with-divider p{
+  color:white
+}
+.with-divider i{
+    color:white; 
+    font-size: 3rem;
+} 
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40%,43% {
+    transform: translateY(-30px);
+    scale:1.050
+  }
+
+  60% {
+    transform: translateY(-15px);
+    
+  }
+}
+.animate__bounce:hover {
+    animation: bounce 1.5s ease-in;
+
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(3deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(-3deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(3deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake-icon:hover {
+  display: inline-block;
+  animation: shake 0.5s ease-in-out infinite;
+}
+.rainbow-line {
+  height: 0.7vh;
+  background: rgb(158, 35, 97);
+  background: linear-gradient(
+    90deg,
+    rgba(158, 35, 97, 1) 18%,
+    rgba(29, 61, 116, 1) 49%,
+    rgba(128, 159, 64, 1) 83%
+  ); /* Cor rosa de sua escolha */
+}
+@media(max-width:768px){
+  .bottom-bar-md p,i{
+    color:white;
+  }
+  .with-divider {
+    padding-right: 0px!important; /* Adiciona um espaço à direita para separar o conteúdo da borda */
+  }
+  .bottom-bar-md p{
+    width:80%;
+    font-size:1.2rem
+  }
+  .bottom-bar-md i{
+    width:20%;
+    font-size:3.5rem
+
+  }
+}
