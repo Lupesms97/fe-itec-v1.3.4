@@ -27,7 +27,7 @@
 .blog-item {
     border: solid 1px #ffff;
 }
-.title{
+.title a{
     color:#ffff;
 }
 

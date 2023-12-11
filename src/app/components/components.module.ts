@@ -7,6 +7,8 @@ import { CountersComponent } from './counters/counters.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { BlogPresentationComponent } from './blog-presentation/blog-presentation.component';
 import { NewsPresentationComponent } from './news-presentation/news-presentation.component';
+import { RouterModule } from '@angular/router';
+import { PagesRoutingModule } from '../pages/pages-routing.module';
 
 
 
@@ -24,6 +26,8 @@ import { NewsPresentationComponent } from './news-presentation/news-presentation
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
+    PagesRoutingModule
   ],
   exports:[
     OurCoursesComponent,

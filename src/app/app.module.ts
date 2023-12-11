@@ -8,6 +8,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PagesModule } from './pages/pages.module';
 import { BottombarComponent } from './shared/bottombar/bottombar.component';
 import { OurCoursesComponent } from './components/our-courses/our-courses.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [

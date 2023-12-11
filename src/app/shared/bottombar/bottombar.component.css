@@ -50,11 +50,14 @@
     
   }
 }
-.animate__bounce:hover {
-    animation: bounce 1.5s ease-in;
+
+.shake:hover i{
+  animation: shake 0.5s ease-in-out infinite;
+} 
+.bounce:hover i{
+  animation: bounce 1.5s ease-in;
 
 }
-
 @keyframes shake {
   0% {
     transform: translateX(0);
@@ -75,7 +78,7 @@
 
 .shake-icon:hover {
   display: inline-block;
-  animation: shake 0.5s ease-in-out infinite;
+  
 }
 .rainbow-line {
   height: 0.7vh;

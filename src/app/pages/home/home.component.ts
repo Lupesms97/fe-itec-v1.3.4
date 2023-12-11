@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { News } from 'src/app/shared/models/NewsI';
 import { Testimonials } from 'src/app/shared/models/TestimonialsI';
 
@@ -8,6 +9,9 @@ import { Testimonials } from 'src/app/shared/models/TestimonialsI';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  constructor(private router:Router){}
+
   news: News[] = [
     {
       title: "Desenvolvimento Web",
@@ -72,4 +76,8 @@ export class HomeComponent {
       background: "/assets/mediaimg1.jpg"
     }
   ]
+  navigateTo(path:string){
+    this.router.navigate([path]);
+
+  }
 }

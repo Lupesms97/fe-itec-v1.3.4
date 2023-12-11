@@ -30,15 +30,17 @@
 <nav class="navbar tn position-absolute navbar-expand-lg">
   <div class="container-fluid">
     <div class="navbar-brand">
-      <img class="navbar-brand ms-0" src="assets/Logo ITEC_horizontalbranco.png" alt="">
+      <img class="navbar-brand ms-0" src="assets/logo.webp" alt="">
     </div>
     <button class="btn d-lg-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fa-solid fa-bars icon-burger"></i></button>
     <div class="collapse navbar-collapse pe-5" id="navbarScroll">
       <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-
         <li class="nav-item">
-          <a class="nav-link" href="#">CURSOS</a>
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-page" >HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cursos" routerLinkActive="active-page" >CURSOS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">SEJA NOSSO ALUNO</a>
@@ -58,9 +60,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">BLOG</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ITEC SOCIAL </a>
         </li>
       </ul>
     </div>

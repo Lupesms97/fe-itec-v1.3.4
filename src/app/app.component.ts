@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ITEC';
+  description = 'Instituto de Tecnologia e Educação';
 }

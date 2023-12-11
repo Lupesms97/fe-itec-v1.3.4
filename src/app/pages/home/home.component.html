@@ -1,27 +1,49 @@
 <div class="home">
   <header>
     <app-navbar></app-navbar>
-    <div class="carousel-container">
-      <div id="carouselExample" class="carousel slide carousel-fade">
+    <div class="carousel-container-home d-none d-lg-block desktop">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/Banner Radiologia.jpg" class="d-block w-100" alt="..." />
+            <img src="assets/bannerhome-analise.webp" class="d-block w-100" alt="..." data-bs-interval="2000"/>
           </div>
           <div class="carousel-item">
-            <img src="assets/Banner principal.jpg" class="d-block w-100" alt="..." />
+            <img src="assets/bannerhome-profissionalizantes.webp" class="d-block w-100" alt="..." data-bs-interval="2000"/>
           </div>
           <div class="carousel-item">
-            <img src="assets/Banner Instrumentação Cirúrgica.jpg" class="d-block w-100" alt="..." />
+            <img src="assets/bannerhome-enfermagem.webp" class="d-block w-100" alt="..." data-bs-interval="2000"/>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/bannerhome-ensinomedio.webp" class="d-block w-100" alt="..." data-bs-interval="2000"/>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+<!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Próxima</span>
-        </button>
+        </button> -->
+      </div>
+    </div>
+
+    <div class="carousel-container-home mobile d-lg-none d-md-block">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/bannerhome-analise-mobile.webp" class="d-block w-100" alt="..." data-bs-interval="2000"/>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/bannerhome-profissionalizantes-mobile.webp" class="d-block w-100" alt="..." data-bs-interval="2000"/>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/bannerhome-enfermagem-mobile.webp" class="d-block w-100" alt="..." data-bs-interval="2000"/>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/bannerhome-ensinomedio-mobile.webp" class="d-block w-100" alt="..." data-bs-interval="2000"/>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -86,7 +108,6 @@
     </div>
   </div>
 
-
   <section class="home-content ">
     <app-blog-presentation></app-blog-presentation>
   </section>
@@ -94,7 +115,7 @@
   <div class="container-fluid div-style cat-news">
     <div class="row text-center">
       <div class="col-lg-6 col-md-12">
-        <h3>NÃO PERCA <span>NENHUMA NOVIDADE</span></h3>
+        <h3>QUER GANHAR UM <span>SUPER DESCONTO?</span></h3>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="row">
@@ -102,17 +123,17 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label class="ms-lg-4 ms-md-0" for="floatingInput">Seu melhor email</label>
           </div>
-          <button class="col-lg-4 col-md-12 btn custom-btn-home">
-            <a href="#apply">CADASTRAR</a>
+          <button class="col-lg-4 col-md-12 btn custom-btn-home" >
+            <a >GARANTIR DESCONTO</a>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-
-  <section class="home-content ">
+  <section class="home-content">
     <app-news-presentation title="ÚLTIMAS" titleOnSpan="NOTÍCIAS" [news]="news"></app-news-presentation>
+
   </section>
 
   <app-testimonials></app-testimonials>
@@ -121,11 +142,27 @@
     <app-news-presentation title="ITEC NA" titleOnSpan="MÍDIA" [news]="midia"></app-news-presentation>
   </section>
 
-
+  
+  <div class="container-fluid div-style cat-news">
+    <div class="row text-center">
+      <div class="col-lg-6 col-md-12 order-lg-0 order-md-1 ">
+        <h3>CONHEÇAS AS NOSSAS<span>UNIDADES</span></h3>
+        <button class="col-lg-6 col-md-12 btn custom-btn-home-unidades mt-5">
+          <a href="#apply">CONHECER AS UNIDADES</a>
+        </button>
+      </div>
+      <div class="col-lg-6 col-md-12 order-lg-1 order-md-0 d-flex justify-content-center">
+        <div class="row text-center imgStyle">
+          <img src="assets/mapsEnd.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="marginb">
 
   </div>
 
   <app-bottombar></app-bottombar>
-</div>
+ </div> 
+<app-footer></app-footer>

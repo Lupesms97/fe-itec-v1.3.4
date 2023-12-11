@@ -4,18 +4,26 @@ import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { BottombarComponent } from '../shared/bottombar/bottombar.component';
 import { ComponentsModule } from '../components/components.module';
+import { DetailsBlogAndNewsComponent } from './details-blog-and-news/details-blog-and-news.component';
+import { Router, RouterModule } from '@angular/router';
+import { FooterComponent } from '../shared/footer/footer.component';
+import { CursosComponent } from './cursos/cursos.component';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    DetailsBlogAndNewsComponent,
+    CursosComponent
   ],
   imports: [
     CommonModule,
     NavbarComponent,
     BottombarComponent,
-    ComponentsModule
+    FooterComponent,
+    ComponentsModule,
+    RouterModule
   ],
   exports: [NavbarComponent]
 })

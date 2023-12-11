@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { News } from 'src/app/shared/models/NewsI';
 
 @Component({
@@ -13,5 +14,13 @@ export class NewsPresentationComponent {
 
 
   @Input() news: News[] = [];
+
+  constructor(private router: Router) { }
+
+  goToPost(id:string ) {
+    this.router.navigate(['news', id]);
+  }
+
+
 
 }
