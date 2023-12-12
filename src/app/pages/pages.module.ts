@@ -8,6 +8,7 @@ import { DetailsBlogAndNewsComponent } from './details-blog-and-news/details-blo
 import { Router, RouterModule } from '@angular/router';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { ContentService } from '../core/content.service';
 
 
 
@@ -15,7 +16,8 @@ import { CursosComponent } from './cursos/cursos.component';
   declarations: [
     HomeComponent,
     DetailsBlogAndNewsComponent,
-    CursosComponent
+    CursosComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { CursosComponent } from './cursos/cursos.component';
     BottombarComponent,
     FooterComponent,
     ComponentsModule,
-    RouterModule
+    RouterModule,
+    
   ],
   exports: [NavbarComponent]
 })

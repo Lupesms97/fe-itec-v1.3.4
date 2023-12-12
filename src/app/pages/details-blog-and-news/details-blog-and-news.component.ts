@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ContentService } from 'src/app/core/content.service';
+import { ContentI } from 'src/app/shared/models/ContentI';
 
 @Component({
   selector: 'app-details-blog-and-news',
@@ -7,11 +9,43 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./details-blog-and-news.component.css']
 })
 export class DetailsBlogAndNewsComponent implements OnInit {
-  postId: string='';
 
-  constructor(private route: ActivatedRoute) {}
+  post:ContentI = {
+    id:'',
+    title:'',
+    background:'',
+    tag:'',
+    content:'',
+    description:''
+  }
+  id: string='';
 
-  ngOnInit() {
+  constructor(private router: ActivatedRoute,
+  private contentService:ContentService) {
+
 
   }
+
+  ngOnInit(): void {
+    this.router.params.subscribe(params => {
+      this.id = params['id'];
+    });
+    if(this.verifictionOdId(this.id)){
+      this.contentService.getPostbyId(this.id).subscribe((post) => {
+        this.post = post;
+      });
+    }
+
+  }
+  verifictionOdId(id :string){
+    if(id!==''){
+      this.id = id;
+      return true;
+    }else{
+      
+      return false;
+    }
+
+  }
+
 }

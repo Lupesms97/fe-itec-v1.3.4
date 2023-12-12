@@ -8,7 +8,7 @@ import { CursosComponent } from './cursos/cursos.component';
 const routes: Routes = [
   { path:'', redirectTo: '', pathMatch: 'full' },
   {path:'', component: HomeComponent},
-  {path:'news', component: DetailsBlogAndNewsComponent},
+  {path:'content/:id', component: DetailsBlogAndNewsComponent},
   {path:'cursos', component:CursosComponent}
  
 ];

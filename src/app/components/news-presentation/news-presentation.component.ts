@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { News } from 'src/app/shared/models/NewsI';
+import { ContentI } from 'src/app/shared/models/ContentI';
 
 @Component({
   selector: 'app-news-presentation',
@@ -13,12 +13,12 @@ export class NewsPresentationComponent {
 
 
 
-  @Input() news: News[] = [];
+  @Input() news: ContentI[] = [];
 
   constructor(private router: Router) { }
 
   goToPost(id:string ) {
-    this.router.navigate(['news', id]);
+    this.router.navigate(['content', id]);
   }
 
 
