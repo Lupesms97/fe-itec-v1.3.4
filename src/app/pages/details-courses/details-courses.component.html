@@ -1,0 +1,60 @@
+
+<header class="header">
+    <app-navbar
+        [corDoBackground]="corDoBackground"
+    ></app-navbar>
+    <div>
+       <div class="bg-img" >
+            <div class="title-style text-center position-absolute bottom-0 start-0 ms-lg-5 ms-md-0 col-lg-6 col-md-12" [style.background-color]="corDoBackground">
+                <h2>
+                    {{post.title}}
+                </h2>
+            </div>
+       </div>
+
+    </div>
+    <div class="containe-fluid text-black mt-5 p-5">
+        <div class="row">
+            <h1 class="col-lg-8 col-md-12 title-course-info">{{post.title}}</h1>
+            <div class="content col-lg-8 col-md-12">             
+                <div class="divisions">
+                    <h4 [style.borderColor]="corDoBackground" [style.color]="corDoBackground">Sobre o curso </h4>
+                    <p [style.background-color]="corDoBackground"> {{post.about}}</p>
+                </div>
+                <div class="divisions">
+                    <h4 [style.borderColor]="corDoBackground" [style.color]="corDoBackground">Mercado de trabalho </h4>
+                    <p [style.background-color]="corDoBackground">{{post.market}}</p>
+                </div>
+                <div class="divisions">
+                    <div class="container" >
+                        <div class="row" >
+                            <div class="itens col-lg-4 col-md-12 pb-4" *ngFor="let module of post.modules" >
+                                <h4 class="mt-5"[style.borderColor]="corDoBackground" [style.color]="corDoBackground" >{{ module.title }}</h4>
+                                <ul [style.background-color]="corDoBackground">
+                                  <li *ngFor="let topic of module.topics" >
+                                        {{ topic }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 justify-content-end">
+                <div class="divisions mb-5">
+                    <h4 [style.borderColor]="corDoBackground" [style.color]="corDoBackground">Media salárial</h4>
+                    <p [style.background-color]="corDoBackground">{{ post.avgSalary | currency:'BRL' }}</p>
+                </div>
+                <app-forms 
+                [showCourses]="false"
+                title="GARANTA SUA VAGA"
+                spanTitle="COM UM SUPER DESCONTO!"
+                buttonText="Enviar"
+                buttonLink="home"
+                [formsAside]="true"
+                ></app-forms>
+            </div>
+        </div>
+    </div>
+</header>
+<app-footer></app-footer>

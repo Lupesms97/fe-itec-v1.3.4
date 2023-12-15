@@ -18,7 +18,7 @@ export class NewsPresentationComponent {
   constructor(private router: Router) { }
 
   goToPost(id:string ) {
-    this.router.navigate(['content', id]);
+    this.router.navigate(['conteudo', id]);
   }
 
 

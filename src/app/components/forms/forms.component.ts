@@ -17,6 +17,7 @@ export class FormsComponent {
   @Input()  buttonText: string = '';
   @Input()  buttonLink: string = '';
   @Input()  showCourses: boolean = true;
+  @Input()  formsAside: boolean = false;
 
   cursos:string[] = [
     'Engenharia Civil',

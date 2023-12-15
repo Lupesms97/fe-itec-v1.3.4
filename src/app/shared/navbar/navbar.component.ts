@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -12,5 +12,5 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
 
-
+  @Input() corDoBackground: string = 'rgba(233, 236, 242, 0.3)';
 }

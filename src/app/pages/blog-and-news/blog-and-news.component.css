@@ -1,0 +1,23 @@
+.bg-img {
+    padding-bottom:10vh!important;
+    margin-top:5vh;
+    width: 100%;
+    height: 50vh;
+    background: url("/assets/fundo-blog-news.webp") no-repeat center;
+    background-size: cover;
+    filter: brightness(90%);
+    padding: 0;
+}
+.main{
+    margin-top:10vh;
+}
+.courses-content{
+    margin: 0 5vw
+}
+.unload-container .card img{
+    padding:1vh 0;
+    height:100%
+}
+.unload-container .card{
+
+}

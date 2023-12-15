@@ -4,6 +4,9 @@
     border: solid 2px green; */
     display:flex
 }
+.blog-row:hover{
+    cursor:pointer
+}
 .blog-item h3{
     padding:  0
 }

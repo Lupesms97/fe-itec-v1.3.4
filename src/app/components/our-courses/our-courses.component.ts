@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CoursesService } from 'src/app/core/courses.service';
+import { CoursesI } from 'src/app/shared/models/CoursesI';
 
 @Component({
   selector: 'app-our-courses',
@@ -6,56 +9,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./our-courses.component.css']
 })
 export class OurCoursesComponent {
-  cursosLivres: string[] = [];
-  cursosEAD: string[] = [];
-  cursosProfissionalizantes: string[] = [];
-  cursosEnsinoSuperior: string[] = [];
+  cursosLivres: CoursesI[] = [];
+  cursosEAD: CoursesI[] = [];
+  cursosProfissionalizantes: CoursesI[] = [];
+  cursosEnsinoSuperior: CoursesI[] = [];
 
 
-  constructor() {
-    this.cursosLivres = [
-      "Arte Abstrata",
-      "Desenvolvimento Web para Iniciantes",
-      "Fotografia Digital",
-      "Mindfulness e Bem-Estar",
-      "Marketing Digital",
-      "Empreendedorismo Social",
-      "Inglês para Viagens"
-    ];
-    this.cursosEAD = [
-      'Desenvolvimento Web',
-      'Marketing Digital',
-      'Design Gráfico',
-      'Inglês Avançado',
-      'Programação em Python',
-      'Gestão de Recursos Humanos',
-      'Machine Learning',
-      'Arquitetura de Software',
-    ];
-    
-    // Array de cursos Profissionalizantes
-    this.cursosProfissionalizantes = [
-      'Eletricista Residencial',
-      'Assistente Administrativo',
-      'Design de Moda',
-      'Técnico em Enfermagem',
-      'Culinária Internacional',
-      'Web Design',
-      'Marketing de Moda',
-    ];
-    
-    // Array de cursos de Ensino Superior
-    this.cursosEnsinoSuperior = [
-      'Engenharia Civil',
-      'Administração de Empresas',
-      'Psicologia',
-      'Medicina',
-      'Ciência da Computação',
-      'Direito',
-      'Ciências Contábeis',
-      'Publicidade e Propaganda',
-      'Engenharia Elétrica',
-    ];
+  constructor(private router:Router,
+    private coursesService: CoursesService) {
+      this.getAndSetValues();
   }
 
 
@@ -63,9 +25,9 @@ export class OurCoursesComponent {
   activateTab(tabId: string): void {
     // Mapeia o ID da tab para a cor desejada
     const colorMap: { [key: string]: string } = {
-      '#tab-1': ' #8dc9f2',
+      '#tab-1': ' #2c61a3',
       '#tab-2': '#86d18f',
-      '#tab-3': '#a76cad',
+      '#tab-3': '#f75ed4',
       '#tab-4': '#0275e8'
     };
   
@@ -89,5 +51,26 @@ export class OurCoursesComponent {
       
     }
   }
-  
+
+  getAndSetValues() {
+    this.coursesService.cursosESuperior$.subscribe(posts => {
+      this.cursosEnsinoSuperior = posts;
+    });
+
+    this.coursesService.cursosEad$.subscribe(posts => {
+      this.cursosEAD = posts;
+    });
+
+    this.coursesService.cursosProfissonalizante$.subscribe(posts => {
+      this.cursosProfissionalizantes = posts;
+    });
+
+    this.coursesService.cursosCursosLivres$.subscribe(posts => {
+      this.cursosLivres = posts;
+    });
+  }
+
+  goToPost(id: string) {
+    this.router.navigate(['cursos', id]);
+  }
 }

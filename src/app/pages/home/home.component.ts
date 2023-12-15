@@ -12,7 +12,6 @@ import { Testimonials } from 'src/app/shared/models/TestimonialsI';
 })
 export class HomeComponent implements OnInit {
 
-
   news: ContentI[] = [];
   midia: ContentI[] = [];
 
@@ -20,20 +19,25 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAndSetValues();
+
   }
 
   getAndSetValues() {
     this.contentService.contentNews$.subscribe(posts => {
-      this.news = posts;
+      this.news = this.getSixPosts(posts);
     });
 
     this.contentService.contentPost$.subscribe(posts => {
-      this.midia = posts;
+      this.midia = this.getSixPosts(posts);
     });
   }
 
+  getSixPosts(posts: ContentI[]) {
+    return posts.slice(0, 6);
+  }
+
   goToPost(id: string) {
-    this.router.navigate(['content', id]);
+    this.router.navigate(['conteudo', id]);
   }
 
 

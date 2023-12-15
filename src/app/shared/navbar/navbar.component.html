@@ -27,15 +27,15 @@
     </div>
   </div>
 </nav>
-<nav class="navbar tn position-absolute navbar-expand-lg">
+<nav class="navbar tn position-absolute navbar-expand-lg" [style.background-color]="corDoBackground">
   <div class="container-fluid">
     <div class="navbar-brand">
-      <img class="navbar-brand ms-0" src="assets/logo.webp" alt="">
+      <img class="navbar-brand ms-0" src="assets/logbranca.webp" alt="" style="height: max-content;">
     </div>
-    <button class="btn d-lg-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="btn d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fa-solid fa-bars icon-burger"></i></button>
     <div class="collapse navbar-collapse pe-5" id="navbarScroll">
-      <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0">
         <li class="nav-item">
           <a class="nav-link" routerLink="/home" routerLinkActive="active-page" >HOME</a>
         </li>
@@ -46,7 +46,7 @@
           <a class="nav-link" href="#">SEJA NOSSO ALUNO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">NOTICIAS</a>
+          <a class="nav-link" routerLink="/noticias" routerLinkActive="active-page">NOTICIAS</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -59,7 +59,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">BLOG</a>
+          <a class="nav-link" routerLink="/blog" routerLinkActive="active-page">BLOG</a>
         </li>
       </ul>
     </div>

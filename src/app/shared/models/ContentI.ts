@@ -1,4 +1,3 @@
-import { TypeNews } from "./TypeNews";
 
 export interface ContentI{
     id: string;
@@ -7,4 +6,5 @@ export interface ContentI{
     description: string;
     content:string;
     background?: string;
+    avgSalary?: number;
 }

@@ -6,7 +6,11 @@ input{
   border-radius: 2rem;
 }
 #forms-container{
+  margin-top:4vh;
     padding:5rem;
+}
+#forms-container-aside .size-element{
+  height:130vh;
 }
 .form-check-label p{
   font-size:0.8em!important;
@@ -46,5 +50,8 @@ label,label{
   }
   .size-element{
     height:auto
+  }
+  #forms-container-aside{
+    width:100%
   }
 }

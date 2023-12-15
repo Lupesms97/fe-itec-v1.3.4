@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ContentI } from '../shared/models/ContentI';
 import { BehaviorSubject, Observable, ReplaySubject, map, tap } from 'rxjs';
+import { Router } from '@angular/router';
 // Remove the unused import
 // import { Router } from '@angular/router';
 // import { TypeNews } from '../shared/models/TypeNews';
@@ -15,16 +16,18 @@ export class ContentService {
   private posts$: BehaviorSubject<ContentI[]> = new BehaviorSubject<ContentI[]>([]);
 
   public contentNews$: Observable<ContentI[]> = this.posts$.pipe(
-    map(posts => posts.filter(post => post.tag === 'News'))
+    map(posts => posts.filter(post => post.tag === 'News')),
+
   );
   public contentBlog$: Observable<ContentI[]> = this.posts$.pipe(
     map(posts => posts.filter(post => post.tag === 'Blog'))
   );
   public contentPost$: Observable<ContentI[]> = this.posts$.pipe(
     map(posts => posts.filter(post => post.tag === 'Post'))
+
   );
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private route:Router) {
     this.refreshPosts();
   }
 
@@ -32,9 +35,9 @@ export class ContentService {
     this.http.get<ContentI[]>(this.API_URL_R)
       .pipe(
         tap(posts => {
-          console.log(posts);
           this.posts$.next(posts);
-        })
+        }),
+       
       )
       .subscribe();
   }
@@ -51,5 +54,10 @@ export class ContentService {
     return this.posts$.pipe(
       map(posts => posts.find(post => post.id === id)!)
     );
+  }
+  
+  public getTypeParameterOwner(): string {
+    // Add a return statement to return an empty string as a default value
+    return this.route.url;
   }
 }

@@ -1,0 +1,68 @@
+.header{
+    margin-bottom:20vh;
+}
+
+.bg-img {
+    width: 100%;
+    height: 45vh;
+    background: url("/assets/bg-news.webp") no-repeat center;
+    background-size: cover;
+    filter: brightness(90%);
+    padding: 0;
+}
+
+.mt-10 {
+    margin-top: 10vh;
+}
+.mb-20 {
+    margin-top: 20vh;
+}
+.title-style { 
+    filter: brightness(100%) !important;
+    color: white;
+    min-height: 10vh;
+    height:auto;
+    padding: 2.5vh;
+}
+p{
+    font-size:1.3rem
+}
+.divisions{
+    margin-top:6vh;
+}
+.divisions h4,p{
+    padding:1rem
+}
+.divisions h4{
+    color:#2C61A3;
+    border-top-left-radius:2rem;
+    border-top-right-radius:2rem;
+    border: 3px solid #2C61A3;
+}
+.divisions p{
+    color:#f8f8f8;
+    border-bottom-left-radius:2rem;
+    border-bottom-right-radius:2rem;
+    background-color:#2C61A3
+}
+.divisions ul{
+    width:100%;
+    padding:1rem 2rem;
+    color:#f8f8f8;
+    border-bottom-left-radius:2rem;
+    border-bottom-right-radius:2rem;
+    background-color:#2C61A3
+}
+.divisions li{
+    width:100%;
+    font-size:1.2rem;
+}
+.title-course-info{
+    padding-bottom:5vh!important;
+}
+.itens ul{
+    height:45vh;
+}
+.itens h4{
+    height:13vh;
+}

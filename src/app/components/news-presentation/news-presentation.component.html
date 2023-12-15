@@ -18,13 +18,13 @@
         <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
             <div class="card d-flex position-relative flex-column animated-icon" *ngFor="let new of news">
                 <div class='imgContainer'>
-                    <img src='{{new.background}}'>
+                    <img src='{{new.background}}' alt="{{new.title}}">
                     <h6 class="py-3 title-witouth-hover">{{new.title}}</h6>
                 </div>
                 <div class="content">
                     <h2  >{{new.title}}</h2>
                     <p>{{new.description}}</p>  
-                    <button (click)="goToPost(new.title)" class="btn custom-btn">
+                    <button (click)="goToPost(new.id)" class="btn custom-btn">
                       <a >Ver</a>&nbsp;<i class="fa-solid fa-hand-point-right animated-icon"></i>
                     </button>              
                 </div>
@@ -64,7 +64,7 @@
                   <h5 class="card-title mt-3">{{new.title}}</h5>
                   <div class="card-content mt-2">
                     <p class="card-text">{{new.description}}</p>
-                    <button href="#" class="btn custom-btn"><a href="">Ver</a></button>
+                    <button (click)="goToPost(new.id)" class="btn custom-btn"><a href="">Ver</a></button>
                   </div>
                 </div>
               </div>

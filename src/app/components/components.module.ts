@@ -9,6 +9,7 @@ import { BlogPresentationComponent } from './blog-presentation/blog-presentation
 import { NewsPresentationComponent } from './news-presentation/news-presentation.component';
 import { RouterModule } from '@angular/router';
 import { PagesRoutingModule } from '../pages/pages-routing.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -27,7 +28,8 @@ import { PagesRoutingModule } from '../pages/pages-routing.module';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    HttpClientModule
   ],
   exports:[
     OurCoursesComponent,

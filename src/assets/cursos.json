@@ -1,0 +1,479 @@
+[
+  {
+    "id": "123e4567-e89b-12d3-a456-426655440000",
+    "tag": "Ensino Superior",
+    "title": "Engenharia Civil",
+    "about": "Prepare-se para uma carreira desafiadora e impactante na área de Engenharia Civil. Este curso de ensino superior abrange os fundamentos da engenharia estrutural, geotecnia, construção civil, gestão de projetos e normas regulatórias. Ao longo do curso, você participará de projetos práticos e estágios para aplicar seus conhecimentos teóricos.",
+    "market": "A engenharia civil oferece diversas oportunidades em projetos de infraestrutura, construção civil, consultoria ambiental e gestão de obras. Este curso superior proporciona uma base sólida para quem deseja atuar como engenheiro civil, gerente de projetos ou consultor técnico.",
+    "hours": "4000",
+    "avgSalary": 8000,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "81dc9bdb-4ca4-11d2-a769-00a0c91e6bf6",
+    "tag": "Ensino Superior",
+    "title": "Enfermagem",
+    "about": "A enfermagem é a ciência e a arte do cuidado integral ao ser humano, desde a concepção até a morte. O enfermeiro é responsável por promover a saúde, prevenir doenças, recuperar a saúde e reabilitar os indivíduos, famílias e comunidades.",
+    "market": "A enfermagem é uma profissão essencial para a sociedade. Os enfermeiros são responsáveis por atender a uma ampla gama de necessidades de saúde, em diversos ambientes, como hospitais, clínicas, domicílios e escolas.",
+    "hours": "4000",
+    "avgSalary": 6000,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c28185f2-6e46-11e3-a27f-000c2953a24c",
+    "tag": "Ensino Superior",
+    "title": "Engenharia de Software",
+    "about": "Prepare-se para uma carreira dinâmica na área de Engenharia de Software. Este curso de ensino superior abrange os princípios fundamentais da engenharia de software, desenvolvimento de software, gerenciamento de projetos e qualidade de software. Você terá a oportunidade de aplicar seus conhecimentos em projetos práticos e colaborativos.",
+    "market": "A demanda por profissionais de engenharia de software é alta, com oportunidades em empresas de tecnologia, consultorias, desenvolvimento de aplicativos e startups. Este curso proporciona uma base sólida para quem deseja se tornar um desenvolvedor de software, arquiteto de sistemas ou gerente de projetos de TI.",
+    "hours": "3600",
+    "avgSalary": 7500,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426655440001",
+    "tag": "Cursos livres",
+    "title": "Arte Abstrata",
+    "about": "A arte abstrata é um movimento artístico que se caracteriza pela ausência de representação de objetos ou figuras reconhecíveis. A arte abstrata se concentra na composição, forma, cor, textura e linha, e pode ser expressa por meio de uma variedade de meios, incluindo pintura, escultura, música, dança e literatura.",
+    "market": "A arte abstrata é uma forma de arte popular e apreciada por pessoas de todas as idades e origens. Os artistas abstratos podem encontrar oportunidades de emprego em museus, galerias, escolas e estúdios privados.",
+    "hours": "100",
+    "avgSalary": 4000,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426655440002",
+    "tag": "Cursos Livres",
+    "title": "Desenvolvimento Web para Iniciantes",
+    "about": "O desenvolvimento web é a criação de sites e aplicativos para a web. É uma área em constante crescimento, com demanda crescente por profissionais qualificados. Este curso é ideal para quem deseja iniciar uma carreira em desenvolvimento web ou atualizar suas habilidades.",
+    "market": "O mercado de desenvolvimento web é amplo e diversificado. Os desenvolvedores web podem encontrar oportunidades de emprego em empresas de todos os tamanhos, bem como trabalhar como freelancers.",
+    "hours": "200",
+    "avgSalary": 5000,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426655440003",
+    "tag": "Profissionalizantes",
+    "title": "Eletricista Residencial",
+    "about": "O eletricista residencial é responsável pela instalação, manutenção e reparo de sistemas elétricos em residências. É uma profissão essencial para a segurança e conforto das pessoas. Este curso é ideal para quem deseja iniciar uma carreira na área ou atualizar suas habilidades.",
+    "market": "O mercado de trabalho para eletricistas residenciais é amplo e diversificado. Os eletricistas residenciais podem encontrar oportunidades de emprego em empresas de todos os tamanhos, bem como trabalhar como autônomos.",
+    "hours": "400",
+    "avgSalary": 4500,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426655440004",
+    "tag": "Profissionalizantes",
+    "title": "Assistente Administrativo",
+    "about": "O assistente administrativo é responsável por auxiliar na execução de tarefas administrativas, como rotinas de escritório, atendimento ao cliente, organização de documentos e arquivo. É uma profissão versátil e com boas oportunidades de emprego. Este curso é ideal para quem deseja iniciar uma carreira na área ou atualizar suas habilidades.",
+    "market": "O mercado de trabalho para assistentes administrativos é amplo e diversificado. Os assistentes administrativos podem encontrar oportunidades de emprego em empresas de todos os tamanhos, bem como em órgãos públicos.",
+    "hours": "200",
+    "avgSalary": 2500,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426655440005",
+    "tag": "EAD",
+    "title": "Desenvolvimento Web",
+    "about": "O desenvolvimento web é a criação de sites e aplicativos para a web. É uma área em constante crescimento, com demanda crescente por profissionais qualificados. Este curso é ideal para quem deseja iniciar uma carreira em desenvolvimento web ou atualizar suas habilidades.",
+    "market": "O mercado de desenvolvimento web é amplo e diversificado. Os desenvolvedores web podem encontrar oportunidades de emprego em empresas de todos os tamanhos, bem como trabalhar como freelancers.",
+    "hours": "400",
+    "avgSalary": 5000,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426655440006",
+    "tag": "EAD",
+    "title": "Marketing Digital",
+    "about": "O marketing digital é o uso de tecnologias digitais para promover produtos ou serviços. É uma área em constante crescimento, com demanda crescente por profissionais qualificados. Este curso é ideal para quem deseja iniciar uma carreira em marketing digital ou atualizar suas habilidades.",
+    "market": "O mercado de marketing digital é amplo e diversificado. Os profissionais de marketing digital podem encontrar oportunidades de emprego em empresas de todos os tamanhos, bem como trabalhar como freelancers.",
+    "hours": "400",
+    "avgSalary": 5500,
+    "modules": [
+      {
+        "id": "1",
+        "title": "Fase Inicial",
+        "topics": [
+          "Introdução à Engenharia Civil",
+          "Matemática Aplicada",
+          "Química Geral",
+          "Comunicação Técnica",
+          "Desenho Técnico"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Fundações e Estruturas",
+        "topics": [
+          "Mecânica dos Solos",
+          "Fundações",
+          "Estruturas de Concreto",
+          "Estruturas Metálicas",
+          "Análise Estrutural"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gestão de Projetos",
+        "topics": [
+          "Gestão de Projetos de Engenharia",
+          "Orçamento e Planejamento",
+          "Ética Profissional",
+          "Legislação e Normas Técnicas"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Especializações",
+        "topics": [
+          "Engenharia Hidráulica",
+          "Engenharia de Transportes",
+          "Geotecnia Avançada",
+          "Sustentabilidade em Obras Civis"
+        ]
+      }
+    ]
+  }
+]

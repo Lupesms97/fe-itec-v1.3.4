@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map } from 'rxjs';
 import { ContentService } from 'src/app/core/content.service';
 import { ContentI } from 'src/app/shared/models/ContentI';
@@ -13,7 +14,8 @@ import { ContentI } from 'src/app/shared/models/ContentI';
 export class BlogPresentationComponent implements OnInit {
   blogs: ContentI[] = [];
 
-  constructor(private contentService: ContentService) {}
+  constructor(private contentService: ContentService,
+    private router:Router) {}
 
   ngOnInit(): void {
     this.getAndSetContent();
@@ -21,7 +23,13 @@ export class BlogPresentationComponent implements OnInit {
 
   getAndSetContent() {
     this.contentService.contentBlog$.subscribe(posts => {
-      this.blogs = posts;
+      this.blogs = this.getSixPosts(posts);
     });
+  }
+  goToPost(id: string) {
+    this.router.navigate(['conteudo', id]);
+  }
+  getSixPosts(posts: ContentI[]) {
+    return posts.slice(0, 6);
   }
 }

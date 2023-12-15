@@ -7,8 +7,10 @@ import { ComponentsModule } from '../components/components.module';
 import { DetailsBlogAndNewsComponent } from './details-blog-and-news/details-blog-and-news.component';
 import { Router, RouterModule } from '@angular/router';
 import { FooterComponent } from '../shared/footer/footer.component';
-import { CursosComponent } from './cursos/cursos.component';
 import { ContentService } from '../core/content.service';
+import { DetailsCoursesComponent } from './details-courses/details-courses.component';
+import { CoursesComponent } from './courses/courses.component';
+import { BlogAndNewsComponent } from './blog-and-news/blog-and-news.component';
 
 
 
@@ -16,7 +18,9 @@ import { ContentService } from '../core/content.service';
   declarations: [
     HomeComponent,
     DetailsBlogAndNewsComponent,
-    CursosComponent,
+    DetailsCoursesComponent,
+    CoursesComponent,
+    BlogAndNewsComponent,
     
   ],
   imports: [

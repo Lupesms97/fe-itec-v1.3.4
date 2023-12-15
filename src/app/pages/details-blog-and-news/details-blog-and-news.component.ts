@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from 'src/app/core/content.service';
 import { ContentI } from 'src/app/shared/models/ContentI';
@@ -10,6 +10,8 @@ import { ContentI } from 'src/app/shared/models/ContentI';
 })
 export class DetailsBlogAndNewsComponent implements OnInit {
 
+  corDoBackground: string = "#2c61a3";
+
   post:ContentI = {
     id:'',
     title:'',
@@ -18,7 +20,9 @@ export class DetailsBlogAndNewsComponent implements OnInit {
     content:'',
     description:''
   }
+
   id: string='';
+
 
   constructor(private router: ActivatedRoute,
   private contentService:ContentService) {
@@ -35,8 +39,12 @@ export class DetailsBlogAndNewsComponent implements OnInit {
         this.post = post;
       });
     }
+    window.scrollTo(0, 0);
+    this.corDoBackground = this.setColor(this.post.tag);
 
   }
+
+
   verifictionOdId(id :string){
     if(id!==''){
       this.id = id;
@@ -45,7 +53,19 @@ export class DetailsBlogAndNewsComponent implements OnInit {
       
       return false;
     }
+  }
 
+  setColor(tag:string){
+    switch (tag) {
+      case 'Blog':
+        return '#2c61a3';
+      case 'News':
+        return '#c95f94';
+      case 'Post':
+        return '#5cb85c';
+      default:
+        return '#2c61a3';
+    }
   }
 
 }
