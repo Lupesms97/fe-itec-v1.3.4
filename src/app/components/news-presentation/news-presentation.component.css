@@ -256,3 +256,9 @@
     height:auto
   }
 }
+pagination-controls{
+  margin-top:150vh
+}
+.fa-chevron-right:hover{
+  cursor:pointer
+}

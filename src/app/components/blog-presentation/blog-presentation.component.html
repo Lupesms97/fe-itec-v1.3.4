@@ -7,7 +7,7 @@
         </div>
         <div class="col">
             <h2 class="text-end">
-                <a href="">
+                <a (click)="goToPageWithAll()">
                     <i class="fa-solid fa-chevron-right" style="font-size: 2rem;"></i>
                 </a>
             </h2>
@@ -16,17 +16,17 @@
     </div>
     <div class="blog-content">
         <div class="row blog-row">
-            <div class="col-lg-8 col-md-12 col-sm-12 blog-item blog-item0" (click)="goToPost(blogs[1].id)">
+            <div class="col-lg-8 col-md-12 col-sm-12 blog-item blog-item0" (click)="goToPost(blogs[0].id)">
                 <h3 class="align-self-center title">
-                    <a>
-                        {{blogs[0].title }}
+                    <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[0].id)">
+                        {{blogs[0].title}}
                     </a>
                 </h3>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 blog-item blog-item1" (click)="goToPost(blogs[2].id)">
+            <div class="col-lg-4 col-md-12 col-sm-12 blog-item blog-item1" (click)="goToPost(blogs[1].id)">
                 <h3 class="align-self-center title ">
-                    <a >
-                        {{blogs[1].title }}
+                    <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[1].id)">
+                        {{blogs[1].title}}
                     </a>
                 </h3>
             </div>
@@ -34,31 +34,31 @@
         <div class="row blog-row">
             <div class="col-lg-5 col-md-12 col-sm-12 blog-item blog-item2"(click)="goToPost(blogs[2].id)" >
                 <h3 class="align-self-center title">
-                    <a >
-                        {{blogs[2].title }}
+                    <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[2].id)">
+                        {{blogs[2].title}}
                     </a>
                 </h3>
             </div>
             <div class="col-lg-7 col-md-12 col-sm-12 blog-item blog-item3" (click)="goToPost(blogs[3].id)">
                 <h3 class="align-self-center title">
-                    <a >
-                        {{blogs[3].title }}
-                    </a>                
+                    <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[3].id)">
+                        {{blogs[3].title}}
+                    </a>             
                 </h3>
             </div>
         </div>
         <div class="row blog-row end-row">
             <div class="col-lg-9 col-md-12 col-sm-12 blog-item blog-item4" (click)="goToPost(blogs[4].id)">
                 <h3 class="align-self-center title">
-                    <a >
-                        {{blogs[4].title }}
-                    </a>                </h3>
+                    <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[4].id)">
+                        {{blogs[4].title}}
+                    </a>             </h3>
             </div>
             <div class="col-lg-3 col-md-12 col-sm-12 blog-item blog-item5" (click)="goToPost(blogs[5].id)">
                 <h3 class="align-self-center title">
-                    <a >
-                        {{blogs[5].title }}
-                    </a>                
+                    <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[5].id)">
+                        {{blogs[5].title}}
+                    </a>              
                 </h3>
             </div>
         </div>

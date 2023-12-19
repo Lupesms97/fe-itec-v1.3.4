@@ -68,3 +68,6 @@
         padding-bottom:10vh!important;
     }
 }
+.fa-chevron-right:hover{
+    cursor:pointer
+  }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ContentI } from '../shared/models/ContentI';
+import { ContentI } from '../../shared/models/ContentI';
 import { BehaviorSubject, Observable, ReplaySubject, map, tap } from 'rxjs';
 import { Router } from '@angular/router';
 // Remove the unused import
@@ -17,7 +17,6 @@ export class ContentService {
 
   public contentNews$: Observable<ContentI[]> = this.posts$.pipe(
     map(posts => posts.filter(post => post.tag === 'News')),
-
   );
   public contentBlog$: Observable<ContentI[]> = this.posts$.pipe(
     map(posts => posts.filter(post => post.tag === 'Blog'))

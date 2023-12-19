@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CoursesService } from 'src/app/core/courses.service';
+import { CoursesService } from 'src/app/core/services/courses.service';
 import { CoursesI } from 'src/app/shared/models/CoursesI';
 
 @Component({

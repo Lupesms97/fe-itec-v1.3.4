@@ -5,7 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { DetailsBlogAndNewsComponent } from './details-blog-and-news/details-blog-and-news.component';
 import { DetailsCoursesComponent } from './details-courses/details-courses.component';
 import { CoursesComponent } from './courses/courses.component';
-import { BlogAndNewsComponent } from './blog-and-news/blog-and-news.component';
+import { BlogNoticiasPostComponent } from './blog-noticias-post/blog-noticias-post.component';
+import { OurStudentComponent } from './our-student/our-student.component';
 
 const routes: Routes = [
   { path:'', redirectTo: '', pathMatch: 'full' },
@@ -14,9 +15,10 @@ const routes: Routes = [
   {path:'cursos/:id', component: DetailsCoursesComponent},
   {path:'cursos', component: CoursesComponent},
   {path:'', component: CoursesComponent},
-  {path: 'blog', component: BlogAndNewsComponent},
-  {path: 'noticias', component: BlogAndNewsComponent},
- 
+  {path: 'blog', component: BlogNoticiasPostComponent},
+  {path: 'noticias', component: BlogNoticiasPostComponent},
+  {path: 'posts', component: BlogNoticiasPostComponent},
+  {path:'seja-nosso-aluno', component: OurStudentComponent}
 ];
 
 @NgModule({

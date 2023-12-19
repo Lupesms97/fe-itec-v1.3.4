@@ -1,38 +1,38 @@
 <section class="container container-blog text-center box-shadow d-none d-lg-block desktop">
-    <div class="row color-title-blog py-4 d-flex">
-        <div class="col">
-            <h2 class="text-start">
-                {{title}}<span > {{titleOnSpan}}</span>
-            </h2>
-        </div>
-        <div class="col">
-            <h2 class="text-end">
-                <a href="">
-                    <i class="fa-solid fa-chevron-right" style="font-size: 2rem;"></i>
-                </a>
-            </h2>
-
-        </div>
+  <div class="row color-title-blog py-4 d-flex">
+    <div class="col">
+      <h2 class="text-start">
+        {{title}}<span> {{titleOnSpan}}</span>
+      </h2>
     </div>
-    <div class="row blog-row">
-        <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
-            <div class="card d-flex position-relative flex-column animated-icon" *ngFor="let new of news">
-                <div class='imgContainer'>
-                    <img src='{{new.background}}' alt="{{new.title}}">
-                    <h6 class="py-3 title-witouth-hover">{{new.title}}</h6>
-                </div>
-                <div class="content">
-                    <h2  >{{new.title}}</h2>
-                    <p>{{new.description}}</p>  
-                    <button (click)="goToPost(new.id)" class="btn custom-btn">
-                      <a >Ver</a>&nbsp;<i class="fa-solid fa-hand-point-right animated-icon"></i>
-                    </button>              
-                </div>
+    <div class="col">
+      <h2 class="text-end">
+        <a (click)="goTo(location)">
+          <i class="fa-solid fa-chevron-right" style="font-size: 2rem;"></i>
+        </a>
+      </h2>
 
-            </div>
-
-        </div>
     </div>
+  </div>
+  <div class="row blog-row">
+    <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+      <div class="card d-flex position-relative flex-column animated-icon"
+        *ngFor="let new of news">
+        <div class='imgContainer'>
+          <img src='{{new.background}}' alt="{{new.title}}">
+          <h6 class="py-3 title-witouth-hover">{{new.title}}</h6>
+        </div>
+        <div class="content">
+          <h2>{{new.title}}</h2>
+          <p>{{new.description}}</p>
+          <button (click)="goToPost(new.id)" class="btn custom-btn">
+            <a>Ver</a>&nbsp;<i class="fa-solid fa-hand-point-right animated-icon"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Seção para telas pequenas e médias -->
 <section class="container text-center box-shadow-custom mobile d-lg-none d-md-block">
@@ -44,7 +44,7 @@
     </div>
     <div class="col">
       <h2 class="text-end">
-        <a href="#">
+        <a (click)="goTo(location)">
           <i class="fa-solid fa-chevron-right" style="font-size: 2rem;"></i>
         </a>
       </h2>

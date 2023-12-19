@@ -10,6 +10,10 @@ import { NewsPresentationComponent } from './news-presentation/news-presentation
 import { RouterModule } from '@angular/router';
 import { PagesRoutingModule } from '../pages/pages-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { PrizeDrawComponent } from './prize-draw/prize-draw.component';
+import { MapComponent } from './map/map.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 
 
@@ -21,7 +25,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     TestimonialsComponent,
     BlogPresentationComponent,
     NewsPresentationComponent,
-
+    PrizeDrawComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +34,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     RouterModule,
     PagesRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    GoogleMapsModule,
   ],
   exports:[
     OurCoursesComponent,
@@ -38,7 +45,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     TestimonialsComponent,
     BlogPresentationComponent,
     NewsPresentationComponent,
-
+    PrizeDrawComponent,
+    MapComponent
   ]
 })
 export class ComponentsModule { }

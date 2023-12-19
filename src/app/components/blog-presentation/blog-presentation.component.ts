@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
-import { ContentService } from 'src/app/core/content.service';
+import { ContentService } from 'src/app/core/services/content.service';
 import { ContentI } from 'src/app/shared/models/ContentI';
 
 
@@ -31,5 +31,8 @@ export class BlogPresentationComponent implements OnInit {
   }
   getSixPosts(posts: ContentI[]) {
     return posts.slice(0, 6);
+  }
+  goToPageWithAll() {
+    this.router.navigate(['/blog']);
   }
 }

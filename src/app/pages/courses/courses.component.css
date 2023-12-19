@@ -12,7 +12,8 @@
     margin-top:10vh;
 }
 .courses-content{
-    margin: 0 5vw
+    margin: 10vh 5vw;
+    padding: 10vh 0;
 }
 @keyframes moveUpDown {
     0%, 100% {

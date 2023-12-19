@@ -1,0 +1,17 @@
+<div class="container content-prizedraw box-shadow">
+    <div class="row">
+        <div class="content">
+            <h2>Seu desconto: </h2>
+            <h4 class="my-5" *ngIf="percentOdDisconutSorted!==''">
+                Desconto: {{ percentOdDisconutSorted }}
+            </h4>
+            <br>
+            <h4 *ngIf="descountCode!==''">
+                Cupom: {{descountCode}}
+            </h4>
+            <div class="row text-center d-flex justify-content-center">
+                <button class="btn btn-pzd col-lg-6 col-md-8 col-sm-12 box-shadow" (click)="sortearString()">Sortear Desconto</button>
+            </div>
+        </div>
+    </div>
+</div>

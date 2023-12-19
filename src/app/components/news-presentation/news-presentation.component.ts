@@ -11,9 +11,10 @@ export class NewsPresentationComponent {
   @Input() title: string = '';
   @Input() titleOnSpan: string = '';
 
-
+  p: any = 0;
 
   @Input() news: ContentI[] = [];
+  @Input() location:string = '';
 
   constructor(private router: Router) { }
 
@@ -22,5 +23,14 @@ export class NewsPresentationComponent {
   }
 
 
+  goTo(location: string): void {
+    this.router.navigate([location]);
+  }
 
+  transformImage(post: ContentI) {
+    if (post.background) {
+      return post.background;
+    }
+    return `/assets/fundo-blog-news.webp`;
+  }
 }

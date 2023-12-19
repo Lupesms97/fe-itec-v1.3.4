@@ -1,131 +1,166 @@
-
 <div class="container-fluid" id="forms-container" *ngIf="!formsAside">
-    <div class="row ">
-        <div class="col-lg-6 col-md-12 img-style px-4 size-element {{orderImage}} d-none d-lg-block">
-            <img src="{{img}}" alt="{{title}}">
-        </div>
-        <div class="col-lg-6 col-md-12 box-shadow p-5 size-element {{orderForms}} forms-element">
-            <h2 class="text-start">{{title}} <span>{{spanTitle}}</span></h2>
-            <p >
-              {{text}}
-            </p>
-            <form class="row g-3" #loginForm="ngForm" (ngSubmit)="criar(loginForm)">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <label for="inputNome" class="form-label">Nome</label>
-                    <input
-                    type="text" 
-                    class="form-control" 
-                    id="inputNome">
-                  </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                  <label for="inputEmail4" class="form-label">Email</label>
-                  <input
-                  type="email" 
-                  class="form-control" 
-                  id="inputEmail4">
-                </div>
-                <div class="col-lg-7 col-md-12">
-                    <label for="inputPolo" class="form-label">Polo</label>
-                    <select class="form-select" id="inputPolo">
-                        <option value="Vr-Vila">Volta Redonda - Vila</option>
-                        <option value="Vr-Retiro">Volta Redonda - Retiro</option>
-                        <option value="Angra do Reis">Angra do Reis</option>
-                        <option value="Resende">Resende</option>
-                        <option value="Porto Real">Porto Real</option>
-                    </select>
-
-                </div>
-                <div class="col-lg-5 col-md-12">
-                  <label for="inputTel" class="form-label">Celular</label>
-                  <input type="text" class="form-control" id="inputTel" placeholder="(XX) XXXX-XXXX">
-                </div>
-                <div class="col-lg-12" *ngIf="showCourses">
-                    <label for="inputState" class="form-label">Cursos</label>
-                    <select id="inputState" class="form-select" >
-                      <option  selected>Opções</option>
-                      <option *ngFor="let curso of cursos" value="{{curso}}">{{curso}}</option>
-                    </select>
-                </div>
-                <div class="col-lg-12">
-                    <label for="inputTel" class="form-label">Cupom de Desconto</label>
-                    <input type="text" class="form-control" id="inputTel">
-                </div>
-                <div class="col-lg-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="emailMarketing">
-                    <label class="form-check-label" for="emailMarketing">
-                      <p>Concordo que os dados pessoais fornecidos aqui serão utilizados para envio de conteúdo informativo, analítico e publicitário sobre produtos, serviços e assuntos gerais, nos termos da lei geral de proteção de dados. Os dados aqui preenchidos serão usados como forma de contato conosco e envio de ofertas.</p>
-                    </label>
-                </div>
-                </div>
-                <div class="col-lg-12 pb-4">
-                  <button type="submit" class="btn btn-forms-custom">{{buttonText}}</button>
-                </div>
-            </form>
-        </div>
+  <div class="row ">
+    <div class="col-lg-6 col-md-12 img-style px-4 size-element {{orderImage}} d-none d-lg-block">
+      <img src="{{img}}" alt="{{title}}">
     </div>
+    <div class="col-lg-6 col-md-12 box-shadow p-5 size-element {{orderForms}} forms-element">
+      <h2 class="text-start">{{title}} <span>{{spanTitle}}</span></h2>
+      <p>
+        {{text}}
+      </p>
+      <form class="row g-3" #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <label for="inputNome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="inputNome" name="name" [(ngModel)]="forms.name" required
+            maxlength="30" #name="ngModel">
+          <div *ngIf="name.hasError('required') && name.touched " class="alert alert-danger">
+            <div id="alert-danger">Informe um nome</div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="forms.email" required email
+            #email="ngModel">
+          <div *ngIf="email.hasError('required') && email.touched " class="alert alert-danger">
+            <div id="alert-danger">Informe um email</div>
+          </div>
+          <div *ngIf="email.hasError('email') && email.dirty" class="alert alert-danger">
+            <p>
+              Informe um email valido
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-7 col-md-12">
+          <label for="inputPolo" class="form-label">Polo</label>
+          <select class="form-select" id="inputPolo" name="polo" [(ngModel)]="forms.polo" required>
+            <option value="Vr-Vila">Volta Redonda - Vila</option>
+            <option value="Vr-Retiro">Volta Redonda - Retiro</option>
+            <option value="Angra do Reis">Angra do Reis</option>
+            <option value="Resende">Resende</option>
+            <option value="Porto Real">Porto Real</option>
+          </select>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <label for="inputTel" class="form-label">Celular</label>
+          <input type="text" class="form-control" id="inputTel" name="celphone" [(ngModel)]="forms.celphone"
+            placeholder="(XX) XXXX-XXXX" required #celphone="ngModel">
+          <div *ngIf="celphone.hasError('required') && celphone.touched " class="alert alert-danger">
+            <div id="alert-danger">Informe um celular</div>
+          </div>
+        </div>
+        <div class="col-lg-12" *ngIf="showCourses">
+          <label for="inputCourses" class="form-label">Cursos</label>
+          <select id="inputCourses" class="form-select" name="curso" [(ngModel)]="forms.course" required
+            #curso="ngModel">
+            <option selected>Opções</option>
+            <option *ngFor="let curso of cursos" value="{{curso}}">{{curso}}</option>
+          </select>
+          <div *ngIf="curso.hasError('required') && curso.touched " class="alert alert-danger">
+            <div id="alert-danger">Informe um curso</div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <label for="inputTel" class="form-label">Cupom de Desconto</label>
+          <input type="text" class="form-control" name="cupom" id="inputDesconto" [(ngModel)]="forms.cupom">
+        </div>
+        <div class="col-lg-12">
+          <div class="form-check">
+            <input class="form-check-input" name="emailMarketing" type="checkbox" id="emailMarketing"
+              [(ngModel)]="forms.emailmarketing">
+            <label class="form-check-label" for="emailMarketing">
+              <p>Concordo que os dados pessoais fornecidos aqui serão utilizados para envio de conteúdo informativo,
+                analítico e publicitário sobre produtos, serviços e assuntos gerais, nos termos da lei geral de proteção
+                de dados. Os dados aqui preenchidos serão usados como forma de contato conosco e envio de ofertas.</p>
+            </label>
+          </div>
+        </div>
+        <div class="col-lg-12 pb-4">
+          <button type="submit" class="btn btn-forms-custom" [disabled]="!infoForm.valid">{{buttonText}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 
 <div class="container-fluid" id="forms-container-aside" *ngIf="formsAside">
   <div class="row ">
-      <div class="col-lg-12 col-md-12 box-shadow size-element forms-element">
-          <h2 class="text-start mt-5">{{title}} <span>{{spanTitle}}</span></h2>
-          <p >
-            {{text}}
-          </p>
-          <form class="row g-3" #loginForm="ngForm" (ngSubmit)="criar(loginForm)">
-              <div class="col-lg-12 col-md-12 col-sm-12">
-                  <label for="inputNome" class="form-label">Nome</label>
-                  <input
-                  type="text" 
-                  class="form-control" 
-                  id="inputNome">
-                </div>
-              <div class="col-lg-12 col-md-12 col-sm-12">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input
-                type="email" 
-                class="form-control" 
-                id="inputEmail4">
-              </div>
-              <div class="col-lg-12 col-md-12">
-                  <label for="inputPolo" class="form-label">Polo</label>
-                  <select class="form-select" id="inputPolo">
-                      <option value="Vr-Vila">Volta Redonda - Vila</option>
-                      <option value="Vr-Retiro">Volta Redonda - Retiro</option>
-                      <option value="Angra do Reis">Angra do Reis</option>
-                      <option value="Resende">Resende</option>
-                      <option value="Porto Real">Porto Real</option>
-                  </select>
+    <div class="col-lg-12 col-md-12 box-shadow size-element forms-element">
+      <h2 class="text-start mt-5">{{title}} <span>{{spanTitle}}</span></h2>
+      <p>
+        {{text}}
+      </p>
+      <form class="row g-3" #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <label for="inputNome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="inputNome" name="name" [(ngModel)]="forms.name" required
+            maxlength="30" #name="ngModel">
+          <div *ngIf="name.hasError('required') && name.touched " class="alert alert-danger">
+            <div id="alert-danger">Informe um nome</div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="forms.email" required email
+            #email="ngModel">
+          <div *ngIf="email.hasError('required') && email.touched " class="alert alert-danger">
+            <div id="alert-danger">Informe um email</div>
+          </div>
+          <div *ngIf="email.hasError('email') && email.dirty" class="alert alert-danger">
+            <p>
+              Informe um email valido
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+          <label for="inputPolo" class="form-label">Polo</label>
+          <select class="form-select" id="inputPolo" name="polo" [(ngModel)]="forms.polo" required>
+            <option value="Vr-Vila">Volta Redonda - Vila</option>
+            <option value="Vr-Retiro">Volta Redonda - Retiro</option>
+            <option value="Angra do Reis">Angra do Reis</option>
+            <option value="Resende">Resende</option>
+            <option value="Porto Real">Porto Real</option>
+          </select>
 
-              </div>
-              <div class="col-lg-12 col-md-12">
-                <label for="inputTel" class="form-label">Celular</label>
-                <input type="text" class="form-control" id="inputTel" placeholder="(XX) XXXX-XXXX">
-              </div>
-              <div class="col-lg-12" *ngIf="showCourses">
-                  <label for="inputState" class="form-label">Cursos</label>
-                  <select id="inputState" class="form-select" >
-                    <option  selected>Opções</option>
-                    <option *ngFor="let curso of cursos" value="{{curso}}">{{curso}}</option>
-                  </select>
-              </div>
-              <div class="col-lg-12">
-                  <label for="inputTel" class="form-label">Cupom de Desconto</label>
-                  <input type="text" class="form-control" id="inputTel">
-              </div>
-              <div class="col-lg-12">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="emailMarketing">
-                  <label class="form-check-label" for="emailMarketing">
-                    <p>Concordo que os dados pessoais fornecidos aqui serão utilizados para envio de conteúdo informativo, analítico e publicitário sobre produtos, serviços e assuntos gerais, nos termos da lei geral de proteção de dados. Os dados aqui preenchidos serão usados como forma de contato conosco e envio de ofertas.</p>
-                  </label>
-              </div>
-              </div>
-              <div class="col-lg-12 pb-4">
-                <button type="submit" class="btn btn-forms-custom">{{buttonText}}</button>
-              </div>
-          </form>
-      </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+          <label for="inputTel" class="form-label">Celular</label>
+          <input type="text" class="form-control" id="inputTel" name="celphone" [(ngModel)]="forms.celphone"
+            placeholder="(XX) XXXX-XXXX" required #celphone="ngModel">
+          <div *ngIf="celphone.hasError('required') && celphone.touched " class="alert alert-danger">
+            <div id="alert-danger">Informe um celular</div>
+          </div>
+        </div>
+        <div class="col-lg-12" *ngIf="showCourses">
+          <label for="inputCourses" class="form-label">Cursos</label>
+          <select id="inputCourses" class="form-select" name="curso" [(ngModel)]="forms.course" required
+            #curso="ngModel">
+            <option selected>Opções</option>
+            <option *ngFor="let curso of cursos" value="{{curso}}">{{curso}}</option>
+          </select>
+          <div *ngIf="curso.hasError('required') && curso.touched " class="alert alert-danger">
+            <div id="alert-danger">Informe um curso</div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <label for="inputTel" class="form-label">Cupom de Desconto</label>
+          <input type="text" class="form-control" name="cupom" id="inputDesconto" [(ngModel)]="forms.cupom">
+        </div>
+        <div class="col-lg-12">
+          <div class="form-check">
+            <input class="form-check-input" name="emailMarketing" type="checkbox" id="emailMarketing"
+              [(ngModel)]="forms.emailmarketing">
+            <label class="form-check-label" for="emailMarketing">
+              <p>Concordo que os dados pessoais fornecidos aqui serão utilizados para envio de conteúdo informativo,
+                analítico e publicitário sobre produtos, serviços e assuntos gerais, nos termos da lei geral de proteção
+                de dados. Os dados aqui preenchidos serão usados como forma de contato conosco e envio de ofertas.</p>
+            </label>
+          </div>
+        </div>
+        <div class="col-lg-12 pb-4">
+          <button type="submit" class="btn btn-forms-custom" [disabled]="!infoForm.valid">{{buttonText}}</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

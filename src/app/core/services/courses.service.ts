@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ContentI } from '../shared/models/ContentI';
+import { ContentI } from '../../shared/models/ContentI';
 import { BehaviorSubject, Observable, ReplaySubject, map, tap } from 'rxjs';
-import { CoursesI } from '../shared/models/CoursesI';
+import { CoursesI } from '../../shared/models/CoursesI';
 import { ActivatedRoute, Router } from '@angular/router';
 // Remove the unused import
 // import { Router } from '@angular/router';

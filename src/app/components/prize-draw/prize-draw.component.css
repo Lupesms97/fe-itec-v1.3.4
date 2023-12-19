@@ -1,0 +1,53 @@
+.content-prizedraw {
+  padding: 3rem;
+  text-align: center;
+  margin-top: 10vh;
+  border: solid 3px #2c61a3;
+  border-radius: 2rem;
+}
+.btn-pzd {
+  border-radius: 2rem;
+  color: #ffff;
+  background-color: #2c61a3;
+  padding: 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave na propriedade transform */
+  animation: buttonScale 1s infinite;
+}
+.btn-pzd:hover {
+    animation:none;
+    color: #2c61a3;;
+    background-color: #ffff;
+    border:solid 3px #2c61a3;
+}
+
+.content h4{
+    margin-bottom:5vh
+}
+@keyframes buttonScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-pzd {
+    width: 70%;
+  }
+}
+@media (max-width: 475px) {
+  .btn-pzd {
+    width: 90%;
+  }
+  .content-prizedraw {
+    padding: 1rem;
+
+  }
+}

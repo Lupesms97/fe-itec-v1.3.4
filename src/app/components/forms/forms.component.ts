@@ -1,5 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormsService } from 'src/app/core/services/forms.service';
+import { NotificationService } from 'src/app/core/services/notification.service';
+import { FormsI } from 'src/app/shared/models/FormsI';
+import { TypeToast } from 'src/app/shared/models/TypeToastE';
+
 
 @Component({
   selector: 'app-forms',
@@ -15,9 +20,20 @@ export class FormsComponent {
   @Input()  title: string = '';
   @Input()  text: string = '';
   @Input()  buttonText: string = '';
-  @Input()  buttonLink: string = '';
   @Input()  showCourses: boolean = true;
   @Input()  formsAside: boolean = false;
+
+  forms:FormsI = {
+    name: '',
+    email: '',
+    polo: '',
+    celphone: '',
+    course: '',
+    cupom: '',
+
+  }
+
+  constructor(private formsService:FormsService,private notification:NotificationService) { }
 
   cursos:string[] = [
     'Engenharia Civil',
@@ -53,9 +69,20 @@ export class FormsComponent {
     "Inglês para Viagens"
   ];
 
-  criar(forms:NgForm){
-
+  onSubmit(forms:NgForm){
+      this.formsService.send(forms.value).subscribe(
+      response => {        
+        this.notification.showToast(TypeToast.Success,'Sucesso','Formulário enviado com sucesso');
+        forms.reset();
+      },
+      error => {
+        this.notification.showToast(TypeToast.Error,'Erro','Não foi possivel enviar o formulário no momento');
+      }
+    )};
   }
 
 
-}
+  
+
+
+

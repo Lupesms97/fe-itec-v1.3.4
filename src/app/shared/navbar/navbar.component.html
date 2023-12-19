@@ -4,23 +4,23 @@
   <div class="container-fluid">
     <div class="row p-2">
       <div class="col text-start ps-5 d-flex">
-        <button class="d-flex me-5 btn">
+        <button (click)="navigateTo('https://api.whatsapp.com/send/?phone=552435120102&text=Ol%C3%A1%2C+vim+pelo+site+do+ITEC%21+Gostaria+de+mais+informa%C3%A7%C3%B5es%2C+pode+me+ajudar%3F&type=phone_number&app_absent=0')" class="d-flex me-5 btn">
           <i class="fa-brands fa-whatsapp"></i>
-          <p href="#" class="text-white">&nbsp;  Matricule-se pelo WhatsApp</p>
+          <p  class="text-white">&nbsp;  Matricule-se pelo WhatsApp</p>
         </button>
         <button class="d-flex btn">
           <i class="fa-solid fa-phone"></i>
-          <p href="#" class="text-white">&nbsp;(24) 99908-7528</p>
+          <p href="#" class="text-white">&nbsp;(24) 3512-0102</p>
         </button>
       </div>
       <div class="col text-end ps-5 icons">
-        <button class="btn">
+        <button (click)="navigateTo('https://api.whatsapp.com/send/?phone=552435120102&text=Ol%C3%A1%2C+vim+pelo+site+do+ITEC%21+Gostaria+de+mais+informa%C3%A7%C3%B5es%2C+pode+me+ajudar%3F&type=phone_number&app_absent=0')" class="btn">
           <i class="fa-brands fa-whatsapp"></i>
         </button>
-        <button class="btn">
+        <button (click)="navigateTo('https://www.instagram.com/itec.ensino/')" class="btn">
           <i class="fa-brands fa-instagram"></i>
         </button>
-        <button class="btn">
+        <button (click)="navigateTo('https://www.linkedin.com/company/itecensino/')" class="btn">
           <i class="fa-brands fa-linkedin"></i>
         </button>
       </div>
@@ -43,7 +43,7 @@
           <a class="nav-link" routerLink="/cursos" routerLinkActive="active-page" >CURSOS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SEJA NOSSO ALUNO</a>
+          <a class="nav-link" routerLink="/seja-nosso-aluno" routerLinkActive="active-page">SEJA NOSSO ALUNO</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/noticias" routerLinkActive="active-page">NOTICIAS</a>

@@ -1,0 +1,46 @@
+<!-- 
+<header class="header">
+    <app-navbar [corDoBackground]="corDoBackground"></app-navbar>
+    <div class="bg-img " >
+    </div>
+    <div class="text-center mt-10">
+      <p class="p-text">{{title}}</p>
+    </div>
+</header>
+
+<section class="light mt-5">
+    <div class="container py-2">
+      
+      <ng-container *ngFor="let post of posts | paginate: { itemsPerPage: 5, currentPage: p }; let i = index"{pagin}>
+        <article class="postcard light" [ngClass]="{'blue': title === 'Blog', 'green': title === 'Notícias'}" (click)=" goToPost(post.id)">
+          <a class="postcard__img_link" href="#">
+            <img class="postcard__img" [src]="post.background" alt="Image Title" />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 [ngClass]="{'blue': title === 'Blog', 'green': title === 'Notícias'}">
+              <a href="#">{{post.title}}</a>
+            </h1>
+            <div class="postcard__subtitle small">
+              <p >
+                {{post.id}}
+              </p>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">{{post.description}}</div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{post.tag}}</li>
+              <li class="tag__item"><i class="fas fa-clock mr-2"></i>{{post.id}}</li>
+            </ul>
+          </div>
+        </article>
+      </ng-container>
+      <div class=" d-flex mb-5 justify-content-around me-5">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+    </div>
+  </section>
+<app-bottombar></app-bottombar>
+<footer>
+    <app-footer></app-footer>
+</footer> -->
+<app-map></app-map>
