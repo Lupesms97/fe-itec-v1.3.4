@@ -19,9 +19,11 @@ export class FormsComponent {
   @Input() spanTitle: string = '';
   @Input()  title: string = '';
   @Input()  text: string = '';
+  @Input()  text2: string = '';
   @Input()  buttonText: string = '';
   @Input()  showCourses: boolean = true;
   @Input()  formsAside: boolean = false;
+  @Input() poloOnAside: boolean = true;
 
   forms:FormsI = {
     name: '',

@@ -7,19 +7,19 @@ input{
 }
 #forms-container{
   margin-top:4vh;
-    padding:5rem;
+  padding:5rem;
 }
 #forms-container-aside .size-element{
-  height:130vh;
+  height:140vh;
 }
 .form-check-label p{
   font-size:0.8em!important;
 }
 .size-element{
-  height:120vh
+  height:135vh;
 }
 .size-element img{
-  height:120vh
+  height:135vh;
 }
 .btn-forms-custom{
   color:white;
@@ -41,7 +41,10 @@ label,label{
 .forms-element span{
   color:#3CB371;
 }
-.forms-element p{
+#forms-container .forms-element p{
+  margin:5vh 0 3vh 0;
+}
+#forms-container-aside .text-div{
   margin:5vh 0 3vh 0;
 }
 @media(max-width:768px){

@@ -210,3 +210,9 @@ OUR-COURSES
   left: 0;
   transform: translateX(100%);
 }
+@media(max-width:475px){
+  .custom-btn{
+    width:100%!important;
+    height:15vh;
+  }
+}

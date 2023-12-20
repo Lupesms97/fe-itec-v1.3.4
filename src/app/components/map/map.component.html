@@ -1,12 +1,99 @@
 <!-- google-map-demo.component.html -->
 <!-- google-map-demo.component.html -->
 
-<google-map height="70vh"
-            width="80vw"
-            [center]="center"
-            [zoom]="zoom"
-            >
-  <map-marker *ngFor="let markerPosition of markerPositions"
-              [position]="markerPosition"
-              [options]="markerOptions"></map-marker>
-</google-map>
+<div class="container-fluid container-maps">
+    <div class="row">
+        <div class="col-lg-8 col-md-12 ms-0 py-md-2">
+            <div class="title text-center bg-title-map p-2 text-white">
+                <h1>Onde nós estamos ?</h1>
+            </div>
+            <google-map 
+                height="75vh"
+                width="100%"
+                [center]="center"
+                [zoom]="zoom"
+                (mapClick)="addressMarker($event)"
+                >
+                <map-marker *ngFor="let markerPosition of markerPositions"
+                    [position]="markerPosition"
+                    [options]="markerOptions">
+                </map-marker>
+            </google-map> 
+        </div>
+        <div class="col-lg-4 col-md-12 me-0 bax-shadow">
+            <ng-container [ngSwitch]="adressToShow">
+                <div *ngSwitchCase="'Volta Redonda'">
+                  <div class="col-lg-12 col-md-12 justify-content-end  pe-lg-5 pe-md-0 md-padding-custom">
+                    <app-forms 
+                      title="AGENDE UMA VISITA EM UMA DAS"
+                      spanTitle=" NOSSAS UNIDADES"
+                      buttonText="Enviar"
+                      buttonLink="home"
+                      text=" R. Sessenta, nº 60 - Vila Santa Cecília, Volta Redonda - RJ, 27261-091"
+                      text2="Telefone: (24) 3512-0102"
+                      [poloOnAside]="false"
+                      [formsAside]="true"
+                    ></app-forms>
+                  </div>
+                </div>
+                <div *ngSwitchCase="'Barra Mansa'">
+                    <div class="col-lg-12 col-md-12 justify-content-end  pe-lg-5 pe-md-0 md-padding-custom">
+                      <app-forms 
+                        title="AGENDE UMA VISITA EM UMA DAS"
+                        spanTitle=" NOSSAS UNIDADES"
+                        buttonText="Enviar"
+                        buttonLink="home"
+                        text=" Av. Joaquim Leite, 117 - Centro, Barra Mansa - RJ, 27330-041"
+                        text2="Telefone: (24) 3512-0102"
+                        [poloOnAside]="false"
+                        [formsAside]="true"
+                      ></app-forms>
+                    </div>
+                </div>
+                <div *ngSwitchCase="'Resende'">
+                    <div class="col-lg-12 col-md-12 justify-content-end  pe-lg-5 pe-md-0 md-padding-custom">
+                      <app-forms 
+                        title="AGENDE UMA VISITA EM UMA DAS"
+                        spanTitle=" NOSSAS UNIDADES"
+                        buttonText="Enviar"
+                        buttonLink="home"
+                        text=" R. Francisco Vilaça, 221 - Centro, Resende - RJ, 27511-280"
+                        text2="Telefone: (24) 3512-0102"
+                        [poloOnAside]="false"
+                        [formsAside]="true"
+                      ></app-forms>
+                    </div>
+                </div>
+                <div *ngSwitchCase="'Angra dos Reis'">
+                    <div class="col-lg-12 col-md-12 justify-content-end  pe-lg-5 pe-md-0 md-padding-custom">
+                      <app-forms 
+                        title="AGENDE UMA VISITA EM UMA DAS"
+                        spanTitle=" NOSSAS UNIDADES"
+                        buttonText="Enviar"
+                        buttonLink="home"
+                        text=" R. Cel. Carvalho - Centro, Angra dos Reis - RJ, 23900-310"
+                        text2="Telefone: (24) 99908-7528"
+                        [poloOnAside]="false"
+                        [formsAside]="true"
+                      ></app-forms>
+                    </div>
+                </div>
+                <div *ngSwitchDefault>
+                    <div class="col-lg-12 col-md-12 justify-content-end  pe-lg-5 pe-md-0 md-padding-custom">
+                        <app-forms 
+                          title="AGENDE UMA VISITA EM UMA DAS"
+                          spanTitle=" NOSSAS UNIDADES"
+                          buttonText="Enviar"
+                          buttonLink="home"
+                          text=" R. Sessenta, nº 60 - Vila Santa Cecília, Volta Redonda - RJ, 27261-091"
+                          text2="Telefone: (24) 3512-0102"
+                          [poloOnAside]="false"
+                          [formsAside]="true"
+                        ></app-forms>
+                      </div>
+                </div>
+              </ng-container>
+            
+        </div>
+    </div>
+</div>

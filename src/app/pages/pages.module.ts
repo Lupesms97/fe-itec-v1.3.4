@@ -14,8 +14,8 @@ import { BlogNoticiasPostComponent } from './blog-noticias-post/blog-noticias-po
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OurStudentComponent } from './our-student/our-student.component';
 import { FormsModule } from '@angular/forms';
-import { MapComponent } from '../components/map/map.component';
-import { GoogleMapsModule } from '@angular/google-maps';
+import { LocaisComponent } from './locais/locais.component';
+
 
 
 
@@ -27,7 +27,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     CoursesComponent,
     BlogNoticiasPostComponent,
     OurStudentComponent,
-    
+    LocaisComponent,
   ],
   imports: [
     CommonModule,

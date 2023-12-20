@@ -1,12 +1,8 @@
-<header class="header">
+<div class="header">
     <app-navbar [corDoBackground]="'#2C61A3'"></app-navbar>
-</header>
-<main class="py-4 mb-5">
-    <div>
-        <h1>Angular String Sorteio</h1>
-        <app-prize-draw></app-prize-draw>
-      </div>
-    
+</div>
+<main class="py-4 mb-5 content-class ">
+
     <app-forms
     [title]="'Seja nosso aluno e '"
     [spanTitle]="'tenha acesso a um mundo de oportunidades'"
@@ -16,6 +12,12 @@
     
     
     ></app-forms>
+
+    <div>
+        
+        <app-prize-draw></app-prize-draw>
+    </div>
+    
 </main>
 
 

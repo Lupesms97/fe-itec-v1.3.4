@@ -3,7 +3,7 @@
     <div class="col-lg-6 col-md-12 img-style px-4 size-element {{orderImage}} d-none d-lg-block">
       <img src="{{img}}" alt="{{title}}">
     </div>
-    <div class="col-lg-6 col-md-12 box-shadow p-5 size-element {{orderForms}} forms-element">
+    <div class="col-lg-6 col-md-12 box-shadow p-4 size-element {{orderForms}} forms-element">
       <h2 class="text-start">{{title}} <span>{{spanTitle}}</span></h2>
       <p>
         {{text}}
@@ -87,9 +87,14 @@
   <div class="row ">
     <div class="col-lg-12 col-md-12 box-shadow size-element forms-element">
       <h2 class="text-start mt-5">{{title}} <span>{{spanTitle}}</span></h2>
-      <p>
-        {{text}}
-      </p>
+      <div class="text-div">
+        <p class="pb-1">
+          {{text}}
+        </p>
+        <p>
+          {{text2}}
+        </p>
+      </div>
       <form class="row g-3" #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)">
         <div class="col-lg-12 col-md-12 col-sm-12">
           <label for="inputNome" class="form-label">Nome</label>
@@ -112,7 +117,7 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-12 col-md-12">
+        <div class="col-lg-12 col-md-12" *ngIf="poloOnAside">
           <label for="inputPolo" class="form-label">Polo</label>
           <select class="form-select" id="inputPolo" name="polo" [(ngModel)]="forms.polo" required>
             <option value="Vr-Vila">Volta Redonda - Vila</option>

@@ -1,4 +1,4 @@
-<!-- 
+
 <header class="header">
     <app-navbar [corDoBackground]="corDoBackground"></app-navbar>
     <div class="bg-img " >
@@ -13,12 +13,12 @@
       
       <ng-container *ngFor="let post of posts | paginate: { itemsPerPage: 5, currentPage: p }; let i = index"{pagin}>
         <article class="postcard light" [ngClass]="{'blue': title === 'Blog', 'green': title === 'Notícias'}" (click)=" goToPost(post.id)">
-          <a class="postcard__img_link" href="#">
+          <a class="postcard__img_link">
             <img class="postcard__img" [src]="post.background" alt="Image Title" />
           </a>
           <div class="postcard__text t-dark">
             <h1 [ngClass]="{'blue': title === 'Blog', 'green': title === 'Notícias'}">
-              <a href="#">{{post.title}}</a>
+              <a>{{post.title}}</a>
             </h1>
             <div class="postcard__subtitle small">
               <p >
@@ -42,5 +42,4 @@
 <app-bottombar></app-bottombar>
 <footer>
     <app-footer></app-footer>
-</footer> -->
-<app-map></app-map>
+</footer> 

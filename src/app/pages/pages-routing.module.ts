@@ -7,6 +7,7 @@ import { DetailsCoursesComponent } from './details-courses/details-courses.compo
 import { CoursesComponent } from './courses/courses.component';
 import { BlogNoticiasPostComponent } from './blog-noticias-post/blog-noticias-post.component';
 import { OurStudentComponent } from './our-student/our-student.component';
+import { LocaisComponent } from './locais/locais.component';
 
 const routes: Routes = [
   { path:'', redirectTo: '', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'blog', component: BlogNoticiasPostComponent},
   {path: 'noticias', component: BlogNoticiasPostComponent},
   {path: 'posts', component: BlogNoticiasPostComponent},
-  {path:'seja-nosso-aluno', component: OurStudentComponent}
+  {path:'seja-nosso-aluno', component: OurStudentComponent},
+  {path:'locais', component: LocaisComponent},
 ];
 
 @NgModule({
