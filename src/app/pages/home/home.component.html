@@ -62,7 +62,7 @@
             Oferecemos mais de 30 cursos e já são mais de 100 mil alunos matriculados.</p>
         </div>
         <div class="row justify-content-start my-3 ms-1">
-          <button class="col-md-12 btn custom-btn-home">
+          <button class="col-md-12 btn custom-btn-home" >
             <a routerLink="/seja-nosso-aluno">MATRICULE-SE</a>
           </button>
         </div>
@@ -96,8 +96,11 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="email">
             <label class="ms-lg-4 ms-md-0" for="floatingInput">Seu melhor email</label>
           </div>
-          <button class="col-lg-4 col-md-12 btn custom-btn-home" (click)="onSubmit()">
-            CADASTRAR
+          <button class="col-lg-4 col-md-12 btn custom-btn-home" [class.loading]="processingOrder" (click)="processOrder();onSubmit()">
+            <p *ngIf="!processingOrder">GARANTIR DESCONTO</p>
+            <p *ngIf="processingOrder">
+              <i class="fa fa-spinner fa-spin"></i> Processando envio
+            </p>
           </button>
         </div>
       </div>      
@@ -119,8 +122,11 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label class="ms-lg-4 ms-md-0" for="floatingInput">Seu melhor email</label>
           </div>
-          <button class="col-lg-4 col-md-12 btn custom-btn-home" >
-            <a >GARANTIR DESCONTO</a>
+          <button class="col-lg-4 col-md-12 btn custom-btn-home" [class.loading]="processingOrder" (click)="processOrder();onSubmit()">
+            <p *ngIf="!processingOrder">GARANTIR DESCONTO</p>
+            <p *ngIf="processingOrder">
+              <i class="fa fa-spinner fa-spin"></i> Processando envio
+            </p>
           </button>
         </div>
       </div>

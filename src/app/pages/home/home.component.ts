@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   email: string = '';
   news: ContentI[] = [];
   midia: ContentI[] = [];
+  public processingOrder: boolean = false;
 
   constructor(
     private router: Router,
@@ -27,6 +28,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAndSetValues();
+
+  }
+
+
+  // ... outros métodos e lógica aqui
+
+  public processOrder() {
+    this.processingOrder = !this.processingOrder;
 
   }
 
@@ -52,12 +61,16 @@ export class HomeComponent implements OnInit {
   onSubmit() {
     this.formsService.sendEmail(this.email).subscribe(
     (res) => {
+      this.processOrder();
       this.notification.showToast(TypeToast.Success,'Sucesso', 'E-mail cadastrado com sucesso!');
+      
     },
     (err) => {
+      this.processOrder();
       this.notification.showToast(TypeToast.Error,'Error','Não Foi possivel cadastra seu email no momento!' );
     }
     );
     console.log('E-mail capturado:', this.email);
   }
+  
 }

@@ -24,6 +24,7 @@ export class FormsComponent {
   @Input()  showCourses: boolean = true;
   @Input()  formsAside: boolean = false;
   @Input() poloOnAside: boolean = true;
+  public processingOrder: boolean = false;
 
   forms:FormsI = {
     name: '',
@@ -71,13 +72,19 @@ export class FormsComponent {
     "Inglês para Viagens"
   ];
 
+  public processOrder() {
+    this.processingOrder = !this.processingOrder;
+
+  }
   onSubmit(forms:NgForm){
       this.formsService.send(forms.value).subscribe(
       response => {        
+        this.processOrder();
         this.notification.showToast(TypeToast.Success,'Sucesso','Formulário enviado com sucesso');
         forms.reset();
       },
       error => {
+        this.processOrder();
         this.notification.showToast(TypeToast.Error,'Erro','Não foi possivel enviar o formulário no momento');
       }
     )};
