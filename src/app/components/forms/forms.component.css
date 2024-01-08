@@ -28,12 +28,22 @@ input{
   height:7vh;
   border-radius:1.5rem;
 }
+.btn-forms-custom p{
+  margin:0!important;
+  color:white;
+}
+.btn-forms-custom i{
+  font-size:1.4rem
+}
 .btn-forms-custom:hover{
   background-color:#3CB371;
   transition: 1.5s
 }
-label,label{
+label{
   font-size:0.8rem;
+}
+label p{
+  margin:0!important
 }
 .forms-element h2{
   font-size:1.7rem

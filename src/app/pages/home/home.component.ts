@@ -17,7 +17,9 @@ export class HomeComponent implements OnInit {
   email: string = '';
   news: ContentI[] = [];
   midia: ContentI[] = [];
-  public processingOrder: boolean = false;
+  public processingOrderDescount: boolean = false;
+  public processingOrderNewsLetter: boolean = false;
+
 
   constructor(
     private router: Router,
@@ -34,9 +36,17 @@ export class HomeComponent implements OnInit {
 
   // ... outros métodos e lógica aqui
 
-  public processOrder() {
-    this.processingOrder = !this.processingOrder;
+  public processOrder(button:string) {
+    if (button === 'desconto') {
+      this.processingOrderDescount = true;
+    } else {
+      this.processingOrderNewsLetter = true;
+    }
+  }
 
+  public unprocessOrder() {
+      this.processingOrderDescount = false;
+      this.processingOrderNewsLetter = false;
   }
 
   getAndSetValues() {
@@ -61,13 +71,13 @@ export class HomeComponent implements OnInit {
   onSubmit() {
     this.formsService.sendEmail(this.email).subscribe(
     (res) => {
-      this.processOrder();
+      this.unprocessOrder();
       this.notification.showToast(TypeToast.Success,'Sucesso', 'E-mail cadastrado com sucesso!');
       
     },
     (err) => {
-      this.processOrder();
-      this.notification.showToast(TypeToast.Error,'Error','Não Foi possivel cadastra seu email no momento!' );
+      this.unprocessOrder();
+      this.notification.showToast(TypeToast.Error,'Error','Não foi possivel cadastrar seu email no momento!' );
     }
     );
     console.log('E-mail capturado:', this.email);
