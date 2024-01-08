@@ -1,9 +1,12 @@
-export interface FormsI{
+export interface IFormsData{
+    contacted: boolean;
+    cratedAt: String;
     name: string;
     email: string;
-    polo?: string;
     phone: string;
+    polo?: string;
     course?: string;
     cupom?: string;
     emailmarketing?: boolean;
+
 }

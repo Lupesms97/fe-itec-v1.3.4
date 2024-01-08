@@ -30,7 +30,7 @@ export class FormsComponent {
     name: '',
     email: '',
     polo: '',
-    celphone: '',
+    phone: '',
     course: '',
     cupom: '',
 
