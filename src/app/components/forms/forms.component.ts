@@ -76,19 +76,21 @@ export class FormsComponent {
     this.processingForms = true;
 
   }
-  unprocessForms(){
-    this.processingForms = false;
+  public unprocessForms(type:TypeToast, titleInfo:string, messageInfo:string) {
+    setTimeout(() => {
+      this.processingForms = false;
+      this.notification.showToast(type,titleInfo, messageInfo);
+    }, 2000);
   }
+
   onSubmit(forms:NgForm){
       this.formsService.send(forms.value).subscribe(
       response => {        
-        this.unprocessForms();
-        this.notification.showToast(TypeToast.Success,'Sucesso','Formulário enviado com sucesso');
+        this.unprocessForms(TypeToast.Success,'Sucesso','Formulário enviado com sucesso');
         forms.reset();
       },
       error => {
-        this.unprocessForms();
-        this.notification.showToast(TypeToast.Error,'Erro','Não foi possivel enviar o formulário no momento');
+        this.unprocessForms(TypeToast.Error,'Erro','Não foi possivel enviar o formulário no momento');
       }
     )};
   }

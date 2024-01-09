@@ -14,7 +14,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CommonModule,
     RouterModule.forChild(
       [
-        {path:'', component: HomeComponent},
+        {path:'', redirectTo: 'home', pathMatch: 'full'},
         {path:'home', component: HomeComponent}
       ]
     ),

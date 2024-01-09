@@ -94,7 +94,7 @@
         <div class="row text-center">
           <div class="col-lg-8 col-md-12 form-floating mb-3 input-field">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="email">
-            <label class="ms-lg-4 ms-md-0" for="floatingInput">Seu melhor email</label>
+            <label class="ms-4 ps-2" for="floatingInput">Seu melhor email</label>
           </div>
           <button class="col-lg-4 col-md-12 btn custom-btn-home" [class.loading]="processingOrderNewsLetter" (click)="processOrder('');onSubmit()">
             <p *ngIf="!processingOrderNewsLetter">
@@ -124,7 +124,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-12 form-floating mb-3 input-field">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label class="ms-lg-4 ms-md-0" for="floatingInput">Seu melhor email</label>
+            <label class="ms-4" for="floatingInput">Seu melhor email</label>
           </div>
           <button class="col-lg-4 col-md-12 btn custom-btn-home" [class.loading]="processingOrderDescount" (click)="processOrder('desconto');onSubmit()">
             <p *ngIf="!processingOrderDescount">GARANTIR DESCONTO</p>

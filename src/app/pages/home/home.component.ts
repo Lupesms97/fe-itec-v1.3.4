@@ -44,9 +44,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  public unprocessOrder() {
+  public unprocessOrder(type:TypeToast, titleInfo:string, messageInfo:string) {
+    setTimeout(() => {
       this.processingOrderDescount = false;
       this.processingOrderNewsLetter = false;
+      this.notification.showToast(type,titleInfo, messageInfo);
+    }, 2000);
   }
 
   getAndSetValues() {
@@ -71,13 +74,11 @@ export class HomeComponent implements OnInit {
   onSubmit() {
     this.formsService.sendEmail(this.email).subscribe(
     (res) => {
-      this.unprocessOrder();
-      this.notification.showToast(TypeToast.Success,'Sucesso', 'E-mail cadastrado com sucesso!');
+      this.unprocessOrder(TypeToast.Success,'Sucesso', 'E-mail cadastrado com sucesso!');
       
     },
     (err) => {
-      this.unprocessOrder();
-      this.notification.showToast(TypeToast.Error,'Error','Não foi possivel cadastrar seu email no momento!' );
+      this.unprocessOrder(TypeToast.Error,'Error','Não foi possivel cadastrar seu email no momento!');
     }
     );
     console.log('E-mail capturado:', this.email);

@@ -1,5 +1,5 @@
 .container-maps{
-    margin:10vh 0 20vh 0;
+    margin:20vh 0 20vh 0;
 }
 .bg-title-map{
     border-top-right-radius:2rem;
@@ -20,5 +20,9 @@
 @media(max-width:768px){
     .md-padding-custom{
         margin-top:10vh
+    }
+    .container-maps{
+        margin:0vh 0 20vh 0;
+        padding: 10vh 0 10vh 0;
     }
 }

@@ -23,6 +23,7 @@
     min-height: 10vh;
     height:auto;
     padding: 2.5vh;
+    
 }
 p{
     font-size:1.3rem
@@ -65,4 +66,9 @@ p{
 }
 .itens h4{
     height:13vh;
+}
+@media(max-width: 768px){
+    .title-style { 
+        width: 100%;
+    }
 }
