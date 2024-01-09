@@ -90,6 +90,10 @@
     rgba(128, 159, 64, 1) 83%
   ); /* Cor rosa de sua escolha */
 }
+
+.container-bottombar{
+  
+}
 @media(max-width:768px){
   .bottom-bar-md p,i{
     color:white;

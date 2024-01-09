@@ -1,6 +1,10 @@
 /*** Testimonial ***/
 section{
-    background-color:pink
+    background: rgb(0,12,247);
+    background: -moz-linear-gradient(90deg, rgba(0,12,247,1) 17%, rgba(91,101,231,1) 62%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(0,12,247,1) 17%, rgba(91,101,231,1) 62%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg, rgba(0,12,247,1) 17%, rgba(91,101,231,1) 62%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000cf7",endColorstr="#ffffff",GradientType=1);
 }
 .carousel-inner .carousel-item{
     width:70%!important;
@@ -32,7 +36,11 @@ section{
         margin-top: 20px!important; /* Ajustado o espaçamento superior em telas menores */
     }
     section {
-        background-color: pink;
+        background: rgb(0,12,247);
+        background: -moz-linear-gradient(90deg, rgba(0,12,247,1) 17%, rgba(91,101,231,1) 62%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(0,12,247,1) 17%, rgba(91,101,231,1) 62%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(90deg, rgba(0,12,247,1) 17%, rgba(91,101,231,1) 62%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000cf7",endColorstr="#ffffff",GradientType=1);
     }
     
     .carousel-inner .carousel-item {

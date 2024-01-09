@@ -15,6 +15,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { OurStudentComponent } from './our-student/our-student.component';
 import { FormsModule } from '@angular/forms';
 import { LocaisComponent } from './locais/locais.component';
+import { InstutcionalComponent } from './instutcional/instutcional.component';
+import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
 
 
 
@@ -28,6 +30,8 @@ import { LocaisComponent } from './locais/locais.component';
     BlogNoticiasPostComponent,
     OurStudentComponent,
     LocaisComponent,
+    InstutcionalComponent,
+    TrabalheConoscoComponent,
   ],
   imports: [
     CommonModule,

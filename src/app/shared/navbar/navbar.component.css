@@ -1,5 +1,6 @@
 .navbar-brand img{
   height:10vh!important;
+  width:auto
 }
 .navbar-brand .josi{
   background: rgb(102,108,218);
@@ -30,12 +31,18 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endCo
   border-radius:2rem;
   background-color:#9ff29b
 }
+.btn:hover a{
+  color:#9ff29b!important
+}
 .active-page{
   padding: .5rem 1rem!important;
   border-radius:2rem;
   background-color: #3CB371;
 }
-
+.btn a {
+  font-size:0.8rem;
+  color:white
+}
 .sub-nav p{
   font-size:0.8rem
 }
