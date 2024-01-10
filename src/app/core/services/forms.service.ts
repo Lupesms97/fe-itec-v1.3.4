@@ -24,7 +24,6 @@ export class FormsService {
     this.prospects$ = this.http.get<FormsI[]>(`${this.API_URL}/records`);
   }
 
-
   send(forms:FormsI){
     return this.http.post(`${this.API_URL}/recordProspect`,forms);
   }

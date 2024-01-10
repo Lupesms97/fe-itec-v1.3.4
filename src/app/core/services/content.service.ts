@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { ContentI } from '../../shared/models/ContentI';
 import { BehaviorSubject, Observable, ReplaySubject, map, tap } from 'rxjs';
 import { Router } from '@angular/router';
-// Remove the unused import
-// import { Router } from '@angular/router';
-// import { TypeNews } from '../shared/models/TypeNews';
+
 
 @Injectable({
   providedIn: 'root'

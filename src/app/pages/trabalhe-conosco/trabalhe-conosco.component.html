@@ -2,7 +2,15 @@
 corDoBackground="#464749"
 
 ></app-navbar>
-<div class="container container-forms mt-5 pt-5 mb-5 pb-5">
+<div class="container container-forms">
+    <div class="container">
+      <h3 class="mb-3">
+        Faça Parte da Nossa Equipe!
+      </h3>
+      <h6 class="mb-5">
+        Você é apaixonado por desafios, procura um ambiente de trabalho dinâmico e está pronto para crescer profissionalmente?  <span>Então, estamos procurando por você!</span> Envie-nos o seu currículo agora e faça parte da nossa equipe de talentos excepcionais.
+      </h6>
+    </div>
     <ng-container>
         <form class="row g-3" #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)">
             <div class="col-lg-6 col-md-12 col-sm-12">
@@ -47,36 +55,43 @@ corDoBackground="#464749"
                 <div id="alert-danger">Informe um celular</div>
               </div>
             </div>
-            <div class="col-lg-12" *ngIf="showCourses">
-              <label for="inputCourses" class="form-label">Cursos</label>
-              <select id="inputCourses" class="form-select" name="curso" [(ngModel)]="forms.course" required
-                #curso="ngModel">
+            <div class="col-lg-6" >
+              <label for="inputSetor" class="form-label">Setor</label>
+              <select id="inputSetor" class="form-select" name="setor" [(ngModel)]="forms.setor" required
+                #setor="ngModel">
                 <option selected>Opções</option>
-                <option *ngFor="let curso of cursos" value="{{curso}}">{{curso}}</option>
+                <option *ngFor="let setor of setores" value="{{setor}}">{{setor}}</option>
               </select>
-              <div *ngIf="curso.hasError('required') && curso.touched " class="alert alert-danger">
-                <div id="alert-danger">Informe um curso</div>
+              <div *ngIf="setor.hasError('required') && setor.touched " class="alert alert-danger">
+                <div id="alert-danger">Informe um setor</div>
               </div>
             </div>
-            <div class="col-lg-12">
-              <label for="inputTel" class="form-label">Cupom de Desconto</label>
-              <input type="text" class="form-control" name="cupom" id="inputDesconto" [(ngModel)]="forms.cupom">
+            <div class="col-lg-6">
+              <label for="curriculoFile" class="form-label">Anexar Curriculo</label>
+              <input type="file" class="form-control" name="curriculoFile" id="curriculoFile"
+               (change)="onFileChange($event)" [(ngModel)]="forms.curriculoFile" required>
+
+              <div *ngIf="!fileValid" class="alert alert-danger">
+                <div id="alert-danger">{{messageErrorFile}}</div>
+              </div>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-12 pt-5">
               <div class="form-check">
-                <input class="form-check-input" name="emailMarketing" type="checkbox" id="emailMarketing"
-                  [(ngModel)]="forms.emailmarketing">
-                <label class="form-check-label" for="emailMarketing">
-                  <p>Concordo que os dados pessoais fornecidos aqui serão utilizados para envio de conteúdo informativo,
-                    analítico e publicitário sobre produtos, serviços e assuntos gerais, nos termos da lei geral de proteção
-                    de dados. Os dados aqui preenchidos serão usados como forma de contato conosco e envio de ofertas.</p>
+                <input class="form-check-input" name="lgpd" type="checkbox" id="lgpd"
+                  [(ngModel)]="forms.lgpd">
+                <label class="form-check-label" for="lgpd">
+                  <p>Ao enviar meu currículo, concordo com a coleta e processamento dos dados pessoais pelo Grupo Sels exclusivamente para fins de avaliação no processo seletivo. Compreendo que meus dados serão tratados de acordo com a política de privacidade da empresa e poderão ser retidos para consideração em futuras oportunidades de emprego.
+
+                    Esta autorização é revogável mediante solicitação por escrito.
+                    
+                    Declaro que li, compreendi e concordo com os termos acima ao marcar esta caixa.</p>
                 </label>
               </div>
             </div>
             <div class="col-lg-12 pb-4">
               <button type="submit" class="btn btn-forms-custom" (click)="processForms()" [disabled]="!infoForm.valid">
                 <p *ngIf="!processingForms">
-                  {{buttonText}}
+                  Enviar
                 </p>
                 <p *ngIf="processingForms">
                   <i class="fa fa-spinner fa-spin"></i>&nbsp; Enviando

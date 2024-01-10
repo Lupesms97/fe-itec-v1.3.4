@@ -1,8 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { CurriculoService } from 'src/app/core/services/currciulo.service';
 import { FormsService } from 'src/app/core/services/forms.service';
 import { NotificationService } from 'src/app/core/services/notification.service';
 import { FormsI } from 'src/app/shared/models/FormsI';
+import { FormsTrabalheConoscoI } from 'src/app/shared/models/FormsTrabalheConoscoI';
 import { TypeToast } from 'src/app/shared/models/TypeToastE';
 
 @Component({
@@ -10,64 +12,37 @@ import { TypeToast } from 'src/app/shared/models/TypeToastE';
   templateUrl: './trabalhe-conosco.component.html',
   styleUrls: ['./trabalhe-conosco.component.css']
 })
-export class TrabalheConoscoComponent {
-  @Input() img: string ='';
-  @Input() orderForms: string = '';
-  @Input() orderImage: string = '';
-  @Input() spanTitle: string = '';
-  @Input()  title: string = '';
-  @Input()  text: string = '';
-  @Input()  text2: string = '';
-  @Input()  buttonText: string = '';
-  @Input()  showCourses: boolean = true;
-  @Input()  formsAside: boolean = false;
-  @Input() poloOnAside: boolean = true;
-  public processingForms: boolean = false;
+export class TrabalheConoscoComponent implements OnInit {
 
-  forms:FormsI = {
+  public processingForms: boolean = false;
+  fileValid:boolean = true;
+  messageErrorFile:string = '';
+
+  forms: FormsTrabalheConoscoI = {
     name: '',
     email: '',
     polo: '',
     phone: '',
-    course: '',
-    cupom: '',
-
+    setor: '',
+    curriculoFile: null,
+    lgpd: false
   }
 
-  constructor(private formsService:FormsService,private notification:NotificationService) { }
+  constructor(private curriculoService:CurriculoService,private notification:NotificationService) { }
 
-  cursos:string[] = [
-    'Engenharia Civil',
-    'Administração de Empresas',
-    'Psicologia',
-    'Medicina',
-    'Ciência da Computação',
-    'Direito',
-    'Ciências Contábeis',
-    'Publicidade e Propaganda',
-    'Engenharia Elétrica',
-    'Eletricista Residencial',
-    'Assistente Administrativo',
-    'Design de Moda',
-    'Técnico em Enfermagem',
-    'Culinária Internacional',
-    'Web Design',
-    'Marketing de Moda',
-    'Desenvolvimento Web',
-    'Marketing Digital',
-    'Design Gráfico',
-    'Inglês Avançado',
-    'Programação em Python',
-    'Gestão de Recursos Humanos',
-    'Machine Learning',
-    'Arquitetura de Software',
-    "Arte Abstrata",
-    "Desenvolvimento Web para Iniciantes",
-    "Fotografia Digital",
-    "Mindfulness e Bem-Estar",
-    "Marketing Digital",
-    "Empreendedorismo Social",
-    "Inglês para Viagens"
+
+  ngOnInit(): void {
+    window.scroll(0,0);
+  }
+
+  setores:string[] = [
+    'Administrativo',
+    'Financeiro',
+    'Comercial',
+    'Marketing',
+    'Tecnologia',
+    'Recursos Humanos',
+    'Limpeza'
   ];
 
   processForms() {
@@ -82,15 +57,54 @@ export class TrabalheConoscoComponent {
   }
 
   onSubmit(forms:NgForm){
-      this.formsService.send(forms.value).subscribe(
+      this.curriculoService.send(forms.value).subscribe(
       response => {        
-        this.unprocessForms(TypeToast.Success,'Sucesso','Formulário enviado com sucesso');
+        this.unprocessForms(TypeToast.Success,'Success','Curriculo enviado com sucesso');
         forms.reset();
       },
       error => {
-        this.unprocessForms(TypeToast.Error,'Erro','Não foi possivel enviar o formulário no momento');
+        this.unprocessForms(TypeToast.Error,'Error','Não foi possivel enviar o seu curriculo no momento, tente novamente mais tarde');
       }
   )};
+
+
+  verificarTipoArquivo(curriculoFile: File | null): boolean {
+    if (!curriculoFile) {
+      this.fileValid = true;
+      return true;
+    }
+  
+    const tiposPermitidos = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+  
+    if (tiposPermitidos.includes(curriculoFile.type)) {
+      const tamanhoLimite = 1 * 1024 * 1024; // Limite de 1 MB, ajuste conforme necessário
+      if (curriculoFile.size <= tamanhoLimite) {
+        this.fileValid = true;
+        return true;
+      } else {
+        this.fileValid = false;
+        this.messageErrorFile = 'O arquivo deve ter no máximo 1 MB.';
+        return false;
+      }
+    } else {
+      this.fileValid = false;
+      // Exemplo: Mensagem de erro específica para o tipo de arquivo
+      this.messageErrorFile = 'O arquivo deve ser um PDF ou um documento do Word.';
+      return false;
+    }
+  }
+
+  onFileChange(event: any) {
+  const fileList: FileList = event.target.files;
+  if (fileList.length > 0) {
+    const curriculoFile: File = fileList[0];
+    if (!this.verificarTipoArquivo(curriculoFile)) {
+      // Limpar o input de arquivo se o tipo não for válido
+      event.target.value = null;
+    }
+  }
+}
+   
 }
 
 
