@@ -12,23 +12,23 @@ import { ActivatedRoute, Router } from '@angular/router';
   providedIn: 'root'
 })
 export class CoursesService {
-  private readonly API_URL_R = 'assets/cursos.json';
+  private readonly API_URL_R = 'assets/itecpro.json';
   
   private cursos$: BehaviorSubject<CoursesI[]> = new BehaviorSubject<CoursesI[]>([]);
 
-  public cursosCursosLivres$: Observable<CoursesI[]> = this.cursos$.pipe(
-    map(posts => posts.filter(post => post.tag === 'Cursos Livres')),
+  public cursosEspecializacao$: Observable<CoursesI[]> = this.cursos$.pipe(
+    map(posts => posts.filter(post => post.tag === 'Especialização')),
 
   );
-  public cursosESuperior$: Observable<CoursesI[]> = this.cursos$.pipe(
-    map(posts => posts.filter(post => post.tag === 'Ensino Superior'))
+  public cursosTecnico$: Observable<CoursesI[]> = this.cursos$.pipe(
+    map(posts => posts.filter(post => post.tag === 'Técnico'))
   );
-  public cursosEad$: Observable<CoursesI[]> = this.cursos$.pipe(
-    map(posts => posts.filter(post => post.tag === 'EAD'))
+  public cursosEscola$: Observable<CoursesI[]> = this.cursos$.pipe(
+    map(posts => posts.filter(post => post.tag === 'Escola'))
 
   );
   public cursosProfissonalizante$: Observable<CoursesI[]> = this.cursos$.pipe(
-    map(posts => posts.filter(post => post.tag === 'Profissionalizantes'))
+    map(posts => posts.filter(post => post.tag === 'ITEC Pro'))
 
   );
 

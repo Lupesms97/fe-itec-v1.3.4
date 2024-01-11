@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -8,7 +9,9 @@ import { Component } from '@angular/core';
 export class CoursesComponent {
   corDoBackground:string = "#2c61a3";
 
-  constructor() { 
+  constructor(){ 
     window.scrollTo(0, 0);
   }
+
+  
 }

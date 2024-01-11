@@ -184,7 +184,7 @@ OUR-COURSES
   border: solid 2px #1aad2b;
 }
 .e-prof-class:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: #f75ed4;
   border: solid 2px #af28bd;
 }
@@ -192,6 +192,12 @@ OUR-COURSES
   color: #fff;
   background-color: #0275e8;
   border: solid 2px #49739e;
+}
+.custom-btn a{
+  color:grey
+}
+.custom-btn a:hover{
+  color:white!important
 }
 .blue1-custom{
     background-color:!important;

@@ -2,11 +2,13 @@ import { ModuleI } from "./ModulesI";
 
 export interface CoursesI {
     id: string;
-    tag: string;
     title: string;
     about: string;
-    market: string;
-    hours: string;
-    avgSalary: number;
-    modules: ModuleI[]
+    areaOfExpertise: string;
+    content: string[]
+    hours: number;
+    duration:string
+    avgSalary?: number;
+    tag: string;
+
   }

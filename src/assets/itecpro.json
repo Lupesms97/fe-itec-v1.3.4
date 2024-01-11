@@ -1,0 +1,531 @@
+[
+  {
+    "id": "c4d979da-7da1-4a5d-b71f-6cdsfsdfsdf2",
+    "title": "Assistente Administrativo",
+    "about": "Atuação nos processos administrativos de empresas urbanas e rurais, executando atividades de apoio nas áreas de recursos humanos, finanças, produção, logística e vendas. Observando procedimentos operacionais e a legislação.",
+    "areaOfExpertise": "Gestão de processos administrativos, controle de qualidade, informações, equipes e comunicações internas e externas. Exercer atividades de liderança, promovendo o desenvolvimento das equipes e facilitando o alcance dos objetivos. Prestar assessoria e consultoria estratégica, participando ativamente das decisões que impactam a rotina da empresa. Manter um atendimento de excelência para clientes e fornecedores. Além disso, será responsável pela organização e manutenção de arquivos e redação de documentos precisos e eficientes.",
+    "content": [
+      "CRIATIVIDADE NO TRABALHO",
+      "DINAMISMO E COMPROMISSO COM O SUCESSO",
+      "EMPREENDEDOR DE SUCESSO",
+      "EXCEL ESSENCIAL",
+      "EXCEL INTERMEDIÁRIO",
+      "ROTINAS ADMINISTRATIVAS",
+      "GESTÃO DE PESSOAS"
+    ],
+    "hours": 48,
+    "duration": "6 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":1850
+  },
+  {
+    "id": "025f35d5-c0fd-4824-99c9-18b6dskfjdhf",
+    "title": "Assistente de Cobrança",
+    "about": "Capacitação de profissionais para lidar com inadimplência, desenvolvendo habilidades de comunicação, negociação e gerenciamento de conflitos. O objetivo é formar especialistas éticos, conscientes da legislação e capazes de buscar soluções para a recuperação de dívidas de forma responsável.",
+    "areaOfExpertise": "Atuar na área de departamentos financeiros, setores de crédito e cobrança, ou empresas especializadas em recuperação de crédito.",
+    "content": [
+      "DEZ MANEIRAS DE SE VENDER UMA IDEIA",
+      "GESTÃO DE CONFLITOS",
+      "ATENDIMENTO AO CLIENTE",
+      "OPERADOR DE CAIXA",
+      "CRÉDITO E COBRANÇA",
+      "TELEMARKETING"
+    ],
+    "hours": 53,
+    "duration": "7 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":1700
+  },
+  {
+    "id": "1e5bf772-6f78-4a5e-b3ec-23ddddd",
+    "title": "Assistente de Contabilidade",
+    "about": "Preparar o aluno para organizar documentos e efetuar sua classificação contábil, gerar lançamentos contábeis, auxiliar na apuração dos impostos, conciliar contas e preenchimento de guias de recolhimento e de solicitações junto a órgãos do governo, emitir notas de venda e de transferência, entre outras; realizar o arquivo de documentos.",
+    "areaOfExpertise": "Organizar documentos e efetuar sua classificação contábil, gerar lançamentos contábeis, auxiliar na apuração de impostos, conciliar contas e preenchimento de guias de recolhimento e solicitações junto a órgãos do governo, emitir notas de venda e de transferência, entre outras. Trabalhar em pequenas ou médias empresas ou escritórios de contabilidade, sempre sob supervisão de um contador.",
+    "content": [
+      "EXCEL ESSENCIAL",
+      "MATEMÁTICA FINANCEIRA NA HP 12",
+      "ASSISTENTE CONTÁBIL",
+      "DEPARTAMENTO PESSOAL"
+    ],
+    "hours": 69,
+    "duration": "9 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":2370
+  },
+  {
+    
+    "id": "7fba69b9-6ed7-4a18-8811-551e4",
+    "title": "Atendente de Farmácia",
+    "about": "Preparar o aluno para atuar em hospitais ou em farmácias, no comércio, no controle e dispersão de medicamentos e correlatos. Interpreta receitas médicas, esclarece pacientes no que se refere ao uso correto dos medicamentos. Trabalha sob supervisão do profissional farmacêutico.",
+    "areaOfExpertise": "Atuar na área farmacêutica, na comercialização, dispersão de medicamentos e correlatos, bem como na gestão de estoque farmacêutico.",
+    "content": [
+      "OPERADOR DE CAIXA",
+      "AGENTE DE VENDAS",
+      "ATENDENTE DE FARMÁCIA 1.0"
+    ],
+    "hours": 41,
+    "duration": "6 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":1900
+  },
+  {
+    "id": "361f24ea-af80-470a-a4b6-6b7ksdjfjhsdjkhf05",
+    "title": "Desenvolvimento de Apps",
+    "about": "Preparação dos alunos a adquirirem habilidades técnicas e práticas para projetar, desenvolver e implementar aplicativos para dispositivos móveis e/ou web.",
+    "areaOfExpertise": "Atuar em indústrias de tecnologia, em startups, empresas de desenvolvimento de software ou como empreendedores na criação de seus próprios aplicativos.",
+    "content": [
+      "LÓGICA DE PROGRAMAÇÃO",
+      "CRIANDO APLICATIVOS COM ANGULAR",
+      "CRIANDO APLICATIVOS COM IONIC",
+      "CRIANDO APLICATIVOS COM CORDOVA"
+    ],
+    "hours": 52,
+    "duration": "7 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":4050
+  },
+  {
+    "id": "bcad665e-4e6d-453b-a2c0-33d6fjkdshfjkhdjkfh",
+    "title": "Desenvolvimento de Games 3D",
+    "about": "Capacitação dos alunos para adquirirem habilidades técnicas e criativas para criar jogos tridimensionais imersivos, permitindo a criação de experiências interativas e visualmente impactantes para diferentes plataformas e dispositivos.",
+    "areaOfExpertise": "Atuação em estúdios de desenvolvimento de jogos, criando mundos e personagens para jogos em diversas plataformas. Além disso, podem encontrar oportunidades em empresas de realidade virtual e aumentada, produzindo conteúdo imersivo.",
+    "content": [
+      "DESENVOLVIMENTO DE GAMES - 3D MÓDULO I",
+      "DESENVOLVIMENTO DE GAMES - 3D MÓDULO II"
+    ],
+    "hours": 40,
+    "duration": "5 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":8030
+  },
+  {
+    "id": "bcad665e-4e6d-453b-a2c0-33d6esxcnkljdhfklgsajhd9898klkljklj",
+    "title": "Desenvolvimento de Games I",
+    "about": "Capacitação dos alunos a adquirirem habilidades técnicas e criativas para criação de jogos eletrônicos, passando conceitos básicos da ferramenta, como criação de cenários, movimentação, colisão, uso de sons, criação de eventos, comandos de input e muito mais.",
+    "areaOfExpertise": "Atuação em diversas áreas da indústria de jogos eletrônicos, incluindo desenvolvimento de jogos para plataformas móveis e consoles, criação de jogos para realidade virtual e aumentada, produção de jogos educacionais e de treinamento, além de oportunidades em estúdios de desenvolvimento de games, empresas de tecnologia e até mesmo como empreendedor independente na criação de jogos autorais.",
+    "content": [
+      "LÓGICA DE PROGRAMAÇÃO",
+      "KODU GAME LAB",
+      "SCRATCH",
+      "ROBLOX",
+      "MINECRAFT"
+    ],
+    "hours": 64,
+    "duration": "8 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":5030
+  },
+  {
+    "id": "bcad665e-4e6d-453b-a2c0-33dfdsjkhfkjdhfkjhsdkjhfsa33223333",
+
+    "title": "Desenvolvimento de Games II",
+    "about": "Capacitação dos alunos a adquirirem habilidades técnicas e criativas para criação de jogos eletrônicos, passando conceitos básicos da ferramenta, como criação de cenários, movimentação, colisão, uso de sons, criação de eventos, comandos de input e muito mais.",
+    "areaOfExpertise": "Atuação em diversas áreas da indústria de jogos eletrônicos, incluindo desenvolvimento de jogos para plataformas móveis e consoles, criação de jogos para realidade virtual e aumentada, produção de jogos educacionais e de treinamento, além de oportunidades em estúdios de desenvolvimento de games, empresas de tecnologia e até mesmo como empreendedor independente na criação de jogos autorais.",
+    "content": ["PIXEL ART", "TINKERCAD", "PYTHON", "DESENVOLVIMENTO DE GAMES"],
+    "hours": 68,
+    "duration": "9 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":5030
+  },
+  {    "id": "bcad665e-4e6d-453b-a2c0-33dsfkjsdkljk4j4444442",
+    "title": "Desenvolvimento Web",
+    "about": "Capacitação dos alunos para adquirirem habilidades técnicas para projetar, criar e implementar sites e aplicações web de forma eficiente e profissional. O curso visa preparar profissionais para atuarem no desenvolvimento de soluções web que atendam às necessidades e demandas do mercado digital atual.",
+    "areaOfExpertise": "Atuação em agências de criação, empresas de tecnologia e startups, desenvolvendo e mantendo sites e aplicações web, em setores de comércio eletrônico, mídia digital e empreendendo projetos próprios na área de desenvolvimento web.",
+    "content": [
+      "LÓGICA DE PROGRAMAÇÃO",
+      "DESENVOLVIMENTO WEB - HTML",
+      "DESENVOLVIMENTO WEB - CSS",
+      "DESENVOLVIMENTO WEB - JAVASCRIPT",
+      "DESENVOLVIMENTO WEB - WORDPRESS"
+    ],
+    "hours": 52,
+    "duration": "7 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":3600
+  },
+  {
+    "id": "bcad665e-4e6d-453b-a2c0ASFJHNJKHKJH4",
+
+    "title": "Desenvolvimento de Sistemas",
+    "about": "Preparação dos alunos para adquirirem habilidades técnicas e práticas para projetar, criar, implementar e manter sistemas de software eficientes e confiáveis. Além disso, ter o conhecimento das linguagens de programação, metodologias ágeis, banco de dados e outras ferramentas essenciais para a área de desenvolvimento de sistemas.",
+    "areaOfExpertise": "Atuar na criação e manutenção de softwares personalizados para empresas, instituições e organizações em geral. Sua área de atuação inclui o desenvolvimento de sistemas de gestão, aplicativos empresariais, plataformas web e soluções tecnológicas sob medida para otimizar processos e melhorar a eficiência das operações.",
+    "content": [
+      "BANCO DE DADOS SQL",
+      "PROGRAMAÇÃO C# COM VISUAL STUDIO: ESSENCIAL, INTERMEDIÁRIO, AVANÇADO I, AVANÇADO II"
+    ],
+    "hours": 76,
+    "duration": "10 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":10565
+  },
+  {
+    "id": "bcad665e-4e6d-453b-a2c0-33jkbbhjkllh4bn3k5",
+
+    "title": "Desenvolvimento de Jogos Digitais",
+    "about": "Capacitação dos alunos para adquirirem habilidades técnicas e criativas para criação de jogos eletrônicos de forma completa e profissional. Ao final do curso, os participantes estarão aptos a conceber, projetar, programar e implementar jogos para diferentes plataformas, utilizando tecnologias e ferramentas relevantes para a indústria de desenvolvimento de games.",
+    "areaOfExpertise": "Atuação em estúdios de desenvolvimento de games, criando jogos para consoles, PC e dispositivos móveis. Além disso, podem encontrar oportunidades em empresas de realidade virtual e aumentada, produzindo experiências imersivas. Outras áreas incluem gamificação, desenvolvimento de aplicativos interativos e simulações para treinamento.",
+    "content": [
+      "KODU GAME LAB",
+      "SCRATCH",
+      "ROBLOX",
+      "MINECRAFT",
+      "PIXEL ART",
+      "TINKERCAD",
+      "PYTHON",
+      "LÓGICA DE PROGRAMAÇÃO",
+      "DESENVOLVIMENTO DE CAMES",
+      "DESENVOLVIMENTO DE GAMES - 3D MÓDULO I",
+      "DESENVOLVIMENTO DE GAMES - 3D MÓDULO II"
+    ],
+    "hours": 172,
+    "duration": "23 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":5030
+  },
+  {
+    "id": "bcad665e-4e6d-453b-a2c0-33d6ejkgbh4kjh5kjh14",
+
+    "title": "Designer 3D",
+    "about": "Capacitação dos alunos para adquirirem habilidades técnicas e criativas na criação de modelos, animações e efeitos visuais em três dimensões.",
+    "areaOfExpertise": "Podem atuar nas áreas de entretenimento, publicidade, design de produtos, arquitetura, jogos e outras indústrias que demandam conteúdo tridimensional.",
+    "content": ["MODELAGEM 3D", "ADOBE XD"],
+    "hours": 42,
+    "duration": "6 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":2995
+  },
+  {
+    "id": "54f8db5f-8f25-41ce-b7e3-3c26eklads893",
+
+    "title": "Designer Gráfico",
+    "about": "Preparação do aluno para edição de textos, imagens e figuras, gerar layouts e arte final para livros, revistas, folders e jornais para o mercado gráfico em geral, utilizando programas de computação, de acordo com as normas e procedimentos técnicos de qualidade e segurança.",
+    "areaOfExpertise": "Operar softwares de computação gráfica, permitindo a edição, criação e preparação para impressão de arquivos vetoriais. Atua em vários ramos de atividade, tais como: artes gráficas, indústria têxtil, fabricação madeireira, empresas de telecomunicações, entre outras.",
+    "content": [
+      "ADOBE PHOTOSHOP - MÓDULO I",
+      "ADOBE PHOTOSHOP - MÓDULO II",
+      "ADOBE PHOTOSHOP - MÓDULO III",
+      "ADOBE ILLUSTRATOR - CREATIVE CLOUD",
+      "CORELDRAW - GRAPHICS SUITE - MÓDULO I",
+      "CORELDRAW - CRAPHICS SUITE - MÓDULO II"
+    ],
+    "hours": 92,
+    "duration": "12 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":2500
+  },
+  {
+    "id": "3bd5b3a2-c309-40a5-87a5-470jkb4jk1gh5",
+
+    "title": "Design para Mídias Sociais",
+    "about": "Capacitação dos alunos para desenvolverem habilidades criativas e técnicas para criação de conteúdo visual atrativo e impactante, específico para as diferentes plataformas de mídias sociais. Visamos preparar profissionais para criar posts, imagens, vídeos e elementos gráficos que sejam relevantes, envolventes e que impulsionam o engajamento e o alcance nas redes sociais, atendendo às necessidades de marcas, empresas e influenciadores digitais.",
+    "areaOfExpertise": "Atuar em agências de marketing, empresas, com influenciadores, empreendedores e no setor público, criando conteúdo visual criativo para impulsionar a presença nas redes sociais e fortalecer a identidade de marcas e projetos. Sua atuação abrange a produção de imagens, vídeos e elementos visuais para diversas plataformas e públicos-alvo.",
+    "content": [
+      "ADOBE PREMIERE",
+      "AFTER EFFECTS",
+      "PHOTOSHOP ESSENCIAL",
+      "PHOTOSHOP AVANÇADO",
+      "ILLUSTRATOR"
+    ],
+    "hours": 80,
+    "duration": "10 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":1800
+  },
+  {
+    "id": "f37d6c04-1627-4ea1-a1d3-7435435jkhjkhkjh43",
+
+    "title": "Editor de Vídeos",
+    "about": "Capacitação dos alunos para adquirirem habilidades técnicas e criativas para edição e produção de vídeos de forma profissional. Com técnicas na utilização de softwares de edição de vídeo, técnicas de montagem, e a aplicação de efeitos visuais e áudio.",
+    "areaOfExpertise": "Atuação em produtoras de vídeo, agências de publicidade e marketing, emissoras de televisão, empresas de produção de conteúdo para internet, entre outros.",
+    "content": ["ADOBE PREMIERE", "AFTER EFFECTS"],
+    "hours": 32,
+    "duration": "4 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":2125
+  },
+  {
+    "title": "Excel Profissional",
+    "about": "Capacitação dos alunos para adquirirem habilidades avançadas e especializadas no uso do Microsoft Excel para fins profissionais. Visando preparar profissionais para lidarem com desafios complexos em suas áreas de atuação, usando o Excel como uma poderosa ferramenta de análise e tornada de decisões.",
+    "areaOfExpertise": "A expertise em Excel é valorizada em diferentes setores profissionais, como em setores administrativos e financeiros de empresas, departamentos de recursos humanos para análise de dados e relatórios, em consultorias para auxiliar clientes com análises complexas de dados, e também em áreas de pesquisa e desenvolvimento para coletar e analisar informações relevantes.",
+    "content": ["EXCEL ESSENCIAL", "EXCEL INTERMEDIÁRIO", "EXCEL AVANÇADO"],
+    "hours": 24,
+    "duration": "3 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":2500
+  },
+  {
+    "id": "7dddbbb2-e3c3-437a-a0ed-57841h5jbggjh4135",
+
+    "title": "Gestão de Marketing Digital",
+    "about": "Capacitação dos alunos para adquirirem habilidades estratégicas e técnicas para planejar, implementar e gerir campanhas de marketing digital de forma eficiente.",
+    "areaOfExpertise": "Atuação em diversas áreas, como: gerência de marketing digital em empresas, agências de publicidade e marketing, consultorias para otimizar estratégias digitais de negócios, e empreendedorismo para impulsionar o crescimento de marcas e projetos online.",
+    "content": [
+      "AGENTE DE VENDAS",
+      "GOOGLE ADWORDS",
+      "MARKETING DIGITAL I",
+      "MARKETING DIGITAL II"
+    ],
+    "hours": 53,
+    "duration": "7 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":3700
+  },
+  {
+    "id": "d89eb45b-4975-4f20-852d-cf43515kj4h5kjh",
+
+    "title": "Gestão de RH",
+    "about": "Capacitação dos alunos para adquirirem conhecimentos teóricos e práticos para atuar de forma estratégica na gestão de pessoas dentro das organizações.",
+    "areaOfExpertise": "Atuação em diversas áreas, como: setores de Recursos Humanos de empresas, consultorias em RH para auxiliar em processos de recrutamento e seleção, desenvolvimento de treinamentos e políticas de retenção de talentos, e também em cargos de liderança e gestão de equipes dentro das organizações.",
+    "content": [
+      "DEPARTAMENTO PESSOAL",
+      "RECURSOS HUMANOS",
+      "GESTÃO DE PESSOAS"
+    ],
+    "hours": 60,
+    "duration": "8 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":2600
+  },
+  {
+    "id": "c0e5230b-6c15-4b4d-9710-5343351345",
+    "title": "Hotelaria e Turismo",
+    "about": "Capacitação dos alunos em conhecimentos teóricos e práticos para atuarem de forma profissional nos segmentos de hospedagem, turismo e serviços relacionados.",
+    "areaOfExpertise": "Atuação em diversas áreas, como: gerência e recepção de hotéis e resorts, coordenação de eventos e turismo de negócios, agências de viagens e turismo, gestão de restaurantes e serviços de alimentação, além de oportunidades em empresas de cruzeiros e companhias aéreas.",
+    "content": [
+      "CRIATIVIDADE NO TRABALHO",
+      "LIDERANÇA",
+      "TRABALHO EM EQUIPE",
+      "DEZ MANEIRAS DE SE VENDER UMA IDEIA",
+      "CESTÃO DE CONFLITOS",
+      "ATENDIMENTO AO CLIENTE",
+      "AGENTE DE VENDAS",
+      "HOTELARIA E TURISMO"
+    ],
+    "hours": 54,
+    "duration": "07 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":1800
+  },
+  {
+    "id": "d89eb45b-4975-4f20-852d-cf0jhdsfauhsduihfuh",
+
+    "title": "Google for Business",
+    "about": "Capacitação dos participantes a dominarem as ferramentas e recursos oferecidos pela Google para otimizar a produtividade e a colaboração no ambiente corporativo.",
+    "areaOfExpertise": "Atuação em diversas áreas, como: setores administrativos e de secretariado, gerenciamento de projetos e equipes, consultorias em produtividade e processos de negócios, e empreendedorismo para otimizar a gestão de empresas.",
+    "content": [
+      "GOOGLE: FERRAMENTAS DE PRODUTIVIDADE",
+      "DOCUMENTOS GOOGLE",
+      "PLANILHAS GOOGLE",
+      "APRESENTAÇÕES GOOGLE"
+    ],
+    "hours": 40,
+    "duration": "05 meses",
+    "tag": "ITEC Pro"
+    
+  },
+  {
+    "id": "f37d6c04-1627-4ea1-a1d3-7a3jkfdhkjfagh0894343",
+
+    "title": "Informática Completa",
+    "about": "Capacitação dos alunos para adquirirem conhecimentos teóricos e práticos sobre o uso e aplicação de tecnologias da informação.",
+    "areaOfExpertise": "Atuação em diversas áreas, como: suporte técnico em empresas de tecnologia, atendimento ao cliente em setores de informática, auxiliando na resolução de problemas e manutenção de equipamentos, e também em cargos administrativos e de escritório, utilizando softwares de escritório e sistemas de gestão.",
+    "content": [
+      "INTRODUÇÃO A INFORMÁTICA",
+      "WINDOWS 11 ESSENCIAL",
+      "WINDOWS 11 AVANÇADO",
+      "WORD ESSENCIAL",
+      "WORD AVANÇADO",
+      "POWER POINT ESSENCIAL",
+      "POWER POINT AVANÇADO",
+      "EXCEL ESSENCIAL",
+      "EXCEL INTERMEDIÁRIO",
+      "OUTLOOK ESSENCIAL",
+      "OUTLOOK AVANÇADO"
+    ],
+    "hours": 92,
+    "duration": "12 meses",
+    "tag": "ITEC Pro"
+  },
+  {
+    "id": "c9de3e8f-049d-45d2-aa72-43ebjkabgsdjfhb2345r23",
+
+    "title": "Liderança 4.0",
+    "about": "Capacitação dos participantes para desenvolverem habilidades e competências essenciais para exercerem papéis de liderança de forma eficaz e inspiradora. Visando preparar os alunos para assumirem posições de liderança em suas carreiras, maximizando o potencial de suas equipes e contribuindo para o sucesso das organizações.",
+    "areaOfExpertise": "Atuação em diversas áreas, como: gestão de equipes em empresas de diferentes setores, liderança em projetos e empreendimentos, cargos de supervisão e coordenação em organizações, além de oportunidades em consultorias e treinamentos em desenvolvimento de liderança.",
+    "content": [
+      "DESENVOLVIMENTO PROFISSIONAL",
+      "DINAMISMO E COMPROMISSO COM O SUCESSO",
+      "EMPREENDEDOR DE SUCESSO",
+      "CRIATIVIDADE NO TRABALHO",
+      "DEZ MANEIRAS DE SE VENDER UMA IDÉIA",
+      "CESTÃO DE CONFLITOS",
+      "ATENDIMENTO AO CLIENTE",
+      "TRABALHO EM EQUIPE",
+      "LIDERANÇA",
+      "CESTÃO DE PESSOAS"
+    ],
+    "hours": 42,
+    "duration": "06 meses",
+    "tag": "ITEC Pro"
+  },
+  {
+    "id": "7ae30b33-7a0d-48a8-8328-3f0a20afdghaklgj",
+
+    "title": "Social Media 360",
+    "about": "Capacitação dos participantes a adquirirem conhecimentos e habilidades para gerir de forma estratégica as mídias sociais de empresas, marcas e projetos. Visando a qualificação dos profissionais para atuarem no crescente mercado de mídias sociais, tornando-se especialistas em impulsionar o alcance e o engajamento das marcas nas plataformas digitais.",
+    "areaOfExpertise": "Atuação em diversas áreas como: agências de marketing digital, gerenciamento de redes sociais para empresas e marcas, criação de conteúdo para influenciadores digitais, estratégias de mídias sociais para e-commerce, além de oportunidades em setores de comunicação e publicidade.",
+    "content": [
+      "DESENVOLVIMENTO PROFISSIONAL",
+      "DINAMISMO E COMPROMISSO COM O SUCESSO",
+      "INTERNET, REDES SOCIAIS E APLICATIVOS",
+      "DEZ MANEIRAS DE SE VENDER UMA IDÉIA",
+      "EMPREENDEDOR DE SUCESSO",
+      "CRIATIVIDADE NO TRABALHO",
+      "ADOBE PHOTOSHOP - MÓDULO I",
+      "APRESENTAÇÕES GOOGLE",
+      "GOOGLE ADWORDS",
+      "MARKETING DIGITAL I"
+    ],
+    "hours": 82,
+    "duration": "10 meses",
+    "tag": "ITEC Pro",
+    "avgSalary":2000
+  },
+  {    "id": "f0a59e0a-8913-4e48-8e91-2345435khjjkh",
+
+    "title": "YOUTUBER",
+    "about": "Aprendizados que auxiliam no desenvolvimento de um canal para o YouTube. Ele oferece dicas de conteúdos, ferramentas e equipamentos necessários para a criação de um vídeo, além de contribuir com ideias para que o trabalho de um YouTuber seja reconhecido e possa ficar o mais profissional possível.",
+    "areaOfExpertise": "Para trabalhar como YouTubers, com canais de diversos tipos, como esportes, culinária, informações, games ou, até mesmo, canais de empresas, sejam elas, pequenas, grandes ou voltadas a um negócio próprio.",
+    "content": [
+      "PHOTOSHOP MOD. I",
+      "AFTER EFFECTS",
+      "ADOBE PREMIERE",
+      "COMO TER UM CANAL DE SUCESSO: YOUTUBE NA PRÁTICA"
+    ],
+    "hours": 56,
+    "duration": "07 meses",
+    "tag": "ITEC Pro"
+  },{    
+    "id": "f0a59e0a-8913-4ex4zzx8-8e91-2345435ksdad",
+    "title": "Atendimento pré hospitalar",
+    "about": "O objetivo da capacitação em APH: Atendimento Pré-Hospitalar é capacitar os profissionais da área da saúde que desejam atuar como “Socorristas no SAMU“, Bombeiros civis e militares, Condutores de veículos de emergência, Comissários de voo, Voluntários da Defesa Civil, Técnicos em Segurança do Trabalho, Bombeiros Voluntários, Brigadistas, Socorristas de Resgate Rodoviário.",
+    "areaOfExpertise": "A atuação no mercado de trabalho inclui os setores de saúde e prestação de serviço. São eles, hospitais, centros de saúde, órgãos do governo, SAMU, ambulâncias de transporte e outros.",
+    "content": [
+        "ANATOMIA E FISIOLOGIA",
+        "CINEMÁTICA DO TRAUMA",
+        "ABORDAGEM AO PACIENTE",
+        "MANEJO DE VIAS AÉREAS",
+        "RESSUSCITAÇÃO CARDIOPULMONAR",
+        "BIOSSEGURANÇA",
+        "FERIMENTOS",
+        "HEMORRAGIA",
+        "BANDAGEM",
+        "CHOQUE",
+        "TRAUMA MÚSCULO-ESQUELÉTICO E IMOBILIZAÇÕES",
+        "TRAUMATISMOS ESPECÍFICOS",
+        "URGÊNCIAS CLÍNICAS NA CRIANÇA E NO PACIENTE ADULTO",
+        "REMOÇÃO DE VÍTIMA",
+        "URGÊNCIAS TRAUMÁTICAS NO PACIENTE ADULTO E NA CRIANÇA",
+        "INTERVENÇÃO EM CRISES E ATENDIMENTOS DE PACIENTES ESPECIAIS",
+        "AFOGAMENTO",
+        "ACIDENTES COM MÚLTIPLAS VÍTIMAS E CATÁSTROFES",
+        "ACIDENTES COM PRODUTOS PERIGOSOS",
+        "URGÊNCIAS PSIQUIÁTRICAS E OBSTÉTRICAS"
+      ],
+    "hours": 60,
+    "duration": "05 meses",
+    "tag": "Especialização",
+    "avgSalary":3150
+    },{    
+        "id": "f0a59e0a-8913-4e48-8adasda1-2345435ksdad",
+        "title": "Auxiliar de Laboratório em Análises Clínicas",
+        "about": "O curso de Auxiliar de Laboratório em Análises Clínicas qualifica o aluno para desempenhar as atribuições das rotinas de trabalho em laboratórios de análises clínicas.",
+        "areaOfExpertise": "A atuação no mercado de trabalho inclui auxiliar na organização do ambiente de trabalho, recepção de pacientes, orientações sobre exames e entrega dos resultado, auxiliar em coletas de amostras e no preparo de bancadas laboratoriais e desenvolver práticas e auxiliar o laboratório nas suas rotinas",
+        "content": [
+            "O LABORATÓRIO CLÍNICO E AS ANÁLISES CLÍNICAS",
+            "BIOSSEGURANÇA",
+            "CONHECIMENTOS BIOLÓGICOS PARA USO EM LABORATÓRIO E BOAS PRÁTICAS DE LABORATÓRIO",
+            "VIDRARIAS, EQUIPAMENTOS, ESTERILIZAÇÃO E LAVAGEM DE VIDRARIAS",
+            "MICROSCOPIA",
+            "SETORES TÉCNICOS",
+            "COLETAS E PROCESSAMENTO DE AMOSTRAS BIOLÓGICAS",
+            "HEMATOLOGIA",
+            "BIOQUÍMICA",
+            "IMUNOLOGIA",
+            "HORMONOLOGIA",
+            "VIROLOGIA",
+            "URINÁLISE E FLUIDOS CORPORAIS",
+            "MICROBIOLOGIA E MICOLOGIA",
+            "PARASITOLOGIA"
+        ],
+        "hours": 72,
+        "duration": "06 meses",
+        "tag": "Especialização",
+        "avgSalary":2070
+    },{    
+        "id": "f0a59e0a-8913-4evxc48-8adasda1-2345435ksdad",
+        "title": "Técnico em Enfermagem",
+        "about": "O Técnico em Enfermagem atua na promoção da saúde e no atendimento das necessidades de pacientes e da comunidade, em todas as faixas etárias. Estão entre as suas principais atribuições promover ações de orientação e preparo do paciente para exames, além de realizar cuidados de enfermagem, como curativos, administração de medicamentos e vacinas, nebulizações, banho de leito e verificação de sinais vitais.",
+        "areaOfExpertise": "Com amplo campo profissional, o Técnico em Enfermagem pode atuar em hospitais, clínicas, redes ambulatoriais, serviços de home care e Unidades Básicas de Saúde.",
+        "content": [
+            "PRATICA ASSISTENCIAL I",
+            "PRINCÍPIOS DE MICROBIOLOGIA E BIOSSEGURANÇA",
+            "ÉTICA E CIDADANIA ORGANIZACIONAL",
+            "PSICOLOGIA ORGANIZACIONAL",
+            "GESTÃO DA QUALIDADE",
+            "INICIAÇÃO A METODOLOGIA DA PESQUISA",
+            "PRATICA ASSISTENCIAL I - ESTÁGIO",
+            "ASSISTÊNCIA NA PREVENÇÃO E PROMOÇÃO À SAÚDE",
+            "MÓDULO PROFISSIONAL II",
+            "ENFERMAGEM PEDIÁTRICA",
+            "ENFERMAGEM GERIÁTRICA",
+            "ENFERMAGEM ONCOLÓGICA",
+            "ADMINISTRAÇÃO APLICADA À ENFERMAGEM",
+            "PRÁTICA ASSISTENCIAL II",
+            "PRÁTICA ASSISTENCIAL II - ESTÁGIO",
+            "ASSISTÊNCIA DE ENFERMAGEM AO PACIENTE GRAVE",
+            "ASSISTÊNCIA DE ENFERMAGEM AO PACIENTE GRAVE - ESTÁGIO",
+            "EMPREENDEDORISMO"
+        ],
+        "hours": 1200,
+        "duration": "18 meses",
+        "tag": "Técnico",
+        "avgSalary":3325
+    },
+    {    
+        "id": "f0a59e0a-8913-4evxc48-8adasda1-2345435ksdadvxcv",
+        "title": "Ensino Médio",
+        "about": "Nossa escola é responsável pelo sucesso de mais de 4 mil alunos há mais de 10 anos, somos referência na nossa região na área de ensino técnico e profissionalizante. ",
+        "areaOfExpertise": "Escolher a nossa escola é investir no futuro promissor e integral de seus filhos. Destacamo-nos na região por oferecer uma educação inovadora, com Sala Maker e Sala Invertida, Metodologia Robótica integrada à Formação Profissionalizante e o renomado Sistema de Ensino Positivo. Com professores qualificados, foco no ENEM e aulas dinâmicas, proporcionamos um ambiente educacional excepcional, preparando os alunos não apenas para os desafios acadêmicos, mas também para se destacarem no mundo profissional em constante evolução. Opte pela excelência e prepare seus filhos para o sucesso com a nossa escola.",
+        "content": [
+            "ÚNICA ESCOLA NA REGIÃO COM SALA MAKER E SALA INVERTIDA",
+            "METODOLOGIA ROBÓTICA + FORMAÇÃO PROFISSIONALIZANTE",
+            "SISTEMA DE ENSINO POSITIVO",
+            "NOVO ENSINO MÉDIO COM FORMAÇÃO PROFISSIONALIZANTE",
+            "PROFESSORES E EQUIPE PEDAGÓGICA PREPARADA E QUALIFICADA",
+            "FOCO NA PREPARAÇÃO DO ALUNO PARA O ENEM",
+            "AULAS DINÂMICAS E INTERATIVAS"
+          ],
+        "hours": 0,
+        "duration": "",
+        "tag": "Escola"
+    },
+    {    
+        "id": "f0a59asde0a-8913-4evxc48-8adasda1-2345435kscvss",
+        "title": "Ensino Fundamental",
+        "about": "Nossa escola é responsável pelo sucesso de mais de 4 mil alunos há mais de 10 anos, somos referência na nossa região na área de ensino técnico e profissionalizante. ",
+        "areaOfExpertise": "Escolher a nossa escola é investir no futuro promissor e integral de seus filhos. Destacamo-nos na região por oferecer uma educação inovadora, com Sala Maker e Sala Invertida, Metodologia Robótica integrada à Formação Profissionalizante e o renomado Sistema de Ensino Positivo. Com professores qualificados, foco no ENEM e aulas dinâmicas, proporcionamos um ambiente educacional excepcional, preparando os alunos não apenas para os desafios acadêmicos, mas também para se destacarem no mundo profissional em constante evolução. Opte pela excelência e prepare seus filhos para o sucesso com a nossa escola.",
+        "content": [
+            "ÚNICA ESCOLA NA REGIÃO COM SALA MAKER E SALA INVERTIDA",
+            "METODOLOGIA ROBÓTICA + FORMAÇÃO PROFISSIONALIZANTE",
+            "SISTEMA DE ENSINO POSITIVO",
+            "NOVO ENSINO MÉDIO COM FORMAÇÃO PROFISSIONALIZANTE",
+            "PROFESSORES E EQUIPE PEDAGÓGICA PREPARADA E QUALIFICADA",
+            "FOCO NA PREPARAÇÃO DO ALUNO PARA O ENEM",
+            "AULAS DINÂMICAS E INTERATIVAS"
+          ],
+        "hours": 0,
+        "duration": "",
+        "tag": "Escola"
+    }
+]

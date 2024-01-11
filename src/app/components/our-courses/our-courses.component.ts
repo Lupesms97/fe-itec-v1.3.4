@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { CoursesService } from 'src/app/core/services/courses.service';
 import { CoursesI } from 'src/app/shared/models/CoursesI';
 
@@ -9,15 +10,19 @@ import { CoursesI } from 'src/app/shared/models/CoursesI';
   styleUrls: ['./our-courses.component.css']
 })
 export class OurCoursesComponent {
-  cursosLivres: CoursesI[] = [];
-  cursosEAD: CoursesI[] = [];
+  cursosTecnico: CoursesI[] = [];
+  cursosEspecializacao: CoursesI[] = [];
   cursosProfissionalizantes: CoursesI[] = [];
-  cursosEnsinoSuperior: CoursesI[] = [];
+  cursosEscola: CoursesI[] = [];
+  viewCursoTecnico =   new BehaviorSubject<CoursesI[]>([]);
+  showOtherButton = new BehaviorSubject<boolean>(false);
+
 
 
   constructor(private router:Router,
     private coursesService: CoursesService) {
       this.getAndSetValues();
+
   }
 
 
@@ -51,26 +56,51 @@ export class OurCoursesComponent {
       
     }
   }
+  limitCoursesForHomepage(): void {
+    // Verifica se está na homepage
+    console.log('mainpage:', this.getRouter() );
+      
+    if (this.getRouter() === '/home') {
+      this.viewCursoTecnico.next(this.cursosProfissionalizantes.slice(0, 7));
+      this.showOtherButton.next(true);
+    }else{
+      this.viewCursoTecnico.next(this.cursosProfissionalizantes);
+      this.showOtherButton.next(false);
+    }
+
+
+    console.log(this.viewCursoTecnico.value)
+  }
+  
+
 
   getAndSetValues() {
-    this.coursesService.cursosESuperior$.subscribe(posts => {
-      this.cursosEnsinoSuperior = posts;
+    this.coursesService.cursosEscola$.subscribe(posts => {
+      this.cursosEscola = posts;
     });
 
-    this.coursesService.cursosEad$.subscribe(posts => {
-      this.cursosEAD = posts;
+    this.coursesService.cursosEspecializacao$.subscribe(posts => {
+      this.cursosEspecializacao = posts;
     });
 
     this.coursesService.cursosProfissonalizante$.subscribe(posts => {
       this.cursosProfissionalizantes = posts;
+      this.limitCoursesForHomepage();
     });
 
-    this.coursesService.cursosCursosLivres$.subscribe(posts => {
-      this.cursosLivres = posts;
+    this.coursesService.cursosTecnico$.subscribe(posts => {
+      this.cursosTecnico = posts;
+       // Chama o método ao receber novos cursos
     });
   }
 
   goToPost(id: string) {
     this.router.navigate(['cursos', id]);
+  }
+
+  
+  getRouter(){
+    console.log(this.router.url);
+    return this.router.url;
   }
 }

@@ -13,15 +13,17 @@ export class DetailsCoursesComponent implements OnInit {
   id: string='';
   infosModules: Info[] = [];
   corDoBackground: string = "#2c61a3";
-  post:CoursesI = {
-      id: '',
-      tag: '',
-      title: '',
-      about: '',
-      market: '',
-      hours: '',
-      avgSalary: 0,
-      modules: [], // Correção: modules é um objeto, não um array
+  show:boolean = false;
+  course:CoursesI = {
+    id :'',
+    title:'',
+    about:'',
+    areaOfExpertise:'',
+    content:[],
+    hours:0,
+    duration:'',
+    avgSalary:0,
+    tag:''
   }
 
 
@@ -39,12 +41,12 @@ export class DetailsCoursesComponent implements OnInit {
     });
     if(this.verifictionOdId(this.id)){
       this.courseService.getPostbyId(this.id).subscribe((post) => {
-        this.post = post;
+        this.course = post;
       });
     }
     window.scrollTo(0, 0);
-    this.corDoBackground = this.setColor(this.post.tag);
-
+    this.corDoBackground = this.setColor(this.course.tag);
+    this.haveAvgSalary();
   }
 
 
@@ -56,6 +58,13 @@ export class DetailsCoursesComponent implements OnInit {
       
       return false;
     }
+  }
+
+  haveAvgSalary(): boolean{
+    if(this.course.avgSalary){
+      return true;
+    }
+    return false;
   }
 
   setColor(tag:string){
