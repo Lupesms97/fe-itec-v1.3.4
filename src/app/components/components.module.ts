@@ -14,6 +14,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { PrizeDrawComponent } from './prize-draw/prize-draw.component';
 import { MapComponent } from './map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { CardInfoUsersComponent } from './card-info-users/card-info-users.component';
 
 
 
@@ -26,7 +27,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     BlogPresentationComponent,
     NewsPresentationComponent,
     PrizeDrawComponent,
-    MapComponent
+    MapComponent,
+    CardInfoUsersComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +48,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     BlogPresentationComponent,
     NewsPresentationComponent,
     PrizeDrawComponent,
-    MapComponent
+    MapComponent,CardInfoUsersComponent
   ]
 })
 export class ComponentsModule { }

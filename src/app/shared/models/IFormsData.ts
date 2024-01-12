@@ -1,6 +1,6 @@
 export interface IFormsData{
     contacted: boolean;
-    cratedAt: String;
+    cratedAt: Date;
     name: string;
     email: string;
     phone: string;

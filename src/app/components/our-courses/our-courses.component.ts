@@ -68,8 +68,6 @@ export class OurCoursesComponent {
       this.showOtherButton.next(false);
     }
 
-
-    console.log(this.viewCursoTecnico.value)
   }
   
 
@@ -98,9 +96,12 @@ export class OurCoursesComponent {
     this.router.navigate(['cursos', id]);
   }
 
+  goToCourses() {
+    this.router.navigate(['cursos']);
+  }
   
   getRouter(){
-    console.log(this.router.url);
+    
     return this.router.url;
   }
 }

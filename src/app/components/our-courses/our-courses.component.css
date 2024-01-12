@@ -196,7 +196,7 @@ OUR-COURSES
 .custom-btn a{
   color:grey
 }
-.custom-btn a:hover{
+.custom-btn:hover a{
   color:white!important
 }
 .blue1-custom{

@@ -22,7 +22,7 @@ export class CoursesService {
   );
   public cursosTecnico$: Observable<CoursesI[]> = this.cursos$.pipe(
     map(posts => posts.filter(post => post.tag === 'Técnico'))
-  ); 888bn1q  2=-0  9 
+  );
   public cursosEscola$: Observable<CoursesI[]> = this.cursos$.pipe(
     map(posts => posts.filter(post => post.tag === 'Escola'))
 

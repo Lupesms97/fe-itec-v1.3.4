@@ -109,10 +109,10 @@
                 </button>
               </div>
               </ng-container>
-              <div class="col-lg-3 col-md-6 col-sm-12" *ngIf="showOtherButton">
-                <button
+              <div class="col-lg-3 col-md-6 col-sm-12" *ngIf="showOtherButton | async">
+                <button (click)="goToCourses()"
                 class=" btn custom-btn e-prof-class animated-button" >
-                <a routerLink="/cursos">Outros</a>
+                <a >Outros</a>
                  </button>
               </div>
 

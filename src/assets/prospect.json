@@ -1,0 +1,91 @@
+[
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "polo": "Engineering",
+      "phone": "+123456789",
+      "course": "Computer Science",
+      "cupom": "CUP123",
+      "emailmarketing": true
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "polo": "Science",
+      "phone": "+987654321",
+      "course": "Physics",
+      "cupom": "CUP456",
+      "emailmarketing": false
+    },
+    {
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "polo": "Arts",
+      "phone": "+111223344",
+      "course": "English Literature",
+      "cupom": "CUP789",
+      "emailmarketing": true
+    },
+    {
+      "name": "Bob Williams",
+      "email": "bob.williams@example.com",
+      "polo": "Business",
+      "phone": "+998877665",
+      "course": "Marketing",
+      "cupom": "CUPABC",
+      "emailmarketing": false
+    },
+    {
+      "name": "Eva Davis",
+      "email": "eva.davis@example.com",
+      "polo": "Health Sciences",
+      "phone": "+112233445",
+      "course": "Nursing",
+      "cupom": "CUPDEF",
+      "emailmarketing": true
+    },
+    {
+      "name": "Michael Brown",
+      "email": "michael.brown@example.com",
+      "phone": "+334455667",
+      "course": "Chemistry",
+      "emailmarketing": false
+    },
+    {
+      "name": "Sophia Lee",
+      "email": "sophia.lee@example.com",
+      "polo": "Engineering",
+      "phone": "+556677889",
+      "course": "Electrical Engineering",
+      "cupom": "CUPGHI",
+      "emailmarketing": true
+    },
+    {
+      "name": "David Clark",
+      "email": "david.clark@example.com",
+      "polo": "Arts",
+      "phone": "+112233445",
+      "course": "History",
+      "cupom": "CUPJKL",
+      "emailmarketing": false
+    },
+    {
+      "name": "Olivia White",
+      "email": "olivia.white@example.com",
+      "polo": "Health Sciences",
+      "phone": "+334455667",
+      "course": "Physiotherapy",
+      "cupom": "CUPMNO",
+      "emailmarketing": true
+    },
+    {
+      "name": "Daniel Taylor",
+      "email": "daniel.taylor@example.com",
+      "polo": "Business",
+      "phone": "+556677889",
+      "course": "Finance",
+      "cupom": "CUPPQR",
+      "emailmarketing": false
+    }
+  ]
+  

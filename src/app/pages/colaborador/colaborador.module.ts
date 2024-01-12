@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
+
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
         {path:'home', component: HomeComponent}
       ]
     ),
-    NgxPaginationModule
+    NgxPaginationModule,ComponentsModule
 
   ]
 })
