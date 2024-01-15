@@ -1,91 +1,68 @@
 [
-    {
-      "name": "John Doe",
-      "email": "john.doe@example.com",
-      "polo": "Engineering",
-      "phone": "+123456789",
-      "course": "Computer Science",
-      "cupom": "CUP123",
-      "emailmarketing": true
-    },
-    {
-      "name": "Jane Smith",
-      "email": "jane.smith@example.com",
-      "polo": "Science",
-      "phone": "+987654321",
-      "course": "Physics",
-      "cupom": "CUP456",
-      "emailmarketing": false
-    },
-    {
-      "name": "Alice Johnson",
-      "email": "alice.johnson@example.com",
-      "polo": "Arts",
-      "phone": "+111223344",
-      "course": "English Literature",
-      "cupom": "CUP789",
-      "emailmarketing": true
-    },
-    {
-      "name": "Bob Williams",
-      "email": "bob.williams@example.com",
-      "polo": "Business",
-      "phone": "+998877665",
-      "course": "Marketing",
-      "cupom": "CUPABC",
-      "emailmarketing": false
-    },
-    {
-      "name": "Eva Davis",
-      "email": "eva.davis@example.com",
-      "polo": "Health Sciences",
-      "phone": "+112233445",
-      "course": "Nursing",
-      "cupom": "CUPDEF",
-      "emailmarketing": true
-    },
-    {
-      "name": "Michael Brown",
-      "email": "michael.brown@example.com",
-      "phone": "+334455667",
-      "course": "Chemistry",
-      "emailmarketing": false
-    },
-    {
-      "name": "Sophia Lee",
-      "email": "sophia.lee@example.com",
-      "polo": "Engineering",
-      "phone": "+556677889",
-      "course": "Electrical Engineering",
-      "cupom": "CUPGHI",
-      "emailmarketing": true
-    },
-    {
-      "name": "David Clark",
-      "email": "david.clark@example.com",
-      "polo": "Arts",
-      "phone": "+112233445",
-      "course": "History",
-      "cupom": "CUPJKL",
-      "emailmarketing": false
-    },
-    {
-      "name": "Olivia White",
-      "email": "olivia.white@example.com",
-      "polo": "Health Sciences",
-      "phone": "+334455667",
-      "course": "Physiotherapy",
-      "cupom": "CUPMNO",
-      "emailmarketing": true
-    },
-    {
-      "name": "Daniel Taylor",
-      "email": "daniel.taylor@example.com",
-      "polo": "Business",
-      "phone": "+556677889",
-      "course": "Finance",
-      "cupom": "CUPPQR",
-      "emailmarketing": false
-    }
-  ]
+  {
+    "contacted": false,
+    "cratedAt": "2024-01-14T00:00:00.000Z",
+    "name": "Felipe",
+    "email": "lupe@sms97@gmail.com",
+    "polo": "Vila-VR",
+    "phone": "(24) 999039239",
+    "course": "Ciência da Computação",
+    "cupom": "asdaskdj-dasdasd"
+  },
+  {
+    "contacted": true,
+    "cratedAt": "2024-01-14T00:00:00.000Z",
+    "name": "Ana",
+    "email": "ana@example.com",
+    "polo": "Centro-RJ",
+    "phone": "(21) 987654321",
+    "course": "Engenharia Civil",
+    "cupom": "qweqw-tyuio",
+    "ownerId": "5e1f3b7b9d1f1b0017f3b7a9"
+
+  },
+  {
+    "contacted": false,
+    "cratedAt": "2024-01-14T00:00:00.000Z",
+    "name": "Carlos",
+    "email": "carlos@example.com",
+    "polo": "Botafogo-RJ",
+    "phone": "(22) 123456789",
+    "course": "Administração",
+    "cupom": "zxcvbnm-asdfgh"
+  },
+  {
+    "contacted": true,
+    "cratedAt": "2024-01-14T00:00:00.000Z",
+    "name": "Larissa",
+    "email": "larissa@example.com",
+    "polo": "Copacabana-RJ",
+    "phone": "(23) 111223344",
+    "course": "Psicologia",
+    "cupom": "qwertyu-123456",
+    "ownerId": "5e1f3b7b9d1f1b0017f3b7a9"
+  },
+  {
+    "contacted": false,
+    "cratedAt": "2024-01-14T00:00:00.000Z",
+    "name": "Eduardo",
+    "email": "eduardo@example.com",
+    "polo": "Niterói-RJ",
+    "phone": "(25) 876543210",
+    "course": "Arquitetura",
+    "cupom": "poiuytrewq-987654"
+  },
+  {
+    "contacted": true,
+    "cratedAt": "2024-01-14T00:00:00.000Z",
+    "name": "Mariana",
+    "email": "mariana@example.com",
+    "polo": "Barra da Tijuca-RJ",
+    "phone": "(26) 555666777",
+    "course": "Biologia",
+    "cupom": "mnbvcxz-lkjhgf",
+    "ownerId": "5e1f3b7b9d1f1b0017f3b7a9"
+  }
+]
+
   

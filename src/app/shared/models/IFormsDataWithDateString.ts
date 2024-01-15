@@ -1,6 +1,6 @@
-export interface IFormsData{
+export interface IFormsDataWithDateString{
     contacted: boolean;
-    createdAt: Date;
+    createdAt: string;
     name: string;
     email: string;
     phone: string;

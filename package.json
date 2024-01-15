@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^16.1.0",
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
+    "date-fns": "^3.2.0",
     "ngx-cookie-service": "^17.0.1",
     "ngx-pagination": "^6.0.3",
     "ngx-toastr": "^18.0.0",
