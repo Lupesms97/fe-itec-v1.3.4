@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { FormsI } from 'src/app/shared/models/FormsI';
 import { NotificationService } from './notification.service';
 import { TypeToast } from 'src/app/shared/models/TypeToastE';
-import { BehaviorSubject, Observable, map } from 'rxjs';
+import { BehaviorSubject, Observable, map, switchMap } from 'rxjs';
 import { IFormsData } from 'src/app/shared/models/IFormsData';
 import { IFormsDataWithDateString } from 'src/app/shared/models/IFormsDataWithDateString';
 import { format, parseISO } from 'date-fns';
@@ -62,20 +62,27 @@ public getDataWithoutOwner(): Observable<IFormsData[]> {
 
 /* ---------------- GETTING DATE WITHOUT onwer on START ------------------- */
 
-private getDataWithOwnerId(): Observable<IFormsData[]> {
-  return this.http.get<IFormsDataWithDateString[]>(`${this.API_URL}/records/5e1f3b7b9d1f1b0017f3b7a9`).pipe(
+private getDataWithOwnerId(idOwner:string ): Observable<IFormsData[]> {
+  /* 5e1f3b7b9d1f1b0017f3b7a9 */
+  return this.http.get<IFormsDataWithDateString[]>(`${this.API_URL}/records/${idOwner}`).pipe(
     map((prospects) => prospects.map(this.convertJsonToIFormsData))
   );
 }
 
 private refreshWithoutOwnerId() {
-  this.dataWithOwnerId$ = this.getDataWithOwnerId();
+  this.dataWithOwnerId$ = this.getDataWithOwnerId('5e1f3b7b9d1f1b0017f3b7a9');
 }
 
 public getDataWithOwner(): Observable<IFormsData[]> {
   return this.dataWithOwnerId$ as Observable<IFormsData[]>;
 }
 
+public updateOwner(idProspect: string, IdOwner: string) {
+  return this.http.post(`${this.API_URL}/updateContacted/${idProspect}/${IdOwner}`, {}).pipe(
+    switchMap(() => this.getDataWithOwnerId(IdOwner)),
+    switchMap(() => this.getDataWithoutOwner())
+  );
+}
 
 /* ---------------- GETTING DATE END ------------------- */
 

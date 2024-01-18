@@ -1,4 +1,5 @@
 export interface IFormsDataWithDateString{
+    id: string;
     contacted: boolean;
     createdAt: string;
     name: string;

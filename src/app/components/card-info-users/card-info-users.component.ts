@@ -1,7 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
 import { FormsService } from 'src/app/core/services/forms.service';
+import { NotificationService } from 'src/app/core/services/notification.service';
 import { FormsI } from 'src/app/shared/models/FormsI';
 import { IFormsData } from 'src/app/shared/models/IFormsData';
+import { TypeToast } from 'src/app/shared/models/TypeToastE';
 
 @Component({
   selector: 'app-card-info-users',
@@ -10,42 +14,52 @@ import { IFormsData } from 'src/app/shared/models/IFormsData';
 })
 export class CardInfoUsersComponent implements OnInit {
 
-  @Input()  
-  userDataArray: IFormsData[] = []
+  
+  userDataArray: IFormsData[] = [];
+  showInformation = false;
+  carteira = '';
 
 
-  constructor() {
+  constructor(private router:Router, private formsService:FormsService,private notificationService:NotificationService) {
     
 /*     this.getDateAltenative();
     console.log(this.userDataArray) */
+    this.showInfo()
+    this.getContacted();
+    this.getData(this.getRouter());
+
   }
   ngOnInit(): void {
-
   }
 
   
-  getContacted(userContacted:boolean): string {
-    let response = 'Disponível'; // Defina um valor padrão
+
   
-    if (userContacted) {
-      response = 'Indisponível';
+  getContacted() {
+    if(this.getRouter() === '/colaborador/home'){
+      this.carteira = 'Disponível'
+    }else if(this.getRouter() === '/colaborador/minha-carteira'){
+      this.carteira = 'Indisponível'
+
+    }else{
+      
     }
-  
-    return response;
   }
   
-  showInfo(userContacted:boolean): boolean {
-    let response = false;
-
-    if (userContacted) {
-        response = true;
+  showInfo() {
+    if(this.getRouter() === '/colaborador/home'){
+      this.showInformation = false;
+    }else if(this.getRouter() === '/colaborador/minha-carteira'){
+      this.showInformation = true;
+    }else{
+      this.notificationService.showToast(TypeToast.Error,'Error','Não foi possivel carregar os dados!');
     }
 
-    return response;
   }
 
 
-  getButtonStyle(userContacted:boolean){
+  getButtonStyle(){
+
     let buttonstyle = {
       'height':'6vh',
       'padding':'0 2rem 0 2rem' ,
@@ -57,7 +71,7 @@ export class CardInfoUsersComponent implements OnInit {
 
     }
 
-    if(userContacted){
+    if(this.showInformation){
       buttonstyle = {
         'height':'6vh',
         'padding':'0 2rem 0 2rem' ,
@@ -75,6 +89,18 @@ export class CardInfoUsersComponent implements OnInit {
 
   }
 
+  updateContacted(idProspect:string){
+    let IdOwner = '5e1f3b7b9d1f1b0017f3b7a9';
+    this.formsService.updateOwner(idProspect,IdOwner).subscribe(
+      (data)=>{
+        this.notificationService.showToast(TypeToast.Success,'Sucesso','Atualizado com sucesso!');
+        this.getData(this.getRouter());
+      },
+      (error)=>{
+        this.notificationService.showToast(TypeToast.Error,'Error','Não foi possivel atualizar os dados!');
+      }
+    )
+  }
 
 /*   getData(){
     this.formsService.data.subscribe(
@@ -99,6 +125,46 @@ export class CardInfoUsersComponent implements OnInit {
     }
   }
 
+  getRouter(){
+    return this.router.url;
+  }
+
+  getData(router:string){
+    if(router === '/colaborador/minha-carteira'){
+      this.getDataMyWallet();
+    }else if(router === '/colaborador/home'){
+      
+      this.getDataHome();
+    }else{
+      this.notificationService.showToast(TypeToast.Error,'Error','Não foi possivel carregar os dados!');
+    }
+
+  }
+
+  getDataMyWallet(){
+    this.formsService.getDataWithOwner().subscribe(
+      (data)=>{
+        this.userDataArray = data;
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
+    
+  }
+
+
+  getDataHome(){
+    this.formsService.getDataWithoutOwner().subscribe(
+      (data)=>{
+        this.userDataArray = data;
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
+    
+  }
 
 
 

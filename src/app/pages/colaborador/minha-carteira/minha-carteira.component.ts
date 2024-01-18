@@ -12,21 +12,11 @@ export class MinhaCarteiraComponent {
   userData: IFormsData[] = []
 
   constructor(
-    private formsService: FormsService
+    
   ) {
-    this.getData(); 
+    
   }
 
   
- getData(){
-    this.formsService.getDataWithOwner().subscribe(
-      (data)=>{
-        this.userData = data;
-      },
-      (error)=>{
-        console.log(error)
-      }
-    )
-    
-  } 
+ 
 }

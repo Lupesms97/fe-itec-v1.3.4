@@ -31,12 +31,11 @@
                         <p class="mb-1 text-center f-w-600">Email</p>
                         <span
                         class="placeholder col-12 line-custom-height"
-                        *ngIf="!showInfo(data.contacted)"
+                        *ngIf="!showInformation "
                       ></span>
-
                       <h6
                         class="text-muted f-w-400 line-custom-height"
-                        *ngIf="showInfo(data.contacted)"
+                        *ngIf="showInformation"
                       >
                         {{ data.email }}
                       </h6>
@@ -45,11 +44,11 @@
                       <p class="mb-1 text-center f-w-600">Telefone</p>
                       <span
                         class="placeholder col-12"
-                        *ngIf="!showInfo(data.contacted)"
+                        *ngIf="!showInformation"
                       ></span>
                       <h6
                         class="text-muted f-w-400"
-                        *ngIf="showInfo(data.contacted)"
+                        *ngIf="showInformation"
                       >
                         {{ data.phone }}
                       </h6>
@@ -68,7 +67,7 @@
                       <div class="col-sm-6">
                         <p class="mb-1 f-w-600">Carteira</p>
                         <h6 class="text-muted f-w-400">
-                          {{ getContacted(data.contacted) }}
+                          {{carteira }}
                         </h6>
                       </div>
                     </div>
@@ -86,7 +85,8 @@
                         <div class="col">
                           <button
                             class="btn btn-success btn-sm btn-custon"
-                            [ngStyle]="getButtonStyle(data.contacted)"
+                            [ngStyle]="getButtonStyle()"
+                            (click)="updateContacted(data.id)"
                           >
                             Captar
                           </button>

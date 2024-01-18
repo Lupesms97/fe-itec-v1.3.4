@@ -6,6 +6,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { MinhaCarteiraComponent } from './minha-carteira/minha-carteira.component';
 import { NavbarAdminComponent } from 'src/app/shared/navbar-admin/navbar-admin.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { loggedGuard } from 'src/app/core/guard/logged.guard';
 
 
 
@@ -13,15 +16,19 @@ import { NavbarAdminComponent } from 'src/app/shared/navbar-admin/navbar-admin.c
   declarations: [
     HomeComponent,
     MinhaCarteiraComponent,
-    NavbarAdminComponent
+    NavbarAdminComponent,
+    LoginComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     RouterModule.forChild(
       [
-        {path:'', redirectTo: 'home', pathMatch: 'full'},
-        {path:'home', component: HomeComponent},
-        {path:'minha-carteira', component: MinhaCarteiraComponent}
+        {path:'', redirectTo: 'login', pathMatch: 'full'},
+        {path:'login', component: LoginComponent},
+        {path:'home', component: HomeComponent/* , canActivate:  [loggedGuard] */},
+        {path:'minha-carteira', component: MinhaCarteiraComponent/* ,canActivate:  [loggedGuard] */},
+       
       ]
     ),
     NgxPaginationModule,

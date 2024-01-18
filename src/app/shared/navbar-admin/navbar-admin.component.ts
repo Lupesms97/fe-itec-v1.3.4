@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-navbar-admin',
@@ -9,11 +10,15 @@ export class NavbarAdminComponent {
   @Input() 
   corDoBackground: string = 'rgba(233, 236, 242, 0.8)';
 
-  constructor() {
+  constructor(private authService:AuthService) {
     
    }
 
   navigateTo(link:string){
     window.open(link, '_blank');
+  }
+
+  logout(){
+    this.authService.logout();
   }
 }
