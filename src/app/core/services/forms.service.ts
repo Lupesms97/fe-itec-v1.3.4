@@ -34,6 +34,9 @@ export class FormsService {
 
 
   send(forms:FormsI){
+    if(forms.cupom == null){
+      forms.cupom = '';
+    }
     return this.http.post(`${this.API_URL}/recordProspect`,forms);
   }
 

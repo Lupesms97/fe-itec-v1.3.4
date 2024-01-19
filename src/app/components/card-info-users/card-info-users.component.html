@@ -18,7 +18,7 @@
                     />
                   </div>
                   <h6 class="f-w-600">{{ data.name }}</h6>
-                  <p class="w-100 mt-3">{{ data.polo }}</p>
+                  <p class="w-100 mt-3">{{ data.polo ? getCity(data.polo) : data.polo }}</p>
                   <p class="w-100 mt-3">{{ data.course }}</p>
                 </div>
               </div>

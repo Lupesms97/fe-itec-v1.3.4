@@ -33,6 +33,7 @@ export class FormsComponent {
     phone: '',
     course: '',
     cupom: '',
+    emailMarketing: false
 
   }
 

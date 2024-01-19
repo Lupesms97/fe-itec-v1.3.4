@@ -165,7 +165,24 @@ export class CardInfoUsersComponent implements OnInit {
     )
     
   }
-
+  getCity(cityString: string): string {
+    switch (cityString) {
+      case 'VR_VILA':
+        return 'Vila VR';
+      case 'VR_RETIRO':
+         return 'Retiro VR';
+      case 'ANGRA_DOS_REIS':
+        return 'Angra dos Reis';
+      case 'BARRA_DO_PIRAI':
+        return 'Barra do Piraí';
+      case 'BARRA_MANSA':
+        return 'Barra Mansa';
+      case 'PORTO_REAL':
+        return 'Porto Real';  
+      default:
+        return cityString;
+    }
+  }
 
 
   
