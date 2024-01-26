@@ -5,7 +5,7 @@ export interface CoursesI {
     title: string;
     about: string;
     areaOfExpertise: string;
-    content: string[]
+    content: ModuleI[]
     hours: number;
     duration:string
     avgSalary?: number;

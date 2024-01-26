@@ -44,9 +44,11 @@
 .custom-btn-home{
   height:8vh;
   border-radius:2rem;
-  width:25%;
+  width:40%;
   color:white;
   background:  #409D00;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave na propriedade transform */
+  animation: buttonScale 1s infinite;
 }
 .custom-btn-home p{
   color:white;

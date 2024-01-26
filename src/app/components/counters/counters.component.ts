@@ -41,7 +41,7 @@ export class CountersComponent implements OnInit, OnDestroy {
   }
   
   animateCounter(): void {
-    const end = 4000; // ou qualquer outro valor até mil que você desejar
+    const end = 5000; // ou qualquer outro valor até mil que você desejar
     const duration = 2000;
     const interval = duration / end;
   

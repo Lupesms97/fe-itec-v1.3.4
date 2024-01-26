@@ -19,15 +19,13 @@ export class DetailsCoursesComponent implements OnInit {
     title:'',
     about:'',
     areaOfExpertise:'',
-    content:[],
+    content: [],
     hours:0,
     duration:'',
     avgSalary:0,
     tag:''
+
   }
-
-
-
 
   constructor(private router: ActivatedRoute,
   private courseService:CoursesService) {
@@ -69,13 +67,13 @@ export class DetailsCoursesComponent implements OnInit {
 
   setColor(tag:string){
     switch (tag) {
-      case 'EAD':
+      case 'Especialização':
         return '#86D18F';
-      case 'Ensino Superior':
+      case 'Escola':
         return '#0275E8';
-      case 'Cursos Livres':
+      case 'Técnico':
         return '#2c61a3';
-      case 'Profissionalizantes':
+      case 'ITEC Pro ':
           return '#f75ed4';
       default:
         return '#2c61a3';

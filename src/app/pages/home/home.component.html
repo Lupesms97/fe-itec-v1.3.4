@@ -51,19 +51,19 @@
     <div class="why-us box-shadow container-fluid mt-5">
 
       <div class="col-lg-12">
-        <div class=" justify-content-start rainbow-line"></div>
+        <div class=" justify-content-center rainbow-line"></div>
 
-        <div class="row text-start my-3">
+        <div class="row text-center my-3">
           <p>POR QUE ESCOLHER O <span>ITEC ?</span></p>
         </div>
-        <div class="row text-start my-3">
+        <div class="row text-center my-3">
           <p>
             Presente em todas as regiões do Brasil, o ITEC é a maior rede privada de Ensino Técnico no Brasil.
             Oferecemos mais de 30 cursos e já são mais de 100 mil alunos matriculados.</p>
         </div>
-        <div class="row justify-content-start my-3 ms-1">
+        <div class="row justify-content-center my-3 ms-1">
           <button class="col-md-12 btn custom-btn-home" >
-            <a routerLink="/seja-nosso-aluno" style="color: #ffff;">MATRICULE-SE</a>
+            <a routerLink="/seja-nosso-aluno" style="color: #ffff;">MATRICULE-SE AGORA</a>
           </button>
         </div>
       </div>
@@ -71,51 +71,26 @@
 
     <app-forms img="assets/POST DESCONTO EXCLUSIVO STORY.jpg" orderForms="order-2" orderImage="order-1"
       title="CHEGOU A HORA DE" spanTitle="MUDAR SEU FUTURO"
-      text="Faça agora o seu cadastro e garanta uma oferta super especial para se matricular em qualquer uma de nossas unidades espalhadas pelo Brasil."
-      buttonText="Garantir meu desconto"></app-forms>
+      text="Faça agora o seu cadastro e garanta uma bolsa desconto especial para se matricular em qualquer uma de nossas unidades."
+      buttonText="Desejo mais informações!"></app-forms>
 
   </section>
   <app-counters></app-counters>
-  <section class="home-content "> 
+<!--   <section class="home-content "> 
     <app-forms img="assets/SEUSUCESSO.png" orderForms="order-1" orderImage="order-2" title="QUAL CURSO"
       spanTitle="COMBINA COM VOCÊ ?"
       text="Quer se qualificar para o mercado de trabalho mas ainda não sabe qual curso fazer? Descubra!"
       buttonText="Fazer o teste" [showCourses]="false"></app-forms>
 
-  </section>
+  </section> -->
 
 
-  <div class="container-fluid div-style cat-news">
-    <div class="row text-center">
-      <div class="col-lg-6 col-md-12">
-        <h3>NÃO PERCA <span>NENHUMA NOVIDADE</span></h3>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="row text-center">
-          <div class="col-lg-8 col-md-12 form-floating mb-3 input-field">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="email">
-            <label class="ms-4 ps-2" for="floatingInput">Seu melhor email</label>
-          </div>
-          <button class="col-lg-4 col-md-12 btn custom-btn-home" [class.loading]="processingOrderNewsLetter" (click)="processOrder('');onSubmit()">
-            <p *ngIf="!processingOrderNewsLetter">
-              Inscrever-se
-            </p>
-            <p *ngIf="processingOrderNewsLetter">
-              <i class="fa fa-spinner fa-spin"></i>
-              <br>
-              Enviando
-            </p>
-          </button>
-        </div>
-      </div>      
-    </div>
-  </div>
 
   <section class="home-content ">
     <app-blog-presentation></app-blog-presentation>
   </section>
 
-  <div class="container-fluid div-style cat-news">
+<!--   <div class="container-fluid div-style cat-news">
     <div class="row text-center">
       <div class="col-lg-6 col-md-12">
         <h3>QUER GANHAR UM <span>SUPER DESCONTO?</span></h3>
@@ -137,7 +112,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <section class="home-content">
     <app-news-presentation title="ÚLTIMAS" titleOnSpan="NOTÍCIAS" [news]="news" location="/noticias"></app-news-presentation>

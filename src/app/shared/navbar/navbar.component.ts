@@ -12,7 +12,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
 
-  @Input() corDoBackground: string = 'rgba(233, 236, 242, 0.3)';
+  @Input() corDoBackground: string = '#3CB371';
 
   constructor() {
     

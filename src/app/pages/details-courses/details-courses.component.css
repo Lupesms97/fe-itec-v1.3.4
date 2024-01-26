@@ -65,7 +65,7 @@ p{
     height:auto;
 }
 .itens h4{
-    height:13vh;
+    height:12vh;
 }
 @media(max-width: 768px){
     .title-style { 

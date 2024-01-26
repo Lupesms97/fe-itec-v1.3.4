@@ -14,9 +14,10 @@ import { BlogNoticiasPostComponent } from './blog-noticias-post/blog-noticias-po
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OurStudentComponent } from './our-student/our-student.component';
 import { FormsModule } from '@angular/forms';
-import { LocaisComponent } from './locais/locais.component';
-import { InstutcionalComponent } from './instutcional/instutcional.component';
-import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
+import { LocaisComponent } from './locations/locais.component';
+import { InstutcionalComponent } from './institutional/instutcional.component';
+import { TrabalheConoscoComponent } from './work-with-us/trabalhe-conosco.component';
+
 
 
 
