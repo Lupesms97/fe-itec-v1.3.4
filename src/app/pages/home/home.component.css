@@ -39,14 +39,14 @@
 .why-us span{
   font-weight:bold;
   font-size:1.3rem;
-  color:#809F40
+  color:#96bae2;
 }
 .custom-btn-home{
   height:8vh;
   border-radius:2rem;
   width:40%;
   color:white;
-  background:  #409D00;
+  background:  #1c3f68;
   transition: transform 0.3s ease; /* Adiciona uma transição suave na propriedade transform */
   animation: buttonScale 1s infinite;
 }
@@ -55,7 +55,7 @@
   font-weight:bold;
 }
 .custom-btn-home:hover{
-  background:#3CB371;
+  background:#96bae2;
   transition: 1s;
 }
 @keyframes buttonScale {
@@ -75,7 +75,7 @@
   border-radius: 2rem;
   width: 75%;
   color: white;
-  background: #409D00;
+  background: #1c3f68;
 
 }
 
@@ -98,13 +98,13 @@
   
 }
 .cat-news h3{
-  color:black;
+  color:#ffff;
 }
 .cat-news span{
-  color:#2B9C07
+  color:#204978
 }
 .cat-news{
-  background-color: #baf5bf ;
+  background-color: #96bae2 ;
   padding:5vh
 }
 .div-style img{

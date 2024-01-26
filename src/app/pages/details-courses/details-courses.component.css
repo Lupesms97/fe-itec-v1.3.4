@@ -58,6 +58,24 @@ p{
     width:100%;
     font-size:1.2rem;
 }
+
+.divisions-infos h4{
+    padding:1rem;
+    color:#2C61A3;
+    border-top-left-radius:2rem;
+    border-top-right-radius:2rem;
+    border: 3px solid #2C61A3;
+}
+.divisions-infos p {
+    color: #f8f8f8;
+
+    background-color: #2C61A3;
+}
+.divisions-infos p:last-of-type {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-bottom:2rem;
+}
 .title-course-info{
     padding-bottom:5vh!important;
 }
@@ -65,7 +83,7 @@ p{
     height:auto;
 }
 .itens h4{
-    height:12vh;
+    height:auto;
 }
 @media(max-width: 768px){
     .title-style { 

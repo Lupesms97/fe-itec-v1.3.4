@@ -47,8 +47,6 @@ export class CoursesService {
   }
 
   public refreshPosts(): void {
-    console.log(this.getPosts());
-
     this.setPostsOnObservable();
   }
 
@@ -69,6 +67,26 @@ export class CoursesService {
     return this.route.url;
   }
 
+
+  getListEspecializacao():string[]{
+    let nameOfCourse:string[] = [];
+    this.cursosEspecializacao$.subscribe((courses)=>{
+      courses.forEach((course)=>{
+        nameOfCourse.push(course.title);
+      });
+    });
+    return nameOfCourse;
+  }
+
+  getListTecnico():string[]{
+    let nameOfCourse:string[] = [];
+    this.cursosEspecializacao$.subscribe((courses)=>{
+      courses.forEach((course)=>{
+        nameOfCourse.push(course.title);
+      });
+    });
+    return nameOfCourse;
+  }
 
   
 }

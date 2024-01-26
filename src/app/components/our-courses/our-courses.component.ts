@@ -58,7 +58,6 @@ export class OurCoursesComponent {
   }
   limitCoursesForHomepage(): void {
     // Verifica se está na homepage
-    console.log('mainpage:', this.getRouter() );
       
     if (this.getRouter() === '/home') {
       this.viewCursoTecnico.next(this.cursosProfissionalizantes.slice(0, 7));

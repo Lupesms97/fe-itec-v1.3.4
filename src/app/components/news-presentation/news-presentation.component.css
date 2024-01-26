@@ -10,29 +10,30 @@
 .container-blog {
   padding: 0 3vw 5vh 3vw;
 }
-.color-title-blog {
-  color: #2b9c07;
+.color-title-blog{
+  color:#659fe0;
+
 }
-.color-title-blog span {
-  color: #2b9c07;
-  font-weight: bold;
+.color-title-blog span{
+  color:#1c3f68;
+  font-weight:bold;
 }
-.color-title-blog a {
-  color: #2b9c07;
+.color-title-blog a{
+  color:#1c3f68;
 }
-.blog-item {
+.blog-item{
+
 }
 .blog-item {
   border: solid 1px #ffff;
 }
-.title {
-  color: #ffff;
+.title a{
+  color:#ffff;
 }
 
 .blog-item:hover {
-  background: #86d18f;
+  background: #96bae2;
 }
-
 .blog-item:hover .title {
   color: white;
 }
@@ -114,7 +115,7 @@
   z-index:999!important
 }
 .desktop .container .card .content .btn:hover {
-  background:#27b03e;
+  background:#659fe0;
   cursor:pointer;
  
 }
@@ -232,7 +233,7 @@
   border-radius:2rem;
   width:80%;
   color:white;
-  background:  #3CB371;
+  background:  #1c3f68;
 }
 .custom-btn a{
   color:white;
@@ -243,12 +244,16 @@
   cursor: pointer;
 }
 .custom-btn:hover{
-  color:#27b03e;
+  
   transition: 1s;
 }
 .card h6, h2{
-  color:#27b03e;
+  color:#1c3f68;
   font-weight:500;
+}
+.card .title-witouth-hover{
+  font-size:1.3rem;
+
 }
 
 @media(max-width:768px){

@@ -59,7 +59,7 @@ export class DetailsCoursesComponent implements OnInit {
   }
 
   haveAvgSalary(): boolean{
-    if(this.course.avgSalary){
+    if(this.course.avgSalary!){
       return true;
     }
     return false;

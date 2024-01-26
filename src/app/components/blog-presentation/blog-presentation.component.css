@@ -14,15 +14,15 @@
     padding: 0 3vw 5vh 3vw
 }
 .color-title-blog{
-    color:#2B9C07;
+    color:#659fe0;
  
 }
 .color-title-blog span{
-    color:#2B9C07;
+    color:#1c3f68;
     font-weight:bold;
 }
 .color-title-blog a{
-    color:#2B9C07;
+    color:#1c3f68;
 }
 .blog-item{
 
@@ -35,7 +35,7 @@
 }
 
 .blog-item:hover {
-    background: #86d18f;
+    background: #96bae2;
 }
 
 .blog-item:hover .title {
