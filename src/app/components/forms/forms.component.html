@@ -56,10 +56,9 @@
         </div>
         <div class="col-lg-12" *ngIf="showCourses">
           <label for="inputCourses" class="form-label">Cursos</label>
-          <select id="inputCourses" class="form-select" name="curso" [(ngModel)]="forms.course" required
-            #curso="ngModel">
+          <select id="inputCourses" class="form-select" name="curso" [(ngModel)]="forms.course" required #curso="ngModel">
             <option selected>Opções</option>
-            <option *ngFor="let curso of cursos" value="{{curso}}">{{curso}}</option>
+            <option *ngFor="let curso of getCoursesByPolo()" value="{{curso}}">{{curso}}</option>
           </select>
           <div *ngIf="curso.hasError('required') && curso.touched " class="alert alert-danger">
             <div id="alert-danger">Informe um curso</div>
@@ -74,6 +73,9 @@
                 analítico e publicitário sobre produtos, serviços e assuntos gerais, nos termos da lei geral de proteção
                 de dados. Os dados aqui preenchidos serão usados como forma de contato conosco e envio de ofertas.</p>
             </label>
+          </div>
+          <div class="col-12 align-baseline d-flex mt-3">
+            <small>*Consulte o regulamento da bolsa desconto na central de matriculas</small>
           </div>
         </div>
         <div class="col-lg-12 pb-4">
@@ -128,13 +130,8 @@
         <div class="col-lg-12 col-md-12" *ngIf="poloOnAside">
           <label for="inputPolo" class="form-label">Polo</label>
           <select class="form-select" id="inputPolo" name="polo" [(ngModel)]="forms.polo" required>
-            <option value="VR_VILA">Volta Redonda - Vila</option>
-            <option value="VR_RETIRO">Volta Redonda - Retiro</option>
-            <option value="ANGRA_DOS_REIS">Angra do Reis</option>
-            <option value="RESENDE">Resende</option>
-            <option value="PORTO_REAL">Porto Real</option>
-            <option value="ITATIAIA">Itatiaia</option>
-            <option value="BARRA_MANSA">Barra Mansa</option>
+            <option *ngFor="let poloinf of polosAvaliable" 
+            value="{{poloinf.aka}}">{{poloinf.location}}</option>
           </select>
 
         </div>
@@ -151,7 +148,7 @@
           <select id="inputCourses" class="form-select" name="curso" [(ngModel)]="forms.course" required
             #curso="ngModel">
             <option selected>Opções</option>
-            <option *ngFor="let curso of cursos" value="{{curso}}">{{curso}}</option>
+            <option *ngFor="let curso of getCoursesByPolo()" value="{{curso}}">{{curso}}</option>
           </select>
           <div *ngIf="curso.hasError('required') && curso.touched " class="alert alert-danger">
             <div id="alert-danger">Informe um curso</div>
@@ -167,6 +164,9 @@
                 de dados. Os dados aqui preenchidos serão usados como forma de contato conosco e envio de ofertas.</p>
             </label>
           </div>
+          <div class="col-12 align-baseline d-flex mt-3">
+            <small>*Consulte o regulamento da bolsa desconto na central de matriculas</small>
+          </div>
         </div>
         <div class="col-lg-12 pb-4">
           <button type="submit" class="btn btn-forms-custom" (click)="processForms()" [disabled]="!infoForm.valid">
@@ -177,9 +177,6 @@
               <i class="fa fa-spinner fa-spin"></i>&nbsp; Enviando
             </p>
           </button>
-        </div>
-        <div class="col-12 align-baseline d-flex">
-          <small>Consulte o regulamento da bolsa desconto na central de matriculas</small>
         </div>
       </form>
     </div>

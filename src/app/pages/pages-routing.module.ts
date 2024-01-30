@@ -11,7 +11,6 @@ import { LocaisComponent } from './locations/locais.component';
 import { InstutcionalComponent } from './institutional/instutcional.component';
 import { TrabalheConoscoComponent } from './work-with-us/trabalhe-conosco.component';
 
-
 const routes: Routes = [
   { path:'', redirectTo: '', pathMatch: 'full' },
   {path:'', component: HomeComponent},

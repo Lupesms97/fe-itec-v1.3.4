@@ -18,11 +18,11 @@
             <h1 class="col-lg-8 col-md-12 title-course-info">{{course.title}}</h1>
             <div class="content col-lg-8 col-md-12">             
                 <div class="divisions">
-                    <h4 [style.borderColor]="corDoBackground" [style.color]="corDoBackground">Sobre o curso </h4>
+                    <h4 [style.borderColor]="corDoBackground" [style.color]="corDoBackground">{{titles.firstTitle}}</h4>
                     <p class="text-center" [style.background-color]="corDoBackground"> {{course.about}}</p>
                 </div>
                 <div class="divisions">
-                    <h4 [style.borderColor]="corDoBackground" [style.color]="corDoBackground">Mercado de trabalho </h4>
+                    <h4 [style.borderColor]="corDoBackground" [style.color]="corDoBackground">{{titles.secondTitle}} </h4>
                     <p class="text-center" [style.background-color]="corDoBackground">{{course.areaOfExpertise}}</p>
                 </div>
                 <div class="divisions">
@@ -58,11 +58,12 @@
    
                 <app-forms 
                 [showCourses]="false"
-                title="Quer ganhar uma bolsa de estudo? "
-                spanTitle="Vem com a gente! 🚀"
+                title="Quer ganhar uma bolsa de estudo?"
+                spanTitle="Vem com a gente!🚀"
                 buttonText="Enviar"
                 buttonLink="home"
                 [formsAside]="true"
+                [tag]="courseTag"
                 ></app-forms>
             </div>
         </div>

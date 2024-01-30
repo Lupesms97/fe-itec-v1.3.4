@@ -16,8 +16,8 @@ export class CoursesService {
   
   private cursos$: BehaviorSubject<CoursesI[]> = new BehaviorSubject<CoursesI[]>([]);
 
-  public cursosEspecializacao$: Observable<CoursesI[]> = this.cursos$.pipe(
-    map(posts => posts.filter(post => post.tag === 'Especialização')),
+  public cursosLivres$: Observable<CoursesI[]> = this.cursos$.pipe(
+    map(posts => posts.filter(post => post.tag === 'Livre')),
 
   );
   public cursosTecnico$: Observable<CoursesI[]> = this.cursos$.pipe(
@@ -27,7 +27,7 @@ export class CoursesService {
     map(posts => posts.filter(post => post.tag === 'Escola'))
 
   );
-  public cursosProfissonalizante$: Observable<CoursesI[]> = this.cursos$.pipe(
+  public cursosProfissionalizante$: Observable<CoursesI[]> = this.cursos$.pipe(
     map(posts => posts.filter(post => post.tag === 'ITEC Pro'))
 
   );
@@ -68,9 +68,9 @@ export class CoursesService {
   }
 
 
-  getListEspecializacao():string[]{
+  getListLivre():string[]{
     let nameOfCourse:string[] = [];
-    this.cursosEspecializacao$.subscribe((courses)=>{
+    this.cursosLivres$.subscribe((courses)=>{
       courses.forEach((course)=>{
         nameOfCourse.push(course.title);
       });
@@ -80,7 +80,27 @@ export class CoursesService {
 
   getListTecnico():string[]{
     let nameOfCourse:string[] = [];
-    this.cursosEspecializacao$.subscribe((courses)=>{
+    this.cursosTecnico$.subscribe((courses)=>{
+      courses.forEach((course)=>{
+        nameOfCourse.push(course.title);
+      });
+    });
+    return nameOfCourse;
+  }
+
+  getListEscola():string[]{
+    let nameOfCourse:string[] = [];
+    this.cursosEscola$.subscribe((courses)=>{
+      courses.forEach((course)=>{
+        nameOfCourse.push(course.title);
+      });
+    });
+    return nameOfCourse;
+  }
+
+  getListProfissionalizante():string[]{
+    let nameOfCourse:string[] = [];
+    this.cursosProfissionalizante$.subscribe((courses)=>{
       courses.forEach((course)=>{
         nameOfCourse.push(course.title);
       });

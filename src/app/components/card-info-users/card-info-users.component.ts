@@ -14,7 +14,7 @@ import { TypeToast } from 'src/app/shared/models/TypeToastE';
 })
 export class CardInfoUsersComponent implements OnInit {
 
-  
+  count = 0 
   userDataArray: IFormsData[] = [];
   showInformation = false;
   carteira = '';
@@ -113,14 +113,15 @@ export class CardInfoUsersComponent implements OnInit {
   } */
 
   getAvatarImagePath(index: number): string {
-    let count = 0;
+    
     if (index < 8) {
-      count++;
-      return `https://bootdey.com/img/Content/avatar/avatar${index + count}.png`;
+      this.count++;
+      return `https://bootdey.com/img/Content/avatar/avatar${index + this.count}.png`;
       
     } else {
-      count =  count - (count + 1);
-      return `https://bootdey.com/img/Content/avatar/avatar${index + count}.png`;
+      
+      this.count =  this.count - (index + 1);
+      return `https://bootdey.com/img/Content/avatar/avatar${ this.count}.png`;
 
     }
   }

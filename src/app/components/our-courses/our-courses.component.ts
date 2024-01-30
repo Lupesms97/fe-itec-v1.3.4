@@ -11,7 +11,7 @@ import { CoursesI } from 'src/app/shared/models/CoursesI';
 })
 export class OurCoursesComponent {
   cursosTecnico: CoursesI[] = [];
-  cursosEspecializacao: CoursesI[] = [];
+  cursosLivres: CoursesI[] = [];
   cursosProfissionalizantes: CoursesI[] = [];
   cursosEscola: CoursesI[] = [];
   viewCursoTecnico =   new BehaviorSubject<CoursesI[]>([]);
@@ -76,11 +76,11 @@ export class OurCoursesComponent {
       this.cursosEscola = posts;
     });
 
-    this.coursesService.cursosEspecializacao$.subscribe(posts => {
-      this.cursosEspecializacao = posts;
+    this.coursesService.cursosLivres$.subscribe(posts => {
+      this.cursosLivres = posts;
     });
 
-    this.coursesService.cursosProfissonalizante$.subscribe(posts => {
+    this.coursesService.cursosProfissionalizante$.subscribe(posts => {
       this.cursosProfissionalizantes = posts;
       this.limitCoursesForHomepage();
     });

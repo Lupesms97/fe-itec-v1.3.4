@@ -15,6 +15,7 @@ import { PrizeDrawComponent } from './prize-draw/prize-draw.component';
 import { MapComponent } from './map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CardInfoUsersComponent } from './card-info-users/card-info-users.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 
@@ -28,9 +29,11 @@ import { CardInfoUsersComponent } from './card-info-users/card-info-users.compon
     NewsPresentationComponent,
     PrizeDrawComponent,
     MapComponent,
-    CardInfoUsersComponent
+    CardInfoUsersComponent,
+
   ],
   imports: [
+    
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
