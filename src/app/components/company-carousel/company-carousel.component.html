@@ -1,0 +1,36 @@
+<section class="py-8 pt-5 text-center">
+    <!--/.bg-holder-->
+    <h2>
+      <span class="justify-content-center mb-5 mb-md-0">GANHE DESCONTO NAS EMPRESAS PARCEIRAS</span>
+    </h2>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="carousel slide" id="carouselPeople" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let company of companys; let i = index" [class.active]="i === 0"
+            data-bs-interval="5000">
+              <div class="row pt-5-custom pb-5-custom">
+                <div class="col-lg-12 col-md-12 col-sm-12 pt-5-custom image-container">
+                    <img src="{{company.photo}}" alt="{{company.companyName}}" />
+                  </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center text-sm-start pt-5-custom pt-s text-carousel">
+                    <p class=" pt-5-custom">{{company.text}}</p>
+                </div>
+                <div class="col-12 pt-5-custom pt-5">
+                    <button class="btn col-12 btn-custom" (click)="navigateTo(company.link)">
+                        <a >Desejo mais informação!</a>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="position-relative z-index-2 mt-5">
+            <ol class="carousel-indicators">
+              <li *ngFor="let testimonial of companys; let i = index" data-bs-target="#carouselPeople" [attr.data-bs-slide-to]="i"
+                  [class.active]="i === 0"></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

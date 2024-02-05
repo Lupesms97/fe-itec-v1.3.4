@@ -16,6 +16,7 @@ import { MapComponent } from './map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CardInfoUsersComponent } from './card-info-users/card-info-users.component';
 import { ModalComponent } from './modal/modal.component';
+import { CompanyCarouselComponent } from './company-carousel/company-carousel.component';
 
 
 
@@ -30,6 +31,7 @@ import { ModalComponent } from './modal/modal.component';
     PrizeDrawComponent,
     MapComponent,
     CardInfoUsersComponent,
+    CompanyCarouselComponent,
 
   ],
   imports: [
@@ -51,7 +53,9 @@ import { ModalComponent } from './modal/modal.component';
     BlogPresentationComponent,
     NewsPresentationComponent,
     PrizeDrawComponent,
-    MapComponent,CardInfoUsersComponent
+    MapComponent,
+    CardInfoUsersComponent,
+    CompanyCarouselComponent
   ]
 })
 export class ComponentsModule { }

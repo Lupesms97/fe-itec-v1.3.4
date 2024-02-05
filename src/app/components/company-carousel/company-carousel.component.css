@@ -1,0 +1,96 @@
+/*** Testimonial ***/
+section{
+    background: #d4d8fc;
+   border-radius:2rem
+}
+.carousel-inner .carousel-item{
+    padding:2vh 5vw 2vh 10vw;
+    width:100%!important;
+    height:85vh;     
+}
+.carousel-innner .carousel-item img{
+    height:20vh!important
+}
+
+.major-title{
+    margin-bottom:5vh!important
+}
+.pt-5-custom{
+    padding-top:5vh;
+}
+.pb-5-custom{
+    padding-bottom:5vh;
+}
+
+/*** Testimonial ***/
+
+.image-container {
+    width: 100%; /* Defina a largura desejada */
+    height:100%; /* Defina a altura desejada */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+  
+    /* Configuração para centralizar a imagem e manter a proporção */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
+    height:30vh; /* Garante que a imagem ocupe 100% da altura do contêiner */
+    object-fit: contain; /* Mantém a proporção e corta para preencher o contêiner */
+  }
+  .btn-custom{
+    border-radius:2rem;
+    height:8vh;
+    width:100%;
+    background-color:#1c3f68;
+  }
+  .btn-custom a{
+    color:white;
+  }
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item {
+        width: 100%!important;
+        margin-left: 0;
+    }
+    .pt-5-custom{
+        padding-top:0vh!important;
+    }
+    .pb-5-custom{
+        padding-bottom:5vh;
+    }
+    .carousel-inner .carousel-item {
+        width: 100%!important; /* Alterado para ocupar 100% da largura em telas menores */
+        height: auto; /* Ajustado para altura automática */
+        margin-left: 0; /* Removido o deslocamento à esquerda */
+    
+    }
+    .carousel-inner .text-carousel {
+        padding-top: 20px; /* Adicionado espaço superior */
+    }
+    .image-container {
+        width: 100%; /* Defina a largura desejada */
+        height:100%; /* Defina a altura desejada */
+        overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+      
+        /* Configuração para centralizar a imagem e manter a proporção */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+      
+    .image-container img {
+        padding: 5vh 0;
+        width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
+        height: 100%; /* Garante que a imagem ocupe 100% da altura do contêiner */
+        object-fit: contain; /* Mantém a proporção e corta para preencher o contêiner */
+    }
+    .carousel-innner .text-carousel p{
+        margin-top:5vh!important
+    }
+    
+    .btn-custom{
+        margin-top:5vh
+      }
+}
