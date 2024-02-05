@@ -30,6 +30,31 @@
     color:white; 
     font-size: 3rem;
 } 
+.help-buttom p {
+  font-size:0.9rem
+}
+
+.help-buttom .span-class{
+  font-weight:bold;
+  color:white;
+  font-size:1.1rem!important;
+  
+}
+.shake:hover i{
+  animation: shake 0.5s ease-in-out infinite;
+} 
+.bounce:hover i{
+  animation: bounce 1.5s ease-in infinite;
+
+}
+.scaleButtom:hover p{
+  animation: buttonScale 1.0s ease-in-out infinite;
+}
+.scaleButtom:hover i{
+  animation: buttonScale 1.0s ease-in-out infinite;
+}
+/* ------------------------------------ ANIMAÇÕES ------------------------------------- */ 
+
 
 @keyframes bounce {
   0%,
@@ -50,14 +75,6 @@
     
   }
 }
-
-.shake:hover i{
-  animation: shake 0.5s ease-in-out infinite;
-} 
-.bounce:hover i{
-  animation: bounce 1.5s ease-in;
-
-}
 @keyframes shake {
   0% {
     transform: translateX(0);
@@ -76,6 +93,18 @@
   }
 }
 
+@keyframes buttonScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .shake-icon:hover {
   display: inline-block;
   
@@ -90,9 +119,13 @@
     rgba(128, 159, 64, 1) 83%
   ); /* Cor rosa de sua escolha */
 }
-
+.px-custom{
+  width:100vw;
+display:flex;
+justify-content:center
+}
 .container-bottombar{
-  
+
 }
 @media(max-width:768px){
   .bottom-bar-md p,i{
@@ -102,11 +135,11 @@
     padding-right: 0px!important; /* Adiciona um espaço à direita para separar o conteúdo da borda */
   }
   .bottom-bar-md p{
-    width:80%;
+    padding-left:1rem;
     font-size:1.2rem
   }
   .bottom-bar-md i{
-    width:20%;
+    padding-left:auto;
     font-size:3.5rem
 
   }
