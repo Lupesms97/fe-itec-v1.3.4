@@ -143,8 +143,6 @@ export class FormsComponent implements OnInit {
         return [...this.cursosProfissionalizantes, ...this.cursosEscola];
       case 'ANGRA_DOS_REIS':
         return [...this.cursosProfissionalizantes, ...this.cursosTecnico];
-      case 'BARRA_MANSA':
-        return [...this.cursosProfissionalizantes, ...this.cursosTecnico];
       case 'ITATIAIA':
         return [...this.cursosProfissionalizantes];
       case 'RESENDE':
@@ -152,7 +150,7 @@ export class FormsComponent implements OnInit {
       case 'PORTO_REAL':
         return [...this.cursosProfissionalizantes];
       default:
-        return [...this.cursosProfissionalizantes];
+        return [...this.cursosProfissionalizantes, ...this.cursosTecnico, ...this.cursosEspecializacao, ...this.cursosEscola];
     }
   }
 
