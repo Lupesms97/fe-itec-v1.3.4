@@ -24,9 +24,12 @@ export class TrabalheConoscoComponent implements OnInit {
     polo: '',
     phone: '',
     setor: '',
-    curriculoFile: null,
-    lgpd: false
+    curriculoFile: new File([], ''),
+    lgpd: false,
+    timeOfExperience: ''
   }
+
+  fileToSend: File = new File([], '');
 
   constructor(private curriculoService:CurriculoService,private notification:NotificationService) { }
 
@@ -44,6 +47,16 @@ export class TrabalheConoscoComponent implements OnInit {
     'Recursos Humanos',
     'Limpeza'
   ];
+  timeOfExperience:string[] = [
+    
+    'Sem experiência',
+    'Estágio',
+    'Até 1 ano',
+    '+1 ano',
+    '+3 anos',
+    '+5 anos',
+
+  ];
 
   processForms() {
     this.processingForms = true;
@@ -57,7 +70,7 @@ export class TrabalheConoscoComponent implements OnInit {
   }
 
   onSubmit(forms:NgForm){
-      this.curriculoService.send(forms.value).subscribe(
+      this.curriculoService.send(this.forms).subscribe(
       response => {        
         this.unprocessForms(TypeToast.Success,'Success','Curriculo enviado com sucesso');
         forms.reset();
@@ -68,7 +81,7 @@ export class TrabalheConoscoComponent implements OnInit {
   )};
 
 
-  verificarTipoArquivo(curriculoFile: File | null): boolean {
+  verificarTipoArquivo(curriculoFile: File): boolean {
     if (!curriculoFile) {
       this.fileValid = true;
       return true;
@@ -95,11 +108,22 @@ export class TrabalheConoscoComponent implements OnInit {
   }
 
   onFileChange(event: any) {
-  const fileList: FileList = event.target.files;
+  const fileList = event.target.files;
+   // Set the selected file to the forms object
+  console.log(this.fileToSend);
+/*   console.log(fileList);
+  const input = event.target as HTMLInputElement;
+  console.log(input);
+  const label = event.currentTarget.files[0]
+  console.log(label); */
+
   if (fileList.length > 0) {
     const curriculoFile: File = fileList[0];
-    if (!this.verificarTipoArquivo(curriculoFile)) {
-      // Limpar o input de arquivo se o tipo não for válido
+    if (this.verificarTipoArquivo(curriculoFile)) {
+      this.forms.curriculoFile = curriculoFile; // Set the selected file to the forms object
+      console.log(this.fileToSend);
+    } else {
+      // Clear the input if file type is not valid
       event.target.value = null;
     }
   }

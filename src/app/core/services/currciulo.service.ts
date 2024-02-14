@@ -11,22 +11,20 @@ import { CookieService } from 'ngx-cookie-service';
   providedIn: 'root'
 })
 export class CurriculoService {
-  private readonly API_URL = 'http://localhost:8081/v1/prospects';
+  private readonly API_URL = 'http://localhost:8080/v1/employee';
 
   localStorage = window.localStorage;
   
   constructor(private http:HttpClient, private cookie:CookieService) { }
   
   send(forms:FormsTrabalheConoscoI){
-    this.saveCurririulo(forms.curriculoFile as File);
-    return this.http.post(`${this.API_URL}/curriculo`,forms);
+    this.saveCurririulo(forms.curriculoFile);
+    return this.http.post(`${this.API_URL}/upload`,forms);
   }
 
   saveCurririulo(file:File){
-    this.cookie.set
     const formData = new FormData();
     formData.append('file',file);
-    this.cookie.set('curriculo',JSON.stringify(formData));
     return formData;
   }
 

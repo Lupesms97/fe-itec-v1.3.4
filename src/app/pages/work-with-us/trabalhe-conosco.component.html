@@ -13,7 +13,7 @@ corDoBackground="#464749"
     </div>
     <ng-container>
         <form class="row g-3" #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)">
-            <div class="col-lg-6 col-md-12 col-sm-12">
+           <div class="col-lg-6 col-md-12 col-sm-12">
               <label for="inputNome" class="form-label">Nome</label>
               <input type="text" class="form-control" id="inputNome" name="name" [(ngModel)]="forms.name" required
                 maxlength="30" #name="ngModel">
@@ -55,7 +55,13 @@ corDoBackground="#464749"
                 <div id="alert-danger">Informe um celular</div>
               </div>
             </div>
-            <div class="col-lg-6" >
+            <div class="col-lg-4 col-md-12">
+              <label for="inputtimeOfExperience" class="form-label">Tempo de Experiência</label>
+              <select class="form-select" id="inputtimeOfExperience" name="timeOfExperience" [(ngModel)]="forms.timeOfExperience" required>
+                <option *ngFor="let time of timeOfExperience" value="{{time}}">{{time}}</option>
+              </select>
+            </div>
+            <div class="col-lg-8" >
               <label for="inputSetor" class="form-label">Setor</label>
               <select id="inputSetor" class="form-select" name="setor" [(ngModel)]="forms.setor" required
                 #setor="ngModel">
@@ -65,8 +71,8 @@ corDoBackground="#464749"
               <div *ngIf="setor.hasError('required') && setor.touched " class="alert alert-danger">
                 <div id="alert-danger">Informe um setor</div>
               </div>
-            </div>
-            <div class="col-lg-6">
+            </div> 
+            <div class="col-lg-12">
               <label for="curriculoFile" class="form-label">Anexar Curriculo</label>
               <input type="file" class="form-control" name="curriculoFile" id="curriculoFile"
                (change)="onFileChange($event)" [(ngModel)]="forms.curriculoFile" required>

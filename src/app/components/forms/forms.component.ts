@@ -54,7 +54,6 @@ export class FormsComponent implements OnInit {
 
   ngOnInit(): void {
     this.polosAvaliable = this.showPoloWhereCourseAreAvaliable(this.tag)
-    console.log(this.polosAvaliable)
   }
 
   cursos: string[] = [];
@@ -74,7 +73,6 @@ export class FormsComponent implements OnInit {
   }
 
   onSubmit(forms: NgForm) {
-    console.log(forms.value);
     this.formsService.send(forms.value).subscribe(
       (response) => {
         this.unprocessForms(
