@@ -9,6 +9,7 @@ import { NavbarAdminComponent } from 'src/app/shared/navbar-admin/navbar-admin.c
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { loggedGuard } from 'src/app/core/guard/logged.guard';
+import { CandidateInformationBankComponent } from './candidate-information-bank/candidate-information-bank.component';
 
 
 
@@ -17,7 +18,8 @@ import { loggedGuard } from 'src/app/core/guard/logged.guard';
     HomeComponent,
     MinhaCarteiraComponent,
     NavbarAdminComponent,
-    LoginComponent
+    LoginComponent,
+    CandidateInformationBankComponent
   ],
   imports: [
     FormsModule,
@@ -28,7 +30,7 @@ import { loggedGuard } from 'src/app/core/guard/logged.guard';
         {path:'login', component: LoginComponent},
         {path:'home', component: HomeComponent/* , canActivate:  [loggedGuard] */},
         {path:'minha-carteira', component: MinhaCarteiraComponent/* ,canActivate:  [loggedGuard] */},
-       
+        {path:'banco-de-candidatos', component: CandidateInformationBankComponent/* ,canActivate:  [loggedGuard] */}
       ]
     ),
     NgxPaginationModule,
