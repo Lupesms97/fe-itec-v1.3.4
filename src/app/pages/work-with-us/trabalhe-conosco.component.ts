@@ -1,3 +1,4 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CurriculoService } from 'src/app/core/services/currciulo.service';
@@ -5,6 +6,7 @@ import { FormsService } from 'src/app/core/services/forms.service';
 import { NotificationService } from 'src/app/core/services/notification.service';
 import { FormsI } from 'src/app/shared/models/FormsI';
 import { FormsTrabalheConoscoI } from 'src/app/shared/models/FormsTrabalheConoscoI';
+import { IResponseApi } from 'src/app/shared/models/IResponseApi';
 import { TypeToast } from 'src/app/shared/models/TypeToastE';
 
 @Component({
@@ -69,16 +71,21 @@ export class TrabalheConoscoComponent implements OnInit {
     }, 2000);
   }
 
-  onSubmit(forms:NgForm){
-      this.curriculoService.send(this.forms).subscribe(
-      response => {        
-        this.unprocessForms(TypeToast.Success,'Success','Curriculo enviado com sucesso');
-        forms.reset();
+  onSubmit(forms: NgForm) {
+    this.curriculoService.send(this.forms).subscribe(
+      (response: HttpResponse<IResponseApi>) => {
+        if (response.status === 200) {
+          this.unprocessForms(TypeToast.Success, 'Success', 'Curriculo enviado com sucesso');
+          forms.reset();
+        } else {
+          this.unprocessForms(TypeToast.Error, 'Error', 'Erro ao enviar o currículo: ' + response.body?.error);
+        }
       },
-      error => {
-        this.unprocessForms(TypeToast.Error,'Error','Não foi possivel enviar o seu curriculo no momento, tente novamente mais tarde');
+      (error) => {
+        this.unprocessForms(TypeToast.Error, 'Error', 'Não foi possível enviar o seu currículo no momento, tente novamente mais tarde');
       }
-  )};
+    );
+  }
 
 
   verificarTipoArquivo(curriculoFile: File): boolean {
@@ -101,7 +108,6 @@ export class TrabalheConoscoComponent implements OnInit {
       }
     } else {
       this.fileValid = false;
-      // Exemplo: Mensagem de erro específica para o tipo de arquivo
       this.messageErrorFile = 'O arquivo deve ser um PDF ou um documento do Word.';
       return false;
     }
@@ -109,7 +115,6 @@ export class TrabalheConoscoComponent implements OnInit {
 
   onFileChange(event: any) {
   const fileList = event.target.files;
-   // Set the selected file to the forms object
   console.log(this.fileToSend);
 /*   console.log(fileList);
   const input = event.target as HTMLInputElement;
