@@ -15,12 +15,13 @@ import { EmployeeResponse } from 'src/app/shared/models/EmployeeResponse';
 })
 export class CurriculoService {
 
-  private readonly API_URL = 'http://localhost:8080/v1/employees';
+  private readonly API_URL = 'http://localhost:8081/v1/employees';
 
   private data$: BehaviorSubject<IEmployee[]> = new BehaviorSubject<IEmployee[]>([]);
 
   currentPage$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   totalPage$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  totalElements$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
   constructor(private http: HttpClient, private cookie: CookieService) {
     this.getPaginateData();
@@ -37,6 +38,7 @@ export class CurriculoService {
       tap((response: EmployeeResponse) => {
         this.data$.next(response.content);
         this.totalPage$.next(response.totalPages);
+        this.totalElements$.next(response.totalElements);
       })
     ).subscribe();
   }
