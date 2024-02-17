@@ -11,11 +11,17 @@ import { IEmployee } from 'src/app/shared/models/IEmployee.model';
 export class TableCandidateComponent implements OnInit {
 
   data$ : Observable<IEmployee[]> = of([]);
+  elements$ : Observable<number> = of(0);
+  pages$ : Observable<number> = of(0);
+  page$ : Observable<number> = of(0);
 
   constructor(private dataService: CurriculoService) { }
 
   ngOnInit(): void {
     this.data$ = this.dataService.getData();
+    this.elements$ = this.dataService.totalElements$;
+    this.pages$ = this.dataService.totalPage$;
+    this.page$ = this.dataService.currentPage$;
   }
 
   download(curriculoIndentifier: string, employeeName: string) {

@@ -58,37 +58,55 @@
                     <div class="container">
                         <div class="row justify-content-between">
                             <div class="col-6 col-md-6 col-lg-3 my-3">
-                                <button (click)="nextpage()" type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
-                                    proxima pagina
-                                </button>
-                            </div>
-                            <div class="col-6 col-md-6 col-lg-3 my-3">
                                 <button (click)="previouspage()" type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
                                     anterior pagina
                                 </button>
                             </div>
+                            <div class="col-6 col-md-6 col-lg-3 my-3">
+                                <button (click)="nextpage()" type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
+                                    proxima pagina
+                                </button>
+                            </div>
+  
                         </div>
                     </div>
 
                     <div class="filter-result">
-                        <p class="mb-30 ff-montserrat">Total Job Openings : 89</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="mb-30 ff-montserrat">Total de Curriculos: {{elements$ | async}}</p>
+
+                                </div>
+                                <div class="col-4">
+                                    <p class="mb-30 ff-montserrat">Página Atual: {{page$ | async}}</p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="mb-30 ff-montserrat">Total de Páginas: {{pages$ | async}}</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
 
                         <div class="job-box d-md-flex align-items-center justify-content-between mb-30"  *ngFor="let employee of data$ | async">
                             <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
-                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
+                                <div class="img-holder ms-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
                                     FD
                                 </div>
                                 <div class="job-content">
                                     <h5 class="text-center text-md-left">{{employee.name}}</h5>
-                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                        <li class="mr-md-4">
-                                            <i class="zmdi zmdi-pin mr-2"></i> {{employee.polo}}
+                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans ">
+                                        <li class="ms-4">
+                                            <i class="zmdi zmdi-pin ms-2"></i> {{employee.polo}}
                                         </li>
-                                        <li class="mr-md-4">
-                                            <i class="zmdi zmdi-money mr-2"></i> {{employee.setor}}
+                                        <li class="ms-4">
+                                            <i class="zmdi zmdi-money ms-2"></i> {{employee.setor}}
                                         </li>
-                                        <li class="mr-md-4">
-                                            <i class="zmdi zmdi-time mr-2"></i> {{employee.timeOfExperience}}
+                                        <li class="ms-4">
+                                            <i class="zmdi zmdi-time ms-2"></i> {{employee.timeOfExperience}}
                                         </li>
                                     </ul>
                                 </div>

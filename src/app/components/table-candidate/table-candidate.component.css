@@ -161,7 +161,12 @@ ul {
   border-bottom: 1px solid #ccc;
   padding: 10px 5px;
 }
-
+.job-content ul {
+  width:100%!important;
+}
+.job-content ul li{
+  width:33%!important;
+}
 @media (min-width: 768px) {
   .job-content ul li {
     border-bottom: 0;
