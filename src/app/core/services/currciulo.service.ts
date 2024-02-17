@@ -37,7 +37,7 @@ export class CurriculoService {
     this.http.get<EmployeeResponse>(`${this.API_URL}/content?size=${size}&page=${page}`).pipe(
       tap((response: EmployeeResponse) => {
         this.data$.next(response.content);
-        this.totalPage$.next(response.totalPages);
+        this.totalPage$.next(response.totalPages - 1);
         this.totalElements$.next(response.totalElements);
       })
     ).subscribe();
@@ -65,26 +65,17 @@ export class CurriculoService {
     const nextPage = this.currentPage$.value + 1;
     const totalPages = this.totalPage$.value;
 
-    if (nextPage >= totalPages) {
-      this.currentPage$.next(totalPages);
-      this.getPaginateData(10, totalPages);
-    } else {
-      this.currentPage$.next(nextPage);
-      this.getPaginateData(10, nextPage);
-    }
-  }
+    this.currentPage$.next(Math.min(nextPage, totalPages));
+    this.getPaginateData(10, this.currentPage$.value);
+}
 
-  previousPage() {
-    const previousPage = this.currentPage$.value - 1;
+previousPage() {
+    const previousPage = Math.max(this.currentPage$.value - 1, 0);
+    this.currentPage$.next(previousPage);
+    this.getPaginateData(10, previousPage);
+}
 
-    if (previousPage <= 0) {
-      this.currentPage$.next(0);
-      this.getPaginateData(10, 0);
-    } else {
-      this.currentPage$.next(previousPage);
-      this.getPaginateData(10, previousPage);
-    }
-  }
+
 
   getSearchEmployee(polo?: string, setor?: string, timeOfExperience?: string) {
     let url = this.getUrl(polo, setor, timeOfExperience);

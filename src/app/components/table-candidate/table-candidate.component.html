@@ -1,130 +1,182 @@
-
 <div class="container-all">
-    <div class="container">
-        <div class="row">
-             <div class="col-lg-10 mx-auto mb-4">
-                <div class="section-title text-center ">
-                    <h3 class="top-c-sep">Grow your career with us</h3>
-                    <p>Lorem ipsum dolor sit detudzdae amet, rcquisc adipiscing elit. Aenean socada commodo
-                        ligaui egets dolor. Nullam quis ante tiam sit ame orci eget erovtiu faucid.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto mb-4">
+        <div class="section-title text-center">
+          <h3 class="top-c-sep">Grow your career with us</h3>
+          <p>
+            Lorem ipsum dolor sit detudzdae amet, rcquisc adipiscing elit.
+            Aenean socada commodo ligaui egets dolor. Nullam quis ante tiam sit
+            ame orci eget erovtiu faucid.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="career-search mb-60">
+          <form
+            action="#"
+            class="career-form mb-60"
+            #form="ngForm"
+            (ngSubmit)="submitForm()"
+          >
+            <div class="row">
+              <div class="col-md-6 col-lg-3 my-3">
+                <div class="select-container">
+                  <select
+                    class="custom-select"
+                    id="inputPolo"
+                    name="polo"
+                    [(ngModel)]="searchForms.polo"
+                  >
+                    <option value="">Polo</option>
+                    <option
+                      *ngFor="let polo of polosAvaliable"
+                      [value]="polo.value"
+                    >
+                      {{ polo.viewValue }}
+                    </option>
+                  </select>
                 </div>
+              </div>
+              <div class="col-md-6 col-lg-3 my-3">
+                <div class="select-container">
+                  <select
+                    class="custom-select"
+                    id="inputSetor"
+                    name="setor"
+                    [(ngModel)]="searchForms.setor"
+                  >
+                    <option value="">Setor</option>
+                    <option *ngFor="let setor of setores" [value]="setor">
+                      {{ setor }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 my-3">
+                <div class="select-container">
+                  <select
+                    class="custom-select"
+                    id="inputXp"
+                    name="experiencia"
+                    [(ngModel)]="searchForms.timeOfExperience"
+                  >
+                    <option value="">Experiência</option>
+                    <option
+                      *ngFor="let time of timeOfExperience"
+                      [value]="time"
+                    >
+                      {{ time }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 my-3">
+                <button
+                  type="submit"
+                  class="ms-5 btn btn-lg btn-block btn-light btn-custom"
+                  id="contact-submit"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Pesquisar
+                </button>
+              </div>
             </div>
+          </form>
+
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-md-6 col-lg-3 my-3">
+                <button
+                  (click)="previouspage()"
+                  type="button"
+                  class="btn btn-lg btn-block btn-light btn-custom"
+                  id="contact-submit"
+                >
+                  <i class="fa-solid fa-angle-left"></i> anterior
+                </button>
+              </div>
+
+              <div class="col-md-6 col-lg-3 my-3">
+                <button
+                  (click)="nextpage()"
+                  type="button"
+                  class="ms-2 btn btn-lg btn-block btn-light btn-custom"
+                  id="contact-submit"
+                >
+                  proxima <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <button class="ms-2 btn btn-lg btn-block btn-light btn-custom">
+                  <a (click)="previouspage()"
+                    ><i class="fa-solid fa-arrow-rotate-left"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-result">
+            <div class="job-box ms-2">
+              <table class="table">
+                <thead>
+                  <tr class="text-center">
+                    <th scope="col">Data</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Setor</th>
+                    <th scope="col">Polo</th>
+                    <th scope="col">Experiência</th>
+                    <th scope="col">Curriculo</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr *ngFor="let employee of data$ | async">
+                    <td>{{ employee.createdAt | date : "dd/MM/yyyy" }}</td>
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.setor }}</td>
+                    <td>{{ showPolo(employee.polo) }}</td>
+                    <td>{{ employee.timeOfExperience }}</td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-light btn-custom"
+                        id="contact-submit"
+                      >
+                        <a
+                          (click)="
+                            download(employee.curriculoFileLink, employee.name)
+                          "
+                          >download curriculo</a
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="container pt-5 d-flex justify-content-between">
+                <div class="row">
+                  <p class="mb-30 ff-montserrat">
+                    Total de Curriculos: {{ elements$ | async }}
+                  </p>
+                </div>
+                <div class="row">
+                  <p class="mb-30 ff-montserrat">
+                    Página Atual: {{ page$ | async }}
+                  </p>
+                </div>
+                <div class="row">
+                  <p class="mb-30 ff-montserrat">
+                    Total de Páginas: {{ pages$ | async }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="career-search mb-60">
-
-                    <form action="#" class="career-form mb-60" #form="ngForm" (ngSubmit)="submitForm()">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-3 my-3">
-                                <div class="select-container">
-                                   
-                                    <select class="custom-select" id="inputPolo" name="polo" [(ngModel)]="searchForms.polo">                           
-                                        <option value="" >Polo</option>
-                                        <option *ngFor="let polo of polosAvaliable" [value]="polo.value">{{ polo.viewValue }}</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 my-3">
-                                <div class="select-container">
-                                    
-                                    <select class="custom-select" id="inputSetor" name="setor" [(ngModel)]="searchForms.setor">
-                                        <option value="">Setor</option>
-                                        <option *ngFor="let setor of setores" [value]="setor">{{ setor }}</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 my-3">
-                                <div class="select-container">
-                                    
-                                    <select class="custom-select" id="inputXp" name="experiencia" [(ngModel)]="searchForms.timeOfExperience">
-                                       <option value="">Experiência</option>
-                                        <option *ngFor="let time of timeOfExperience" [value]="time">{{ time }}</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 my-3 ">
-                                <button type="submit" class="ms-5 btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
-                                    <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Pesquisar
-                                </button>
-    
-                            </div>
-                        </div>
-                    </form>
-
-                    <div class="container">
-                        <div class="row justify-content-between">
-                            <div class="col-6 col-md-6 col-lg-3 my-3">
-                                <button (click)="previouspage()" type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
-                                    anterior
-                                </button>
-                            </div>
-
-                            <div class="col-6 col-md-6 col-lg-3 my-3 ps-5 d-flex">
-                                <button (click)="nextpage()" type="button" class="ms-2 btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
-                                    proxima 
-                                </button>
-                                <button class="ms-2 btn btn-lg btn-block btn-light btn-custom">
-                                    <a (click)="previouspage()"><i class="fa-solid fa-arrow-rotate-left"></i></a>
-                                </button>
-
-                            </div>
-  
-                        </div>
-                    </div>
-
-                    <div class="filter-result">
-                    
-                        <div class="job-box ms-2"  >
-                            <table class="table">
-                                <thead>
-                                  <tr class="text-center">
-                                    <th scope="col">Data</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Setor</th>
-                                    <th scope="col">Polo</th>
-                                    <th scope="col">Experiência</th>
-                                    <th scope="col">Curriculo</th>
-                                  </tr>
-                                </thead>
-                                <tbody class="text-center">
-                                  <tr *ngFor="let employee of data$ | async">                         
-                                    <td>{{employee.createdAt| date: 'dd/MM/yyyy'}}</td>
-                                    <td>{{employee.name}}</td>
-                                    <td>{{employee.setor}}</td>
-                                    <td>{{showPolo(employee.polo)}}</td>
-                                    <td>{{employee.timeOfExperience}}</td>
-                                    <td>
-                                        <button  type="button" class="btn btn-light btn-custom" id="contact-submit">
-                                            <a (click)="download(employee.curriculoFileLink, employee.name)">download curriculo</a>
-                                        </button>
-                                    </td>
-                                  </tr>
-                                  
-                                </tbody>
-                            </table>
-                            <div class="container pt-5 ">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <p class="mb-30 ff-montserrat">Total de Curriculos: {{elements$ | async}}</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <p class="mb-30 ff-montserrat">Página Atual: {{page$ | async}}</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <p class="mb-30 ff-montserrat">Total de Páginas: {{pages$ | async}}</p>
-                                    </div>
-        
-                                </div>
-        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- START Pagination -->
-               <!--  <nav aria-label="Page navigation">
+        <!-- START Pagination -->
+        <!--  <nav aria-label="Page navigation">
                     <ul class="pagination pagination-reset justify-content-center">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
@@ -143,9 +195,8 @@
                         </li>
                     </ul>
                 </nav> -->
-                <!-- END Pagination -->
-            </div>
-        </div>
-
+        <!-- END Pagination -->
+      </div>
     </div>
+  </div>
 </div>

@@ -115,7 +115,7 @@ export class TableCandidateComponent implements OnInit {
       if (this.dataService.totalElements$.value === 0) {
         this.notificationService.showToast(TypeToast.Warning, 'Aviso', 'Nenhum resultado encontrado para sua busca');
       }      
-    },1000)
+    },500)
 
     ;
   }
