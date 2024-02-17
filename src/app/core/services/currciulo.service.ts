@@ -91,6 +91,7 @@ export class CurriculoService {
     this.http.get<IEmployee[]>(`${this.API_URL}/search${url}`).pipe(
       tap((response: IEmployee[]) => {
         this.data$.next(response);
+        this.totalElements$.next(response.length);
       })
     ).subscribe();
   }
