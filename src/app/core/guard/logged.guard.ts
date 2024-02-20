@@ -13,7 +13,6 @@ export const loggedGuard: CanActivateFn = (route, state) => {
   return serviceAuth.isLogged$.pipe(
     tap((isLogged: boolean) => {
       if (!isLogged) {
-
         router.navigate(['/colaborador/login']);
         notification.showToast(
           TypeToast.Error,

@@ -1,4 +1,7 @@
 export interface ResponseDto {
     token:string;
-    message:string;
+    acessInfo:{
+        permission: string[];
+        availiableCompanies: string[];
+    }
 }

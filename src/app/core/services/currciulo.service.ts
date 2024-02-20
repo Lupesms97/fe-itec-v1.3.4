@@ -1,4 +1,4 @@
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ContentI } from '../../shared/models/ContentI';
 import { BehaviorSubject, Observable, ReplaySubject, map, of, tap } from 'rxjs';
@@ -8,6 +8,9 @@ import { CookieService } from 'ngx-cookie-service';
 import { IResponseApi } from 'src/app/shared/models/IResponseApi';
 import { IEmployee } from 'src/app/shared/models/IEmployee.model';
 import { EmployeeResponse } from 'src/app/shared/models/EmployeeResponse';
+import { AuthService } from './auth.service';
+
+const TOKEN_KEY = '_tky-usr';
 
 
 @Injectable({
@@ -15,15 +18,18 @@ import { EmployeeResponse } from 'src/app/shared/models/EmployeeResponse';
 })
 export class CurriculoService {
 
-  private readonly API_URL = 'http://localhost:8081/v1/employees';
+  private readonly API_URL = 'http://localhost:8080/v1/employees';
+
 
   private data$: BehaviorSubject<IEmployee[]> = new BehaviorSubject<IEmployee[]>([]);
+  token = ''
 
   currentPage$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   totalPage$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   totalElements$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
-  constructor(private http: HttpClient, private cookie: CookieService) {
+  constructor(private http: HttpClient, private cookie: CookieService, private auth:AuthService) {
+    this.token = auth.getToken(TOKEN_KEY);
     this.getPaginateData();
   }
 
@@ -34,7 +40,15 @@ export class CurriculoService {
 
 
   private setData(size: number, page: number) {
-    this.http.get<EmployeeResponse>(`${this.API_URL}/content?size=${size}&page=${page}`).pipe(
+    // Crie o cabeçalho de autorização com o token Bearer
+   
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
+  
+    // Defina o objeto de opções da solicitação HTTP com o cabeçalho de autorização
+    const options = { headers: headers };
+  
+    // Faça a solicitação HTTP com o cabeçalho de autorização
+    this.http.get<EmployeeResponse>(`${this.API_URL}/content?size=${size}&page=${page}`, options).pipe(
       tap((response: EmployeeResponse) => {
         this.data$.next(response.content);
         this.totalPage$.next(response.totalPages - 1);

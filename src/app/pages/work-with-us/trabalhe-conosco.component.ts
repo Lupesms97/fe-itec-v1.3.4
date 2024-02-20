@@ -47,7 +47,7 @@ export class TrabalheConoscoComponent implements OnInit {
     'Marketing',
     'Tecnologia',
     'Recursos Humanos',
-    'Limpeza'
+    'Limpeza', 'Departamento Pessoal', 'Professor', 'Coordenador Pedágogico', 'Professor', 'Secretaria'
   ];
   timeOfExperience:string[] = [
     

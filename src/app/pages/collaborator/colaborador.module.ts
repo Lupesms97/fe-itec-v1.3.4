@@ -28,9 +28,9 @@ import { CandidateInformationBankComponent } from './candidate-information-bank/
       [
         {path:'', redirectTo: 'login', pathMatch: 'full'},
         {path:'login', component: LoginComponent},
-        {path:'home', component: HomeComponent/* , canActivate:  [loggedGuard] */},
-        {path:'minha-carteira', component: MinhaCarteiraComponent/* ,canActivate:  [loggedGuard] */},
-        {path:'banco-de-candidatos', component: CandidateInformationBankComponent/* ,canActivate:  [loggedGuard] */}
+        {path:'home', component: HomeComponent, canActivate:  [loggedGuard]},
+        {path:'minha-carteira', component: MinhaCarteiraComponent,canActivate:  [loggedGuard]},
+        {path:'banco-de-candidatos', component: CandidateInformationBankComponent,canActivate:  [loggedGuard]}
       ]
     ),
     NgxPaginationModule,

@@ -10,6 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { UserCadastro } from 'src/app/shared/models/IUserCadastro';
 import { UserInterface } from 'src/app/shared/models/IUserInterface';
 import { jwtDecode } from "jwt-decode";
+import { UserLoginDto } from 'src/app/shared/models/UserLoginDto';
 
 const TOKEN_KEY = '_tky-usr';
 const ROLES_KEY = '_rly-usr';
@@ -24,7 +25,7 @@ export class AuthService {
   isLogged$: Observable<boolean> = this.user$.pipe(map(Boolean));
   role$: Observable<Role> = new Observable<Role>();
 
-  private readonly API_URL = 'http://localhost:8082/auth';
+  private readonly API_URL = 'http://localhost:8082/v2/auth';
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -50,13 +51,13 @@ export class AuthService {
 
 
   login(
-    login: string,
-    password: string
+    userLogin:UserLoginDto
   ): Observable<HttpResponse<ResponseDto>> {
+
     return this.http
       .post<ResponseDto>(
-        `${this.API_URL}/login`,
-        { login, password },
+        `${this.API_URL}/user/login`,
+        userLogin,
         { ...this.httpOptions, observe: 'response' }
       )
       .pipe(
@@ -73,7 +74,7 @@ export class AuthService {
           this.setCookie(TOKEN_KEY, token, 1);
           const decodedToken = this.decodeJwt(token);
           this.setRoles(decodedToken.roles);
-          this.redirectToBlog();
+          this.redirectToHome();
           this.notificationService.showToast(TypeToast.Success, 'Login', 'Login efetuado com sucesso');
         }),
         
@@ -140,8 +141,8 @@ export class AuthService {
     this.setCookie(ROLES_KEY, roles);
   }
 
-  private redirectToBlog() {
-    this.router.navigate(['/home'])
+  private redirectToHome() {
+    this.router.navigate(['/colaborador/home'])
   }
 
 
