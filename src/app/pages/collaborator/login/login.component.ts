@@ -4,8 +4,8 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { NotificationService } from 'src/app/core/services/notification.service';
-import { ResponseDto } from 'src/app/shared/models/IResponseDto';
-import { UserLogin } from 'src/app/shared/models/IUserLogin';
+import { IResponseLoginDto } from 'src/app/shared/models/IResponseLoginDto';
+import { IUserLogin } from 'src/app/shared/models/IUserLogin';
 import { TypeToast } from 'src/app/shared/models/TypeToastE';
 
 @Component({
@@ -20,12 +20,12 @@ export class LoginComponent {
     ) {}
   alertMessage: any = ''
 
-  user: UserLogin = {
+  user: IUserLogin = {
     login: '',
     password: ''
   }
 
-  resp:ResponseDto = {
+  resp:IResponseLoginDto = {
     token: '',
     acessInfo: {
       permission: [],
@@ -34,25 +34,21 @@ export class LoginComponent {
   }
 
   autenticar(form: NgForm){
-    this.router.navigate(['/colaborador/home']);
-    let userLogin:UserLogin = {
+  
+    let userLogin:IUserLogin = {
       login: form.value.login,
       password: form.value.password
     }
 
     this.authService.login(userLogin)
       .subscribe(
-        (response: HttpResponse<ResponseDto>) => {
-          const token = response.body?.token;
-          const acess = response.body?.acessInfo;
-          const status = response.status;
-          this.resp.token = token!;
-          this.resp.acessInfo = acess!;
+        (response: HttpResponse<IResponseLoginDto>) => {
+     
           
-          const role:string = this.authService.decodeJwt(token!).roles;
-          
+
         },
-        (error) => {          
+        (error) => {     
+          
           this.alertMessage = 'Usuário ou senha inválidos';
           this.notifications.showToast(TypeToast.Error, 'Login', 'Usuário ou senha inválidos');
         }

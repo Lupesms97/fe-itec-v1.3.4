@@ -7,10 +7,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieService } from 'ngx-cookie-service';
 import { ModalComponent } from './components/modal/modal.component';
+import { CollaboratorNavbarComponent } from './shared/collaborator-navbar/collaborator-navbar.component';
+import { CollaboratorAdminNavbarComponent } from './shared/collaborator-admin-navbar/collaborator-admin-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
     
   ],
   imports: [

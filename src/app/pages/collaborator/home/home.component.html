@@ -1,10 +1,14 @@
-<app-navbar-admin [corDoBackground]="'#61A1FE'"></app-navbar-admin>
 
+<app-collaborator-admin-navbar *ngIf="isAdmin"></app-collaborator-admin-navbar>
+
+<app-collaborator-navbar  *ngIf="!isAdmin"></app-collaborator-navbar>
 
 <div class="container-fluid">
 
 	<app-card-info-users
-	></app-card-info-users>
+	*ngIf="!isAdmin" ></app-card-info-users>
+
+	<app-dashboard *ngIf="isAdmin"></app-dashboard>
 
 
 </div>

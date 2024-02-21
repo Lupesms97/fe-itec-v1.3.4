@@ -7,24 +7,18 @@
         <i class="fa-solid fa-bars icon-burger"></i></button>
       <div class="collapse navbar-collapse pe-5 text-black" id="navbarScroll">
         <ul class="navbar-nav ms-auto my-2 my-lg-0">
-
-          <li class="nav-item" *ngIf="isAdmin">
-            <a class="nav-link" routerLink="/colaborador/dashboard" routerLinkActive="active-page">Dashboard</a>
-          </li>
-          <li class="nav-item" *ngIf="isAdmin">
+            <li class="nav-item" >
+                <a class="nav-link" routerLink="/colaborador/home" routerLinkActive="active-page">HOME</a>
+         </li>
+          <li class="nav-item">
             <a class="nav-link" routerLink="/colaborador/banco-de-candidatos" routerLinkActive="active-page">Banco de Candidatos</a>
           </li>
-          <li class="nav-item" *ngIf="!isAdmin">
-            <a class="nav-link" routerLink="/colaborador/home" routerLinkActive="active-page">HOME</a>
-          </li>
-          <li class="nav-item"  *ngIf="!isAdmin">
-            <a class="nav-link" routerLink="/colaborador/minha-carteira" routerLinkActive="active-page">Carteira</a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link"  (click)="logout()">SAIR</a>
           </li>
+
         </ul>
       </div>
     </div>
   </nav>
-

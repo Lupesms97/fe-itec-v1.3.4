@@ -18,6 +18,7 @@ import { CardInfoUsersComponent } from './card-info-users/card-info-users.compon
 import { ModalComponent } from './modal/modal.component';
 import { CompanyCarouselComponent } from './company-carousel/company-carousel.component';
 import { TableCandidateComponent } from './table-candidate/table-candidate.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -34,6 +35,7 @@ import { TableCandidateComponent } from './table-candidate/table-candidate.compo
     CardInfoUsersComponent,
     CompanyCarouselComponent,
     TableCandidateComponent,
+    DashboardComponent,
 
   ],
   imports: [
@@ -59,6 +61,7 @@ import { TableCandidateComponent } from './table-candidate/table-candidate.compo
     CardInfoUsersComponent,
     CompanyCarouselComponent,
     TableCandidateComponent,
+    DashboardComponent
   ]
 })
 export class ComponentsModule { }

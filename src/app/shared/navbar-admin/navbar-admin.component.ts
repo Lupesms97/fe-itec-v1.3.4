@@ -10,8 +10,10 @@ export class NavbarAdminComponent {
   @Input() 
   corDoBackground: string = 'rgba(233, 236, 242, 0.8)';
 
+  isAdmin = false ;
+
   constructor(private authService:AuthService) {
-    
+    this.setIsAdmin()
    }
 
   navigateTo(link:string){
@@ -21,4 +23,12 @@ export class NavbarAdminComponent {
   logout(){
     this.authService.logout();
   }
+
+  setIsAdmin(){
+    this.authService.role$.subscribe(role => {
+      if(role === 'ADMIN'){
+        this.isAdmin = true;
+      }
+    })
+  };
 }

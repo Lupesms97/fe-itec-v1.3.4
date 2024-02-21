@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/core/services/auth.service';
 import { FormsService } from 'src/app/core/services/forms.service';
 import { IFormsData } from 'src/app/shared/models/IFormsData';
 
@@ -11,14 +12,19 @@ export class HomeComponent {
   p:number = 0;
   userData: IFormsData[] = []
 
-  constructor(
-   
-  ) {
-    
-  }
+  isAdmin = false ;
+
+  constructor(private authService:AuthService) {
+    this.setIsAdmin()
+   }
 
 
-
-
+   setIsAdmin(){
+    this.authService.role$.subscribe(role => {
+      if(role === 'ADMIN'){
+        this.isAdmin = true;
+      }
+    })
+  };
  
 }

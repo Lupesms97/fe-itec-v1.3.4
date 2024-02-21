@@ -1,0 +1,84 @@
+.navbar-brand img{
+    height:10vh!important;
+    width:auto
+  }
+  .navbar-brand .josi{
+    background: rgb(102,108,218);
+  background: -moz-linear-gradient(90deg, rgba(102,108,218,1) 17%, rgba(233,120,236,1) 50%, rgba(168,242,174,1) 83%);
+  background: -webkit-linear-gradient(90deg, rgba(102,108,218,1) 17%, rgba(233,120,236,1) 50%, rgba(168,242,174,1) 83%);
+  background: linear-gradient(90deg, rgba(102,108,218,1) 17%, rgba(233,120,236,1) 50%, rgba(168,242,174,1) 83%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endColorstr="#a8f2ae",GradientType=1);
+    height: 100%;
+    padding: 0;
+  }
+  .navbars-container{
+    background-color:#1F272B
+  }
+  .tn{
+    width:100%;
+    z-index:999;
+  }
+  .nav-link{
+    margin-right:1vw;
+    font-weight: 500;
+    color:white;
+    font-weight:bold;
+    coursor:pointer;
+  }
+  .nav-link:hover{
+    transition:0.9s;
+    padding: .5rem 1rem!important;
+    border-radius:2rem;
+    background-color:#9ff29b
+  }
+  .btn:hover a{
+    color:#9ff29b!important
+  }
+  .active-page{
+    padding: .5rem 1rem!important;
+    border-radius:2rem;
+    background-color: #3CB371;
+  }
+  .btn a {
+    font-size:0.8rem;
+    color:white
+  }
+  .sub-nav p{
+    font-size:0.8rem
+  }
+  .sub-nav i{
+    color:#25D366;
+    font-size:1.2rem
+  }
+  .sub-nav .fa-phone{
+    margin-top:0.4vh;
+    font-size:0.9rem!important
+  }
+  .icons i{
+    color:white;
+  }
+  .icons .fa-whatsapp:hover{
+    color:#25D366;
+  }
+  .icons .fa-instagram:hover{
+    color:#f75ed4;
+  }
+  .icons .fa-linkedin:hover{
+    color:#5b5bfc;
+  }
+  .icon-burger{
+    color:white;
+  }
+  
+  @media(max-width:768px){
+    .navbar-brand img{
+      width:40vw;
+      height:8vh!important
+    }
+    .icon-burger{
+      font-size:1.8rem!important;
+      color:white;
+      
+    }
+  }
+  

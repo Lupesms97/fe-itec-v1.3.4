@@ -1,4 +1,4 @@
-export interface ResponseDto {
+export interface IResponseLoginDto {
     token:string;
     acessInfo:{
         permission: string[];
