@@ -13,8 +13,6 @@ import { CollaboratorAdminNavbarComponent } from './shared/collaborator-admin-na
 @NgModule({
   declarations: [
     AppComponent,
-
-    
   ],
   imports: [
     ModalComponent,

@@ -13,6 +13,7 @@ import { CandidateInformationBankComponent } from './candidate-information-bank/
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CollaboratorNavbarComponent } from 'src/app/shared/collaborator-navbar/collaborator-navbar.component';
 import { CollaboratorAdminNavbarComponent } from 'src/app/shared/collaborator-admin-navbar/collaborator-admin-navbar.component';
+import { ResetComponent } from './reset/reset.component';
 
 
 
@@ -26,6 +27,7 @@ import { CollaboratorAdminNavbarComponent } from 'src/app/shared/collaborator-ad
     DashboardComponent,
     CollaboratorNavbarComponent,
     CollaboratorAdminNavbarComponent,
+    ResetComponent
   ],
   imports: [
     FormsModule,
@@ -37,7 +39,8 @@ import { CollaboratorAdminNavbarComponent } from 'src/app/shared/collaborator-ad
         {path:'home', component: HomeComponent, canActivate:  [loggedGuard]},
         {path:'minha-carteira', component: MinhaCarteiraComponent,canActivate:  [loggedGuard]},
         {path:'banco-de-candidatos', component: CandidateInformationBankComponent,canActivate:  [loggedGuard]},
-        {path:'dashboard', component: HomeComponent,canActivate:  [loggedGuard]}
+        {path:'dashboard', component: HomeComponent,canActivate:  [loggedGuard]},
+        {path:'reset', component: ResetComponent}
       ]
     ),
     NgxPaginationModule,

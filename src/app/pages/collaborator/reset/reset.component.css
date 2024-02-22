@@ -3,6 +3,11 @@
     background-color: #f2f2f2;
     padding-top: 20vh;
 }
+#container-etapa3{
+    height: 100vh;
+    background-color: #f2f2f2;
+    padding-top: 10vh;
+}
 .containerLogin{
     width: 50%;
     border-radius: 2rem;
@@ -22,15 +27,26 @@
     transition: transform 0.2s;
 }
 .butaoSubmit button{
-    height:3rem;
+    
     cursor: pointer;
     border-radius: 2rem;
 }
-.butaoSubmit:hover{
+..others:hover{
     transform: scale(1.1);
     font-size:1.1rem;
 }
-
+.butaoSubmit .btn-a:hover{
+    transform: scale(1.1);
+    font-size:1.1rem;
+}
+.butaoSubmit .btn-a:hover{
+    transform: scale(1.1);
+    font-size:1.1rem;
+}
+.butaoSubmit .btn-b:hover{
+    transform: scale(1.1);
+    font-size:1.1rem;
+}
 input.ng-invalid.ng-dirty{
     border: 2px solid red; /* Cor da borda vermelha para indicar erro */
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
