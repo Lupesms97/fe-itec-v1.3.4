@@ -22,7 +22,7 @@
     transition: transform 0.2s;
 }
 .butaoSubmit button{
-    height:5vh;
+    height:3rem;
     cursor: pointer;
     border-radius: 2rem;
 }
