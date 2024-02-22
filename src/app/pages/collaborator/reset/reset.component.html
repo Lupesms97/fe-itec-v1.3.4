@@ -1,0 +1,127 @@
+<div class="container-fluid" id="container" *ngIf="etapa1">
+    <div class="container">
+        <div class="col bg-light p-5 mx-auto containerLogin" >
+           <form #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+                <div class="row text-center">
+                    <h3 id="title">
+                        Recuperar senha
+                    </h3>
+                </div>
+                <div class="form-group my-4 ">
+                    <p class="text-center my-5">
+                        Informe o email cadastrado para receber um código de recuperação
+                    </p>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    name="email"
+                    [(ngModel)]="info.email"
+                    required 
+                    email
+                    #emailInput="ngModel"
+                    >
+                    <div *ngIf="emailInput.hasError('required') && emailInput.touched " class="alert alert-danger">
+                        <div id="alert-danger">Informe um email válido</div>
+                    </div> 
+                </div>
+                <div class="mt-3 text-center butaoSubmit">
+                    <button class="btn btn-primary w-75 others" style="height: 3rem;" type="submit" [disabled]="!loginForm.valid">Enviar código</button>
+                </div>
+           </form>
+        </div>
+                       
+        <div class="row my-4 ">
+            <a  routerLink="/colaborador/login"  class="newUserLink mx-auto">Voltar ao login</a>
+        </div>
+    </div>
+</div> 
+<div class="container-fluid" id="container" *ngIf="etapa2">
+    <div class="container">
+        <div class="col bg-light p-5 mx-auto containerLogin" >
+                <div class="row text-center">
+                    <h3 id="title">
+                        Recuperar senha
+                    </h3>
+                </div>
+                <div class="form-group my-4 ">
+                    <p class="text-center my-5">
+                        Foi enviado para o email cadastrado um código de recuperação válido por 30 minutos. Verifique seu email
+                    </p>
+                </div>
+                <div class="mt-3 text-center butaoSubmit">
+                    <button class="btn btn-primary w-75 mb-3 btn-a" style="height: 3rem;" (click)="goBackEtapa1()">Não recebi o código</button>
+                    <button class="btn btn-primary w-75 btn-b" style="height: 3rem;" (click)="goToEtapa3()">Recebi o código</button>
+                </div>
+        </div>
+                       
+        <div class="row my-4 ">
+            <a  routerLink="/colaborador/login"  class="newUserLink mx-auto">Voltar ao login</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="container-etapa3" *ngIf="etapa3">
+  <div class="container">
+    <div class="col bg-light p-5 mx-auto containerLogin">
+      <form #loginForm="ngForm" (ngSubmit)="submitCode(loginForm)">
+        <div class="row text-center">
+          <h3 id="title">Recuperar senha</h3>
+        </div>
+        <div class="form-group my-4">
+          <label class="form-control-label">Nova Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            [(ngModel)]="reset.newPassword"
+            required
+          />
+        </div>
+        <div class="form-group my-4">
+          <label class="form-control-label">Repita Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            name="verifypassWord"
+            [(ngModel)]="verifypassWord"
+            required
+            #verify="ngModel"
+          />
+
+          <div
+            *ngIf="verifypassWord != reset.newPassword && verify.touched"
+            class="alert alert-danger"
+          >
+            <div id="alert-danger">As senhas não conferem</div>
+          </div>
+        </div>
+
+        <div class="form-group my-4">
+          <label class="form-control-label">Codigo</label>
+          <input
+            type="text"
+            class="form-control"
+            name="password"
+            [(ngModel)]="reset.token"
+            required
+          />
+        </div>
+        <div class="mt-3 text-center butaoSubmit">
+          <button
+            class="btn btn-primary w-75 others"
+            style="height: 3rem"
+            type="submit"
+            [disabled]="!loginForm.valid"
+          >
+            Enviar código
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="row my-4">
+      <a routerLink="/colaborador/login" class="newUserLink mx-auto"
+        >Voltar ao login</a
+      >
+    </div>
+  </div>
+</div>
