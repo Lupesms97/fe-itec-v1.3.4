@@ -10,6 +10,8 @@ import { jwtDecode } from "jwt-decode";
 import { IUserLogin } from 'src/app/shared/models/IUserLogin';
 import { IResponseLoginDto } from 'src/app/shared/models/IResponseLoginDto';
 import { IToken } from 'src/app/shared/models/IToken';
+import { EmailObjPasswordAndTokenDto } from 'src/app/shared/models/EmailObjPasswordAndTokenDto';
+import { IResponseReset } from 'src/app/shared/models/IResponseReset';
 
 
 const TOKEN_KEY = '_tky-usr';
@@ -48,6 +50,8 @@ export class AuthService {
     }
   }
 
+  /* ----------------- LOGIN METHOD  ------------------------ */
+
   login(
     userLogin:IUserLogin
   ): Observable<HttpResponse<IResponseLoginDto>> {
@@ -73,6 +77,34 @@ export class AuthService {
         ignoreElements()
       );
   }
+
+  /* ----------------- LOGIN METHOD  ------------------------ */
+
+  /* ----------------- GET CODE TO RESET PASSWORD METHOD  ------------------------ */
+
+  getCodeToResetPassword(email: string): Observable<HttpResponse<IResponseReset>> {
+    return this.http
+      .post<IResponseReset>(
+        `${this.API_URL}/user/reset-code`,
+        { email },
+        { ...this.httpOptions, observe: 'response' }
+      ) 
+  }
+
+  /* ----------------- GET CODE TO RESET PASSWORD METHOD  ------------------------ */
+
+  /* ----------------- RESET PASSWORD METHOD  ------------------------ */
+  resetPassword(emailAndtoken: EmailObjPasswordAndTokenDto) : Observable<HttpResponse<IResponseReset>>{
+    return this.http
+    .post<IResponseReset>(
+      `${this.API_URL}/user/reset-password`,
+       emailAndtoken ,
+      { ...this.httpOptions, observe: 'response' }
+    ) 
+    
+  }
+  /* ----------------- RESET PASSWORD METHOD  ------------------------ */
+
 
   logout() {
     this.cleanInfo();
