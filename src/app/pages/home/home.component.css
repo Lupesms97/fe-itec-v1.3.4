@@ -3,10 +3,9 @@
 .home-content{
   margin:5vw
 }
-
 .desktop .carousel-inner img {
-  margin-top:-8vh;
-  height: 120vh;
+  margin-top:2vh;
+  height: 70vh;
 }
 .mobile .carousel-inner img {
   height: 100vh;

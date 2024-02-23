@@ -18,14 +18,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endCo
   width:100%;
   z-index:999;
 }
-.nav-link{
+.navbars-container-nav .nav-link{
   margin-right:1vw;
   font-weight: 500;
   color:white;
   font-weight:bold;
   coursor:pointer;
 }
-.nav-link:hover{
+.navbars-container-nav .nav-link:hover{
   transition:0.9s;
   padding: .5rem 1rem!important;
   border-radius:2rem;
@@ -37,11 +37,24 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endCo
   border-radius:2rem;
   background-color: #3CB371;
 }
-.btn a {
-  font-size:0.8rem;
+.btn-custom{
+  background-color:#2c64a4;
+  color:white;
+}
+.btn-custom{
+  border-radius:2rem
+}
+.btn-custom a {
+  
+  font-weight:bold;
+  font-size:0.8rem!important;
   color:white
 }
-
+.btn-custom .nav-link{
+  color:white;
+  font-weight:bold;
+  coursor:pointer;
+}
 .sub-nav p{
   font-size:0.8rem
 }
@@ -49,6 +62,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endCo
   color:#25D366;
   font-size:1.2rem
 }
+
 .sub-nav .fa-phone{
   margin-top:0.4vh;
   font-size:0.9rem!important

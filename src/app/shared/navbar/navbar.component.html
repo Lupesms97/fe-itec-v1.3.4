@@ -1,8 +1,8 @@
 <div class="navbars-container position-relative">
   
 <nav class="sub-nav d-none d-lg-block">
-  <div class="container-fluid">
-    <div class="row p-0" style="height: 2.5vw;">
+  <div class="container-fluid nav-nav-sub">
+    <div class="row p-0" style="height: 2vw;">
       <div class="col text-start ps-5 d-flex">
         <button (click)="navigateTo('https://api.whatsapp.com/send/?phone=552435120102&text=Ol%C3%A1%2C+vim+pelo+site+do+ITEC%21+Gostaria+de+mais+informa%C3%A7%C3%B5es%2C+pode+me+ajudar%3F&type=phone_number&app_absent=0')" class="d-flex me-5 btn">
           <i class="fa-brands fa-whatsapp"></i>
@@ -12,19 +12,29 @@
           <i class="fa-solid fa-phone"></i>
           <p href="#" class="text-black">&nbsp;(24) 3512-0102</p>
         </button>
-      </div>
-      <div class="col text-end ps-5 icons">         
-        <button class="btn ">
-          <a class="text-black" routerLink="/institucional" >Institucional</a>
-        </button>
-        <button  class="btn">
-          <a class="text-black" routerLink="/trabalheConsoco" >Trabalhe Conosco</a>
-        </button>
-      </div>
+      </div> 
+        <div class="col text-end icons  m-0 p-0 d-flex justify-content-end">   
+          <button class="btn btn-custom " style="height: 3.5vh;"> 
+            <ul >
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle" style="margin-top:-1vh;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Portal do Aluno
+                </a>
+                <ul class="dropdown-menu bg-primary-subtle">
+                  <li><a class="dropdown-item text-black" href="#">GRUPO SELS</a></li>
+                  <li><a class="dropdown-item text-black" href="#">SALA VIRTUAL - ITEC</a></li>
+                </ul>
+              </li>  
+            </ul>
+          </button>
+          <button  class="btn-custom "  style="height: 3.5vh;">
+            <a class="text-white " style="margin-top:-4vh;" routerLink="/trabalheConsoco" >Trabalhe Conosco</a>
+          </button>
+        </div>
     </div>
   </div>
 </nav>
-<nav class="navbar tn position-absolute navbar-expand-lg" [style.background-color]="corDoBackground">
+<nav class="navbar tn position-absolute navbar-expand-lg navbars-container-nav" [style.background-color]="corDoBackground">
   <div class="container-fluid">
     <div class="navbar-brand">
       <img class="navbar-brand ms-0" src="assets/logbranca.webp" alt="" style="height: max-content;">
@@ -45,16 +55,10 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/noticias" routerLinkActive="active-page">NOTÍCIAS</a>
         </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            PORTAL DO ALUNO
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">GRUPO SELS</a></li>
-            <li><a class="dropdown-item" href="#">SALA VIRTUAL - ITEC</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/institucional" >INSTITUCIONAL</a>
         </li>
+       
         <li class="nav-item">
           <a class="nav-link" routerLink="/blog" routerLinkActive="active-page">BLOG</a>
         </li>
