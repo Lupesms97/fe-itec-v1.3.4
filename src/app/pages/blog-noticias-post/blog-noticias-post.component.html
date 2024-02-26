@@ -3,12 +3,12 @@
     <app-navbar [corDoBackground]="corDoBackground"></app-navbar>
     <div class="bg-img " >
     </div>
-    <div class="text-center mt-10">
+    <div class="text-center mt-10 title-style">
       <p class="p-text">{{title}}</p>
     </div>
 </header>
 
-<section class="light mt-5">
+<section class="light pt-5">
     <div class="container py-2">
       
       <ng-container *ngFor="let post of posts | paginate: { itemsPerPage: 5, currentPage: p }; let i = index"{pagin}>

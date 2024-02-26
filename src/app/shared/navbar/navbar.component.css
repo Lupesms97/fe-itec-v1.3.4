@@ -47,7 +47,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endCo
 .btn-custom a {
   
   font-weight:bold;
-  font-size:0.8rem!important;
+ 
   color:white
 }
 .btn-custom .nav-link{
@@ -82,7 +82,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endCo
 .icon-burger{
   color:white;
 }
-
+.mt-meio{
+  margin-top:0.20rem
+}
 @media(max-width:768px){
   .navbar-brand img{
     width:40vw;

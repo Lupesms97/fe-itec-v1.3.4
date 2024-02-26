@@ -35,30 +35,13 @@
 }
 
 .blog-item:hover {
-    background: #96bae2;
+    background: #96bae2!important;
 }
 
 .blog-item:hover .title {
     color: white;
 }
-.blog-item0{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/bg-itec-enfermagem-2.jpg') no-repeat center;  
-}
-.blog-item1{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/bg-itec-games-1.png') no-repeat center;  
-}
-.blog-item2{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/newsimg3.jpg') no-repeat center;  
-}
-.blog-item3{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/newsimg4.jpg') no-repeat center;  
-}
-.blog-item4{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/newsimg5.jpg') no-repeat center;  
-}
-.blog-item5{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/newsimg6.jpg') no-repeat center;  
-}
+
 @media(max-width:768px){
     .container-blog{
         padding:0 10vw;

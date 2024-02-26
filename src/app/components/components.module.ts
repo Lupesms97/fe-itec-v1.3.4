@@ -19,6 +19,7 @@ import { ModalComponent } from './modal/modal.component';
 import { CompanyCarouselComponent } from './company-carousel/company-carousel.component';
 import { TableCandidateComponent } from './table-candidate/table-candidate.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CarouselBackgroundComponent } from './carousel-background/carousel-background.component';
 
 
 
@@ -36,6 +37,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CompanyCarouselComponent,
     TableCandidateComponent,
     DashboardComponent,
+    CarouselBackgroundComponent,
 
   ],
   imports: [
@@ -61,7 +63,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CardInfoUsersComponent,
     CompanyCarouselComponent,
     TableCandidateComponent,
-    DashboardComponent
+    DashboardComponent,
+    CarouselBackgroundComponent
   ]
 })
 export class ComponentsModule { }

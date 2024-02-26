@@ -16,14 +16,18 @@
     </div>
     <div class="blog-content">
         <div class="row blog-row">
-            <div class="col-lg-8 col-md-12 col-sm-12 blog-item blog-item0" (click)="goToPost(blogs[0].id)">
+            <div class="col-lg-8 col-md-12 col-sm-12 blog-item blog-item0" (click)="goToPost(blogs[0].id)" 
+            style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{blogs[0].background}}') no-repeat center/cover; "
+            >
                 <h3 class="align-self-center title">
                     <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[0].id)">
                         {{blogs[0].title}}
                     </a>
                 </h3>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 blog-item blog-item1" (click)="goToPost(blogs[1].id)">
+            <div class="col-lg-4 col-md-12 col-sm-12 blog-item blog-item1" (click)="goToPost(blogs[1].id)"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{blogs[1].background}}') no-repeat center/cover; "
+            >
                 <h3 class="align-self-center title ">
                     <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[1].id)">
                         {{blogs[1].title}}
@@ -32,14 +36,18 @@
             </div>
         </div>
         <div class="row blog-row">
-            <div class="col-lg-5 col-md-12 col-sm-12 blog-item blog-item2"(click)="goToPost(blogs[2].id)" >
+            <div class="col-lg-5 col-md-12 col-sm-12 blog-item blog-item2"(click)="goToPost(blogs[2].id)"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{blogs[2].background}}') no-repeat center/cover; "
+            >
                 <h3 class="align-self-center title">
                     <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[2].id)">
                         {{blogs[2].title}}
                     </a>
                 </h3>
             </div>
-            <div class="col-lg-7 col-md-12 col-sm-12 blog-item blog-item3" (click)="goToPost(blogs[3].id)">
+            <div class="col-lg-7 col-md-12 col-sm-12 blog-item blog-item3" (click)="goToPost(blogs[3].id)"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{blogs[3].background}}') no-repeat center/cover; "
+            >
                 <h3 class="align-self-center title">
                     <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[3].id)">
                         {{blogs[3].title}}
@@ -48,13 +56,17 @@
             </div>
         </div>
         <div class="row blog-row end-row">
-            <div class="col-lg-9 col-md-12 col-sm-12 blog-item blog-item4" (click)="goToPost(blogs[4].id)">
+            <div class="col-lg-9 col-md-12 col-sm-12 blog-item blog-item4" (click)="goToPost(blogs[4].id)"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{blogs[4].background}}') no-repeat center/cover; "
+            >
                 <h3 class="align-self-center title">
                     <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[4].id)">
                         {{blogs[4].title}}
                     </a>             </h3>
             </div>
-            <div class="col-lg-3 col-md-12 col-sm-12 blog-item blog-item5" (click)="goToPost(blogs[5].id)">
+            <div class="col-lg-3 col-md-12 col-sm-12 blog-item blog-item5" (click)="goToPost(blogs[5].id)"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{blogs[5].background}}') no-repeat center/cover; "
+            >
                 <h3 class="align-self-center title">
                     <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[5].id)">
                         {{blogs[5].title}}

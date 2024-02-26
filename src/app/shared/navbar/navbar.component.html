@@ -1,69 +1,134 @@
 <div class="navbars-container position-relative">
-  
-<nav class="sub-nav d-none d-lg-block">
-  <div class="container-fluid nav-nav-sub">
-    <div class="row p-0" style="height: 2vw;">
-      <div class="col text-start ps-5 d-flex">
-        <button (click)="navigateTo('https://api.whatsapp.com/send/?phone=552435120102&text=Ol%C3%A1%2C+vim+pelo+site+do+ITEC%21+Gostaria+de+mais+informa%C3%A7%C3%B5es%2C+pode+me+ajudar%3F&type=phone_number&app_absent=0')" class="d-flex me-5 btn">
-          <i class="fa-brands fa-whatsapp"></i>
-          <p  class="text-black">&nbsp;  Matricule-se pelo WhatsApp</p>
-        </button>
-        <button class="d-flex btn">
-          <i class="fa-solid fa-phone"></i>
-          <p href="#" class="text-black">&nbsp;(24) 3512-0102</p>
-        </button>
-      </div> 
-        <div class="col text-end icons  m-0 p-0 d-flex justify-content-end">   
-          <button class="btn btn-custom " style="height: 3.5vh;"> 
-            <ul >
-              <li class="nav-item">
-                <a class="nav-link dropdown-toggle" style="margin-top:-1vh;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Portal do Aluno
-                </a>
-                <ul class="dropdown-menu bg-primary-subtle">
-                  <li><a class="dropdown-item text-black" href="#">GRUPO SELS</a></li>
-                  <li><a class="dropdown-item text-black" href="#">SALA VIRTUAL - ITEC</a></li>
-                </ul>
-              </li>  
-            </ul>
+  <nav class="sub-nav d-none d-lg-block">
+    <div class="container-fluid nav-nav-sub">
+      <div class="row p-0" style="height: 5vh">
+        <div class="col text-start ps-5 d-flex">
+          <button
+            (click)="
+              navigateTo(
+                'https://api.whatsapp.com/send/?phone=552435120102&text=Ol%C3%A1%2C+vim+pelo+site+do+ITEC%21+Gostaria+de+mais+informa%C3%A7%C3%B5es%2C+pode+me+ajudar%3F&type=phone_number&app_absent=0'
+              )
+            "
+            class="d-flex me-5 btn"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <p class="text-black">&nbsp; Matricule-se pelo WhatsApp</p>
           </button>
-          <button  class="btn-custom "  style="height: 3.5vh;">
-            <a class="text-white " style="margin-top:-4vh;" routerLink="/trabalheConsoco" >Trabalhe Conosco</a>
+          <button class="d-flex btn">
+            <i class="fa-solid fa-phone"></i>
+            <p href="#" class="text-black">&nbsp;(24) 3512-0102</p>
           </button>
         </div>
+        <div class="col text-end icons m-0 d-flex justify-content-end">
+            <div class="nav-item dropdown">
+              <button class="btn btn-custom mt-meio "
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+               role="button"
+               style="height: 4vh">
+                <a
+                  class="nav-link dropdown-toggle"
+                  style="margin-top: -1vh"
+                >
+                  Portal do Aluno
+                </a>
+              </button>
+              <ul class="dropdown-menu bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item text-black" href="#">GRUPO SELS</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-black" href="#"
+                    >SALA VIRTUAL - ITEC</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+          <button class="btn-custom btn p-0 mt-meio" style="height: 4vh">
+            <a class="text-white m-3" routerLink="/trabalheConsoco"
+              >Trabalhe Conosco</a
+            >
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
-<nav class="navbar tn position-absolute navbar-expand-lg navbars-container-nav" [style.background-color]="corDoBackground">
-  <div class="container-fluid">
-    <div class="navbar-brand">
-      <img class="navbar-brand ms-0" src="assets/logbranca.webp" alt="" style="height: max-content;">
+  </nav>
+  <nav
+    class="navbar tn position-absolute navbar-expand-lg navbars-container-nav"
+    [style.background-color]="corDoBackground"
+  >
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <a routerLink="/home">
+        <img
+          class="navbar-brand ms-0"
+          src="assets/logbranca.webp"
+          alt=""
+          style="height: max-content"
+        />
+        
+        </a>
+      </div>
+      <button
+        class="btn d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fa-solid fa-bars icon-burger"></i>
+      </button>
+      <div class="collapse navbar-collapse pe-5" id="navbarScroll">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/home"
+              routerLinkActive="active-page"
+              >HOME</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/cursos"
+              routerLinkActive="active-page"
+              >CURSOS</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/seja-nosso-aluno"
+              routerLinkActive="active-page"
+              >SEJA NOSSO ALUNO</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/noticias"
+              routerLinkActive="active-page"
+              >NOTÍCIAS</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/institucional">INSTITUCIONAL</a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/blog"
+              routerLinkActive="active-page"
+              >BLOG</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-    <button class="btn d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fa-solid fa-bars icon-burger"></i></button>
-    <div class="collapse navbar-collapse pe-5" id="navbarScroll">
-      <ul class="navbar-nav ms-auto my-2 my-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/home" routerLinkActive="active-page" >HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/cursos" routerLinkActive="active-page" >CURSOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/seja-nosso-aluno" routerLinkActive="active-page">SEJA NOSSO ALUNO</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/noticias" routerLinkActive="active-page">NOTÍCIAS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/institucional" >INSTITUCIONAL</a>
-        </li>
-       
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/blog" routerLinkActive="active-page">BLOG</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 </div>

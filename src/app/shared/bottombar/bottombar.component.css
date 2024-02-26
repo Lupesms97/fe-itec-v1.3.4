@@ -8,6 +8,10 @@
   border-right: 1px solid white; /* Adiciona uma borda branca à direita */
   padding-right: 15px; /* Adiciona um espaço à direita para separar o conteúdo da borda */
   height: 9vh;
+
+  & p{
+    font-size:1rem
+  }
   
 }
 .container-fluid .navbar span {
@@ -144,3 +148,15 @@ justify-content:center
 
   }
 }
+@media(width <=768px){
+  .with-divider a p {
+    font-size:0.9rem!important
+  }
+  .with-divider a i {
+    font-size:2rem!important
+  }
+  .with-divider a p span {
+    font-size: 0.9rem!important
+  }
+}
+

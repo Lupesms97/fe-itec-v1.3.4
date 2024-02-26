@@ -1,0 +1,8 @@
+.desktop .carousel-inner img {
+    
+    height: 75vh;
+}
+.mobile .carousel-inner img {
+    margin-top:10vh;
+    height: 75vh;
+}
