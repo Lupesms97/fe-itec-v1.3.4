@@ -96,3 +96,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endCo
     
   }
 }
+.navbar-brand img:hover{
+  
+  transition: 1s 
+}
