@@ -8,11 +8,12 @@
     filter: brightness(90%);
     padding: 0;
 }
+
 .main{
     margin-top:10vh;
 }
 .courses-content{
-    margin: 10vh 5vw;
+    margin: 0 5vw 10vh 5vw;
     padding: 10vh 0;
 }
 @keyframes moveUpDown {
