@@ -1,0 +1,58 @@
+.container-forms {
+    padding: 20vh 5vw 25vh 5vw;
+  }
+  .btn-forms-custom {
+  margin-top:5vh;
+    color: white;
+    background-color: #409d00;
+    width: 100%;
+    height: 10vh;
+    border-radius: 1.5rem;
+  }
+  h3{
+      color:#3cb371;
+  }
+  span{
+      color:#3cb371;
+  }
+  .btn-forms-custom p {
+    margin: 0 !important;
+    color: white;
+  }
+  .btn-forms-custom i {
+    font-size: 1.4rem;
+  }
+  .btn-forms-custom:hover {
+    background-color: #3cb371;
+    transition: 1.5s;
+  }
+  label {
+    font-size: 0.8rem;
+  }
+  label p {
+    margin: 0 !important;
+  }
+  .forms-element h2 {
+    font-size: 1.7rem;
+  }
+  .forms-element span {
+    color: #3cb371;
+  }
+  #forms-container .forms-element p {
+    margin: 5vh 0 3vh 0;
+  }
+  #forms-container-aside .text-div {
+    margin: 5vh 0 3vh 0;
+  }
+  @media (max-width: 768px) {
+    #forms-container {
+      padding: 0rem;
+    }
+    .size-element {
+      height: auto;
+    }
+    #forms-container-aside {
+      width: 100%;
+    }
+  }
+  

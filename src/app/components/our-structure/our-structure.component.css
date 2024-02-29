@@ -1,0 +1,266 @@
+
+  
+
+  .typewriter:after {
+    content:'';
+    color:#659fe0;
+    animation:write 10s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes write {
+    0% {
+        content: "n";
+      }
+      2% {
+        content: "no";
+      }
+      4% {
+        content: "nos";
+      }
+      6% {
+        content: "noss";
+      }
+      8% {
+        content: "nossa ";
+      }
+      10% {
+        content: "nossa e";
+      }
+      12% {
+        content: "nossa es";
+      }
+      14% {
+        content: "nossa est";
+      }
+      16% {
+        content: "nossa estr";
+      }
+      18% {
+        content: "nossa estru";
+      }
+      20% {
+        content: "nossa estrut";
+      }
+      22% {
+        content: "nossa estrutu";
+      }
+      24% {
+        content: "nossa estrutur";
+      }
+      26% {
+        content: "nossa estrutura";
+      }
+    
+      26% {
+        content: "nossa estrutura";
+        
+      }
+      28% {
+        content: "nossa estrutura";
+        
+      }
+      30% {
+        content: "nossa estrutu";
+        
+      }
+      32% {
+        content: "nossa estrut";
+        
+      }
+      34% {
+        content: "nossa estru";
+        
+      }
+      36% {
+        content: "nossa estr";
+        
+      }
+      38% {
+        content: "nossa est";
+        
+      }
+      40% {
+        content: "nossa es";
+        
+      }
+      42% {
+        content: "nossa e";
+        
+      }
+      44% {
+        content: "nossa ";
+        
+      }
+      46% {
+        content: "nossa";
+        
+      }
+      48% {
+        content: "noss";
+        
+      }
+      50% {
+        content: "nos";
+        
+      }
+      52% {
+        content: "no";
+        
+      }
+      54% {
+        content: "n";
+        
+      }
+      /* Comece a escrever "sua nova estrutura" */
+      56% {
+        content: "s";
+        
+      }
+      58% {
+        content: "su";
+        
+      }
+      60% {
+        content: "sua";
+        
+      }
+      62% {
+        content: "sua ";
+        
+      }
+      64% {
+        content: "sua n";
+        
+      }
+      66% {
+        content: "sua no";
+        
+      }
+      68% {
+        content: "sua nov";
+        
+      }
+      70% {
+        content: "sua nova";
+        
+      }
+      72% {
+        content: "sua nova ";
+        
+      }
+      74% {
+        content: "sua nova e";
+        
+      }
+      76% {
+        content: "sua nova es";
+        
+      }
+      78% {
+        content: "sua nova est";
+        
+      }
+      80% {
+        content: "sua nova estr";
+        
+      }
+      82% {
+        content: "sua nova estru";
+        
+      }
+      84% {
+        content: "sua nova estrut";
+        
+      }
+      86% {
+        content: "sua nova estrutu";
+        
+      }
+      88% {
+        content: "sua nova estrutura";
+        
+      }
+87% {
+      content:'sua nova estrutura';
+    }
+    99% {
+      content:'sua nova estrutura';
+      color:#1c3f68;
+    }
+    100% {
+      color:#1c3f68;
+      content:'sua nova estrutura.';
+    }
+  }
+
+  .blog-item{
+    height:40vh;
+/*     background-color:pink;
+    border: solid 2px green; */
+
+    border: solid 1px #ffff;
+    overflow:hidden
+
+}
+.blog-row:hover{
+    cursor:pointer
+}
+.blog-item h3{
+    padding:  0
+}
+.container-blog{
+    padding: 0 3vw 5vh 3vw
+}
+.color-title-blog{
+    color:#659fe0;
+    width:100%;
+ 
+}
+.color-title-blog span{
+
+}
+.color-title-blog a{
+    color:#1c3f68;
+}
+
+.title-description{
+    color:#ffff;
+}
+.description {
+    background-color:#659fe0;
+    height:8vh;
+    width:100%;
+     margin-left:-100rem;
+     transition: margin-left 0.3s ease; /* Adicionando uma transição suave */
+
+   & .title-description{
+    width: 100% !important;
+    margin: auto auto
+   }
+}
+  
+  .blog-item:hover .description {
+    margin-left: 0;
+  }
+
+.blog-item:hover .title {
+    color: white;
+}
+
+@media(max-width:768px){
+    .container-blog{
+        padding:0 10vw;
+
+    }
+    .blog-content{
+        padding-bottom:10vh!important;
+    }
+}
+.fa-chevron-right:hover{
+    cursor:pointer
+  }
+
+h2{
+    font-size:2rem
+}

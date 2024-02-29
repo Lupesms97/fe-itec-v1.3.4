@@ -10,6 +10,7 @@ import { OurStudentComponent } from './our-student/our-student.component';
 import { LocaisComponent } from './locations/locais.component';
 import { InstutcionalComponent } from './institutional/instutcional.component';
 import { TrabalheConoscoComponent } from './work-with-us/trabalhe-conosco.component';
+import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
 
 const routes: Routes = [
   { path:'', redirectTo: '', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'seja-nosso-aluno', component: OurStudentComponent},
   {path:'locais', component: LocaisComponent},
   {path:'institucional', component: InstutcionalComponent},
-  {path:'trabalheConsoco', component: TrabalheConoscoComponent}
+  {path:'trabalheConsoco', component: TrabalheConoscoComponent},
+  {path:'ouvidoria', component: OmbudsmanComponent},
 ];
 
 @NgModule({

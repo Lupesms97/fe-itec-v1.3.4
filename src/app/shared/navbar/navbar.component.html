@@ -108,12 +108,25 @@
             >
           </li>
           <li class="nav-item">
+           <div class="dropdown">
             <a
-              class="nav-link"
-              routerLink="/noticias"
-              routerLinkActive="active-page"
-              >NOTÍCIAS</a
-            >
+            class="nav-link dropdown-toggle"
+            routerLinkActive="active-page"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            role="button"
+            >FALE CONOSCO
+            </a>
+            <ul class="dropdown-menu bg-primary-subtle">
+              <li>
+                <a class="dropdown-item text-black"  routerLink="/ouvidoria">OUVIDORIA</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-black" routerLink="/trabalheConsoco">TRABALHE CONOSCO</a
+                >
+              </li>
+            </ul>
+           </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/institucional">INSTITUCIONAL</a>

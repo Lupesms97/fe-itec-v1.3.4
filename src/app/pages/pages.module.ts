@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { LocaisComponent } from './locations/locais.component';
 import { InstutcionalComponent } from './institutional/instutcional.component';
 import { TrabalheConoscoComponent } from './work-with-us/trabalhe-conosco.component';
+import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
 
 
 
@@ -33,6 +34,7 @@ import { TrabalheConoscoComponent } from './work-with-us/trabalhe-conosco.compon
     LocaisComponent,
     InstutcionalComponent,
     TrabalheConoscoComponent,
+    OmbudsmanComponent,
   ],
   imports: [
     CommonModule,
