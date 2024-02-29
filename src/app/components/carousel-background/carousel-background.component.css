@@ -19,7 +19,7 @@
 }
 
 .carousel-thumbnail {
-    width: 50px; /* Ajuste o tamanho conforme necessário */
+    width: 6vw; /* Ajuste o tamanho conforme necessário */
     height: auto;
     margin: 0 5px; /* Espaçamento entre as miniaturas */
     cursor: pointer; /* Mostrar cursor de mão ao passar por cima */

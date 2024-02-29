@@ -20,6 +20,8 @@ import { CompanyCarouselComponent } from './company-carousel/company-carousel.co
 import { TableCandidateComponent } from './table-candidate/table-candidate.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarouselBackgroundComponent } from './carousel-background/carousel-background.component';
+import { OurStructureComponent } from './our-structure/our-structure.component';
+import { FormsOmbudsmanComponent } from './forms-ombudsman/forms-ombudsman.component';
 
 
 
@@ -38,6 +40,8 @@ import { CarouselBackgroundComponent } from './carousel-background/carousel-back
     TableCandidateComponent,
     DashboardComponent,
     CarouselBackgroundComponent,
+    OurStructureComponent,
+    FormsOmbudsmanComponent
 
   ],
   imports: [
@@ -64,7 +68,9 @@ import { CarouselBackgroundComponent } from './carousel-background/carousel-back
     CompanyCarouselComponent,
     TableCandidateComponent,
     DashboardComponent,
-    CarouselBackgroundComponent
+    CarouselBackgroundComponent,
+    OurStructureComponent,
+    FormsOmbudsmanComponent
   ]
 })
 export class ComponentsModule { }
