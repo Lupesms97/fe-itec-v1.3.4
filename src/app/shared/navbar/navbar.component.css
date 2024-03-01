@@ -19,22 +19,24 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#666cda",endCo
   z-index:999;
 }
 .navbars-container-nav .nav-link{
-  margin-right:1vw;
+  margin-right:0.5rem;
   font-weight: 500;
   color:white;
   font-weight:bold;
   coursor:pointer;
+  border-radius:2rem;
+  padding: .5rem 0.5rem!important;
+
+
 }
 .navbars-container-nav .nav-link:hover{
   transition:0.9s;
-  padding: .5rem 1rem!important;
-  border-radius:2rem;
+  padding: .5rem 0.5rem!important;
   background-color:#9ff29b
 }
 
 .active-page{
-  padding: .5rem 1rem!important;
-  border-radius:2rem;
+  padding: .5rem 0.5rem!important;
   background-color: #3CB371;
 }
 .btn-custom{

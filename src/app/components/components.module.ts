@@ -22,6 +22,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarouselBackgroundComponent } from './carousel-background/carousel-background.component';
 import { OurStructureComponent } from './our-structure/our-structure.component';
 import { FormsOmbudsmanComponent } from './forms-ombudsman/forms-ombudsman.component';
+import { TableOmbudsmanComponent } from './table-ombudsman/table-ombudsman.component';
 
 
 
@@ -41,7 +42,8 @@ import { FormsOmbudsmanComponent } from './forms-ombudsman/forms-ombudsman.compo
     DashboardComponent,
     CarouselBackgroundComponent,
     OurStructureComponent,
-    FormsOmbudsmanComponent
+    FormsOmbudsmanComponent,
+    TableOmbudsmanComponent
 
   ],
   imports: [
@@ -70,7 +72,8 @@ import { FormsOmbudsmanComponent } from './forms-ombudsman/forms-ombudsman.compo
     DashboardComponent,
     CarouselBackgroundComponent,
     OurStructureComponent,
-    FormsOmbudsmanComponent
+    FormsOmbudsmanComponent,
+    TableOmbudsmanComponent
   ]
 })
 export class ComponentsModule { }

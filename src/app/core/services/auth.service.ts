@@ -27,6 +27,7 @@ export class AuthService {
   user$ = this.user.asObservable();
   isLogged$: Observable<boolean> = this.user$.pipe(map(Boolean));
   role$ = new BehaviorSubject<Role>(Role.UNDEFINED_ROLE);
+  ouvidoria$ = new BehaviorSubject<boolean>(false);
 
   private readonly API_URL = 'http://localhost:8082/v2/auth';
 
@@ -143,12 +144,19 @@ export class AuthService {
     const userName = this.decodeJwt(obj.token).name
     this.setNameRoleToken(userName, roles);
 
+/*     this.ouvidoria$.next(this.hastheAuth(obj.acessInfo));
+ */
     this.user.next(obj);
   
     this.setCookie(TOKEN_KEY, obj.token, 1);
 
+
     this.redirectToHome();
   }
+  
+/*   private hastheAuth(acessInfo: { permission: string[]; availiableCompanies: string[]; }): boolean {
+    return acessInfo.permission.includes('OUVIDORIA');
+  } */
 
 
 

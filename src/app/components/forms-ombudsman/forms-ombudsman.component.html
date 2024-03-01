@@ -1,103 +1,211 @@
-
 <div class="container container-forms">
-    <div class="container mb-5 pb-5">
-        <h3 class="mb-3">Por que Usar a Ouvidoria:</h3>
-        <p class="mb-5">   
-          <span>1. Dar Voz às Suas Preocupações: </span> Seja uma questão relacionada ao corpo docente, infraestrutura, serviços administrativos ou qualquer outro aspecto da vida acadêmica, a Ouvidoria está aqui para ouvir você.
-        </p>
-        <p class="mb-5">   
-          <span>2. Fornecer Feedback Construtivo:</span> Seu feedback é valioso para nós. Ele nos ajuda a identificar áreas que precisam de melhorias e a implementar mudanças positivas em benefício de toda a comunidade acadêmica.
-        </p>
-        <p class="mb-5">   
-          <span>3. Resolver Problemas de Forma Eficiente:</span> A Ouvidoria serve como um ponto central para lidar com suas preocupações de maneira justa, imparcial e eficaz. Nossa equipe está pronta para ajudar a resolver seus problemas da melhor forma possível.
-        </p>
-        <p class="mb-5">   
-          <span>4. Promover uma Cultura de Transparência e Melhoria Contínua:</span> Ao utilizar a Ouvidoria, você contribui para uma cultura de transparência e melhoria contínua em nossa instituição de ensino, beneficiando não apenas você, mas também seus colegas e as gerações futuras de estudantes.
-        </p>
-      
-        <h3 class="mb-3">Fique à Vontade para Entrar em Contato:</h3>
-        <p>   
-          Não hesite em usar a Ouvidoria sempre que precisar. Estamos aqui para ouvir você, apoiá-lo e trabalhar juntos para criar um ambiente acadêmico positivo e enriquecedor para todos.
-          Sua opinião importa. Sua voz é ouvida. Juntos, podemos fazer a diferença!
-        </p>
+  <div class="container mb-5 pb-5">
+    <h3 class="mb-3">Por que Usar a Ouvidoria:</h3>
+    <ul>
+      <p class="mb-3">
+        <span>1. Dar Voz às Suas Preocupações: </span> Seja uma questão
+        relacionada ao corpo docente, infraestrutura, serviços administrativos
+        ou qualquer outro aspecto da vida acadêmica, a Ouvidoria está aqui para
+        ouvir você.
+      </p>
+      <p class="mb-3">
+        <span>2. Fornecer Feedback Construtivo:</span> Seu feedback é valioso
+        para nós. Ele nos ajuda a identificar áreas que precisam de melhorias e
+        a implementar mudanças positivas em benefício de toda a comunidade
+        acadêmica.
+      </p>
+      <p class="mb-3">
+        <span>3. Resolver Problemas de Forma Eficiente:</span> A Ouvidoria serve
+        como um ponto central para lidar com suas preocupações de maneira justa,
+        imparcial e eficaz. Nossa equipe está pronta para ajudar a resolver seus
+        problemas da melhor forma possível.
+      </p>
+      <p class="mb-3">
+        <span
+          >4. Promover uma Cultura de Transparência e Melhoria Contínua:</span
+        >
+        Ao utilizar a Ouvidoria, você contribui para uma cultura de
+        transparência e melhoria contínua em nossa instituição de ensino,
+        beneficiando não apenas você, mas também seus colegas e as gerações
+        futuras de estudantes.
+      </p>
+    </ul>
+
+    <h3 class="mb-3">Fique à Vontade para Entrar em Contato:</h3>
+    <p>
+      Não hesite em usar a Ouvidoria sempre que precisar. Estamos aqui para
+      ouvir você, apoiá-lo e trabalhar juntos para criar um ambiente acadêmico
+      positivo e enriquecedor para todos. Sua opinião importa. Sua voz é ouvida.
+      Juntos, podemos fazer a diferença!
+    </p>
+  </div>
+  <ng-container>
+    <form class="row g-3" #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <label for="inputNome" class="form-label">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputNome"
+          name="name"
+          [(ngModel)]="forms.name"
+          required
+          maxlength="30"
+          #name="ngModel"
+        />
+        <div
+          *ngIf="name.hasError('required') && name.touched"
+          class="alert alert-danger"
+        >
+          <div id="alert-danger">Informe um nome</div>
+        </div>
       </div>
-    <ng-container>
-        <form class="row g-3" #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)">
-           <div class="col-lg-6 col-md-12 col-sm-12">
-              <label for="inputNome" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="inputNome" name="name" [(ngModel)]="forms.name" required
-                maxlength="30" #name="ngModel">
-              <div *ngIf="name.hasError('required') && name.touched " class="alert alert-danger">
-                <div id="alert-danger">Informe um nome</div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="forms.email" required email
-                #email="ngModel">
-              <div *ngIf="email.hasError('required') && email.touched " class="alert alert-danger">
-                <div id="alert-danger">Informe um email</div>
-              </div>
-              <div *ngIf="email.hasError('email') && email.dirty" class="alert alert-danger">
-                <p>
-                  Informe um email valido
-                </p>
-              </div>
-    
-            </div>
-            <div class="col-lg-7 col-md-12">
-              <label for="inputPolo" class="form-label">Polo</label>
-              <select class="form-select" id="inputPolo" name="polo" [(ngModel)]="forms.polo" required>
-                <option value="VR_VILA">Volta Redonda - Vila</option>
-                <option value="VR_RETIRO">Volta Redonda - Retiro</option>
-                <option value="ANGRA_DOS_REIS">Angra do Reis</option>
-                <option value="RESENDE">Resende</option>
-                <option value="PORTO_REAL">Porto Real</option>
-                <option value="ITATIAIA">Itatiaia</option>
-                <option value="BARRA_MANSA">Barra Mansa</option>
-              </select>
-            </div>
-            <div class="col-lg-5 col-md-12">
-              <label for="inputTel" class="form-label">Celular</label>
-              <input type="text" class="form-control" id="inputTel" name="celphone" [(ngModel)]="forms.phone"
-                placeholder="(XX) XXXX-XXXX" required #celphone="ngModel">
-              <div *ngIf="celphone.hasError('required') && celphone.touched " class="alert alert-danger">
-                <div id="alert-danger">Informe um celular</div>
-              </div>
-            </div>
-            <div class=" col-12 mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Escreva aqui oque gostaria de nos falar</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            
-            
-            <div class="col-lg-12 pt-5">
-              <div class="form-check">
-                <input class="form-check-input" name="lgpd" type="checkbox" id="lgpd"
-                  [(ngModel)]="forms.lgpd">
-                <label class="form-check-label" for="lgpd">
-                    <p>Ao enviar minhas informações, concordo com a coleta e processamento dos dados pessoais pela Ouvidoria da instituição exclusivamente para a finalidade de tratar e responder às minhas solicitações, reclamações ou feedback. Compreendo que meus dados serão tratados de acordo com a política de privacidade da instituição e serão usados apenas para os fins declarados acima.
+      <div class="col-lg-7 col-md-12 col-sm-12">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail"
+          name="email"
+          [(ngModel)]="forms.email"
+          required
+          email
+          #email="ngModel"
+        />
+        <div
+          *ngIf="email.hasError('required') && email.touched"
+          class="alert alert-danger"
+        >
+          <div id="alert-danger">Informe um email</div>
+        </div>
+        <div
+          *ngIf="email.hasError('email') && email.dirty"
+          class="alert alert-danger"
+        >
+          <p>Informe um email valido</p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12">
+        <label for="inputTel" class="form-label">Celular</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputTel"
+          name="celphone"
+          [(ngModel)]="forms.phone"
+          placeholder="(XX) XXXX-XXXX"
+          required
+          #celphone="ngModel"
+        />
+        <div
+          *ngIf="celphone.hasError('required') && celphone.touched"
+          class="alert alert-danger"
+        >
+          <div id="alert-danger">Informe um celular</div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <label for="inputCurso" class="form-label">Curso</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputCurso"
+          name="course"
+          [(ngModel)]="forms.course"
+          required
+          curso
+          #curso="ngModel"
+        />
+        <div
+          *ngIf="curso.hasError('required') && curso.touched"
+          class="alert alert-danger"
+        >
+          <div id="alert-danger">Informe um cursos</div>
+      </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <label for="inputPolo" class="form-label">Polo</label>
+        <select
+          class="form-select"
+          id="inputPolo"
+          name="polo"
+          [(ngModel)]="forms.polo"
+          required
+        >
+          <option value="VR_VILA">Volta Redonda - Vila</option>
+          <option value="VR_RETIRO">Volta Redonda - Retiro</option>
+          <option value="ANGRA_DOS_REIS">Angra do Reis</option>
+          <option value="RESENDE">Resende</option>
+          <option value="PORTO_REAL">Porto Real</option>
+          <option value="ITATIAIA">Itatiaia</option>
+          <option value="BARRA_MANSA">Barra Mansa</option>
+        </select>
+      </div>
+     
+      <div class="col-12 mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Escreva aqui oque gostaria de nos falar</label
+        >
+        <textarea
+          class="form-control"
+          id="inputMessage"
+          rows="4"
+          name="message"
+          [(ngModel)]="forms.message"
+          required
+          message
+          #message="ngModel"
+          maxlength="300"
+        ></textarea>
+        <small class="text-muted">
+          {{ forms.message.length }} / 300 caracteres restantes
+        </small>
+        <div
+          *ngIf="message.hasError('required') && message.touched"
+          class="alert alert-danger"
+        >
+        <div id="alert-danger">Não é possivel enviar sem texto</div>
 
-                        Esta autorização é revogável mediante solicitação por escrito.
-                        
-                        Declaro que li, compreendi e concordo com os termos acima ao marcar esta caixa.</p>
-                        
-                </label>
-              </div>
-            </div>
-            <div class="col-lg-12 pb-4">
-              <button type="submit" class="btn btn-forms-custom" (click)="processForms()" [disabled]="!infoForm.valid">
-                <p *ngIf="!processingForms">
-                  Enviar
-                </p>
-                <p *ngIf="processingForms">
-                  <i class="fa fa-spinner fa-spin"></i>&nbsp; Enviando
-                </p>
-              </button>
-            </div>
-          </form>
-    </ng-container>
-    
+         </div>
+      </div>
 
+      <div class="col-lg-12 pt-5">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            name="lgpd"
+            type="checkbox"
+            id="lgpd"
+            [(ngModel)]="forms.lgpd"
+          />
+          <label class="form-check-label" for="lgpd">
+            <p>
+              Ao enviar minhas informações, concordo com a coleta e
+              processamento dos dados pessoais pela Ouvidoria da instituição
+              exclusivamente para a finalidade de tratar e responder às minhas
+              solicitações, reclamações ou feedback. Compreendo que meus dados
+              serão tratados de acordo com a política de privacidade da
+              instituição e serão usados apenas para os fins declarados acima.
+              Esta autorização é revogável mediante solicitação por escrito.
+              Declaro que li, compreendi e concordo com os termos acima ao
+              marcar esta caixa.
+            </p>
+          </label>
+        </div>
+      </div>
+      <div class="col-lg-12 pb-4">
+        <button
+          type="submit"
+          class="btn btn-forms-custom"
+          (click)="processForms()"
+          [disabled]="!infoForm.valid"
+        >
+          <p *ngIf="!processingForms">Enviar</p>
+          <p *ngIf="processingForms">
+            <i class="fa fa-spinner fa-spin"></i>&nbsp; Enviando
+          </p>
+        </button>
+      </div>
+    </form>
+  </ng-container>
 </div>
-

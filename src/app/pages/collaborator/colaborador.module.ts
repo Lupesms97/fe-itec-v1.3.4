@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CollaboratorNavbarComponent } from 'src/app/shared/collaborator-navbar/collaborator-navbar.component';
 import { CollaboratorAdminNavbarComponent } from 'src/app/shared/collaborator-admin-navbar/collaborator-admin-navbar.component';
 import { ResetComponent } from './reset/reset.component';
+import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
 
 
 
@@ -27,7 +28,8 @@ import { ResetComponent } from './reset/reset.component';
     DashboardComponent,
     CollaboratorNavbarComponent,
     CollaboratorAdminNavbarComponent,
-    ResetComponent
+    ResetComponent,
+    OmbudsmanComponent
   ],
   imports: [
     FormsModule,
@@ -36,11 +38,13 @@ import { ResetComponent } from './reset/reset.component';
       [
         {path:'', redirectTo: 'login', pathMatch: 'full'},
         {path:'login', component: LoginComponent},
+        {path:'reset', component: ResetComponent},
         {path:'home', component: HomeComponent, canActivate:  [loggedGuard]},
         {path:'minha-carteira', component: MinhaCarteiraComponent,canActivate:  [loggedGuard]},
         {path:'banco-de-candidatos', component: CandidateInformationBankComponent,canActivate:  [loggedGuard]},
         {path:'dashboard', component: HomeComponent,canActivate:  [loggedGuard]},
-        {path:'reset', component: ResetComponent}
+        {path:'resposta-ouvidoria', component: OmbudsmanComponent ,canActivate:  [loggedGuard] }
+        
       ]
     ),
     NgxPaginationModule,
