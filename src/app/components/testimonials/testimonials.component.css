@@ -5,7 +5,7 @@ section{
 }
 .carousel-inner .carousel-item{
     width:70%!important;
-    height:40vh;    
+    height:auto;    
     margin-left:20%;
     
 }
@@ -13,7 +13,7 @@ section{
     height:15vh!important
 }
 .carousel-innner .text-carousel p{
-    margin-top:50vh!important
+    margin-top:30vh!important
 }
 .icons i{
     color:gold!important

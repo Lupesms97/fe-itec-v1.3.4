@@ -1,96 +1,243 @@
-/*** Testimonial ***/
-section{
-    background: #d4d8fc;
-   border-radius:2rem
-}
-.carousel-inner .carousel-item{
-    padding:2vh 5vw 2vh 10vw;
-    width:100%!important;
-    height:85vh;     
-}
-.carousel-innner .carousel-item img{
-    height:20vh!important
-}
-
-.major-title{
-    margin-bottom:5vh!important
-}
-.pt-5-custom{
-    padding-top:5vh;
-}
-.pb-5-custom{
-    padding-bottom:5vh;
-}
-
-/*** Testimonial ***/
-
-.image-container {
-    width: 100%; /* Defina a largura desejada */
-    height:100%; /* Defina a altura desejada */
-    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+/* 
+---------------------------------------------
+OUR-COURSES
+--------------------------------------------- 
+*/
+.container-fluid {
+    padding-top: 4vh;
   
-    /* Configuração para centralizar a imagem e manter a proporção */
+  }
+  .features{
+      margin-top:10vh
+  }
+  
+  .features .nav-tabs {
+    border: 0;
+  }
+  .color-title {
+    color: white;
+    margin-bottom: 4vh;
+    background: #659fe0;                                                                               
+    font-size:2rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .with-divider {
+    border-right: 1px solid black; /* Adiciona uma borda branca à direita */
+    padding-right: 15px; /* Adiciona um espaço à direita para separar o conteúdo da borda */
+  }
+  .nav-hover .nav-item:hover {
+    background-color: #f0f0f0; /* Adicione a cor de fundo desejada no hover */
+    transition: background-color 0.3s ease; /* Adicione uma transição suave */
+  }
+  
+  /* Estilos adicionais para garantir que o texto seja visível */
+  .nav-hover .nav-item:hover a {
+    color: #333; /* Cor do texto no hover */
+  }
+  
+  /* Estilos adicionais para garantir que as imagens mantenham a opacidade padrão e não sejam afetadas pelo hover */
+  .nav-hover .nav-item:hover img {
+    opacity: 1; /* Mantenha a opacidade padrão no hover */
+  }
+  .features .nav-link {
+    border: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0s;
+    cursor: pointer;
+    height: 20vh;
+  }
+  .features .nav-link img {
+    height: 10vh;
+    width: auto;
   }
   
-  .image-container img {
-    width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
-    height:30vh; /* Garante que a imagem ocupe 100% da altura do contêiner */
-    object-fit: contain; /* Mantém a proporção e corta para preencher o contêiner */
+  .features .nav-link h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+    color: var(--color-secondary);
   }
-  .btn-custom{
-    border-radius:2rem;
-    height:8vh;
-    width:100%;
-    background-color:#1c3f68;
+  
+  .features .nav-link:hover {
+    color: var(--color-primary);
   }
-  .btn-custom a{
-    color:white;
+  
+  .features .nav-link.active {
+    transition: 0.3s;
+    background: var(--color-secondary)
+      linear-gradient(
+        rgba(var(--color-primary-rgb), 0.95),
+        rgba(var(--color-primary-rgb), 0.6)
+      );
+    border-color: var(--color-primary);
   }
-@media (max-width: 767px) {
-    .carousel-inner .carousel-item {
-        width: 100%!important;
-        margin-left: 0;
+  
+  .features .nav-link.active h4 {
+    color: var(--color-white);
+  }
+  
+  .features .nav-link.active i {
+    color: var(--color-white) !important;
+  }
+  
+  .features .tab-content {
+    margin-top: 6vh;
+    width: 100%;
+  }
+  
+  .features .tab-pane.active {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .features .tab-pane h3 {
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--color-secondary);
+  }
+  
+  .features .tab-pane ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features .tab-pane ul li {
+    padding-bottom: 10px;
+  }
+  
+  .features .tab-pane ul i {
+    font-size: 24px;
+  
+    color: var(--color-primary);
+  }
+  
+  .features .tab-pane p:last-child {
+    margin-bottom: 0;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
     }
-    .pt-5-custom{
-        padding-top:0vh!important;
+  
+    100% {
+      opacity: 1;
     }
-    .pb-5-custom{
-        padding-bottom:5vh;
+  }
+  
+  .course-title {
+    height: 6vh;
+    margin-bottom: 2vh;
+  }
+  .course-title h5 {
+    border-radius: 1.5rem;
+    border: solid 2px grey;
+    height: 100%;
+  }
+  .mx-auto-custom a {
+    color: grey;
+  }
+  .mx-auto-custom h5 {
+    padding: 0 auto;
+    width: 100%;
+  }
+  
+  .animated-button {
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 2vh;
+    border: solid 2px grey;
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: grey;
+    background-color: ;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: color 0.6s;
+    border-radius: 1.5rem;
+  }
+  .animated-button-2 {
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 2vh;
+    border: solid 2px grey;
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: grey;
+    background-color: ;
+    border-radius: 5px;
+    transition: color 0.6s;
+    border-radius: 1.5rem;
+  }
+  .animated-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #2c3e50;
+    transition: transform 0.4s;
+  }
+  
+  .c-yes-class:hover {
+    color: #fff;
+    background-color: #f56471;
+    border: solid 2px #F40015;
+  }
+  .c-gourmet-class:hover {
+    color: #fff;
+    background-color: #f5d86c;
+    border: solid 2px #FFCA05;
+  }
+  .c-integrador-class:hover {
+    color: #fff!important;
+    background-color: #5e5d5d;
+    border: solid 2px #0d0d0d;
+  }
+  .c-unicessumar-class:hover {
+    color: #fff;
+    background-color: #49739e;
+    border: solid 2px #00639E; 
+  }
+  .custom-btn a{
+    color:grey
+  }
+  .custom-btn:hover a{
+    color:white!important
+  }
+  .blue1-custom{
+      background-color:!important;
+  }
+  .blue2-custom{
+      background-color: #!important;
+  }
+  .green-custom{
+      background-color: #86d18f!important;
+  }
+  .pink-custom{
+      background-color: #a76cad!important;
+  }
+  
+  .animated-button:hover::before {
+    left: 0;
+    transform: translateX(100%);
+  }
+  @media(max-width:475px){
+    .custom-btn{
+      width:100%!important;
+      height:15vh;
     }
-    .carousel-inner .carousel-item {
-        width: 100%!important; /* Alterado para ocupar 100% da largura em telas menores */
-        height: auto; /* Ajustado para altura automática */
-        margin-left: 0; /* Removido o deslocamento à esquerda */
-    
-    }
-    .carousel-inner .text-carousel {
-        padding-top: 20px; /* Adicionado espaço superior */
-    }
-    .image-container {
-        width: 100%; /* Defina a largura desejada */
-        height:100%; /* Defina a altura desejada */
-        overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
-      
-        /* Configuração para centralizar a imagem e manter a proporção */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-      
-    .image-container img {
-        padding: 5vh 0;
-        width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
-        height: 100%; /* Garante que a imagem ocupe 100% da altura do contêiner */
-        object-fit: contain; /* Mantém a proporção e corta para preencher o contêiner */
-    }
-    .carousel-innner .text-carousel p{
-        margin-top:5vh!important
-    }
-    
-    .btn-custom{
-        margin-top:5vh
-      }
-}
+  }

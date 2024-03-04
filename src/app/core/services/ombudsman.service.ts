@@ -23,7 +23,7 @@ export class OmbudsmanService {
   totalElements$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
   constructor(private http: HttpClient) {
-    this.getPaginateData();
+    
   }
 
   send(forms: IOpinions): Observable<IResponseApi> {
@@ -76,6 +76,10 @@ previousPage() {
     this.getPaginateData(10, previousPage);
 }
 
+
+  public callData(){
+    this.getPaginateData()
+  }
  
 
   public getData(): Observable<IOpinionsResponse[]> {

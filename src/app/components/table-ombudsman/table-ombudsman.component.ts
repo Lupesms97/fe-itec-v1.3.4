@@ -47,7 +47,9 @@ export class TableOmbudsmanComponent implements OnInit {
   ];
 
 
-  constructor(private dataService: OmbudsmanService) { }
+  constructor(private dataService: OmbudsmanService) {
+    this.dataService.callData();
+   }
 
   ngOnInit(): void {
     this.data$ = this.dataService.getData();

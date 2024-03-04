@@ -29,10 +29,19 @@
 .why-us p{
   font-size:1.2rem
 }
-.why-us span{
+.why-us:hover .text-info span{
+  color:#96bae2;
+  transition:1s
+}
+.why-us .title-info span{
   font-weight:bold;
   font-size:1.3rem;
   color:#96bae2;
+}
+.why-us .text-info span{
+  color:#1c3f68;
+  font-size:1.2rem
+
 }
 .custom-btn-home{
   height:8vh;

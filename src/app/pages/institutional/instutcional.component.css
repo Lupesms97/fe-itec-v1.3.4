@@ -1,0 +1,9 @@
+.content-timeline{
+    height:65vh;
+    margin-top:15vh;
+    overflow-y:scroll;
+    scrollbar-color: transparent transparent; 
+}
+.content{
+    padding:5rem 10rem;
+}

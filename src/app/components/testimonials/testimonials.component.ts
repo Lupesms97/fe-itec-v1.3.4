@@ -9,11 +9,11 @@ import { Testimonials } from 'src/app/shared/models/TestimonialsI';
 export class TestimonialsComponent {
   testimonials: Testimonials[] = [
     {
-      name: "Mariana Silva",
-      titleTestimonial: "Excelente suporte acadêmico!",
-      course: "Aluna",
-      testimonial: "Estou muito satisfeita com o excelente suporte acadêmico oferecido pela instituição. Os professores são dedicados e o ambiente de aprendizado é incrível.",
-      photo: "assets/mulher1.webp"
+      name: "Bruno Arruda",
+      titleTestimonial: "Atendimento com excelência",
+      course: "Aluno",
+      testimonial: "Conheci o Itec através da minha irmã, que se formou como técnica de enfermagem na instituição. Para eu escolher a escola em que começei a estudar não foi difícil assim, atendimento com excelência, cordialidade e clara… Escola super flexível para os alunos. Onde te escutam e te ajudam… desde a secretaria até a sala de aula… desde o porteiro até a diretora. Eu amo o curso que faço, estou cada dia mais apaixonado na profissão, os professores nos deixam apaixonados pela vivência que nos contam… a realidade… e a sabedoria. Sem dúvida indico o Itec para todos.",
+      photo: "assets/brunoArruda (1).jpeg"
     },
     {
       name: "Rodrigo Oliveira",
