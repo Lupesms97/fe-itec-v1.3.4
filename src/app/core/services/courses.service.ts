@@ -33,7 +33,7 @@ export class CoursesService {
   );
 
   constructor(private http: HttpClient,private route: Router) {
-    this.refreshPosts();
+    
   }
 
   private setPostsOnObservable(): void {

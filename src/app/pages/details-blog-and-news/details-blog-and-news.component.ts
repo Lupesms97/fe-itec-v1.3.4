@@ -27,7 +27,6 @@ export class DetailsBlogAndNewsComponent implements OnInit {
   constructor(private router: ActivatedRoute,
   private contentService:ContentService) {
 
-
   }
 
   ngOnInit(): void {

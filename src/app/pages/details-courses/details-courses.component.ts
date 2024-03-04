@@ -36,7 +36,6 @@ export class DetailsCoursesComponent implements OnInit {
 
   constructor(private router: ActivatedRoute,
   private courseService:CoursesService) {
-
   }
 
   ngOnInit(): void {

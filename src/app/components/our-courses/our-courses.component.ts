@@ -22,6 +22,7 @@ export class OurCoursesComponent {
   constructor(private router:Router,
     private coursesService: CoursesService) {
       this.getAndSetValues();
+      this.coursesService.refreshPosts();
 
   }
 
