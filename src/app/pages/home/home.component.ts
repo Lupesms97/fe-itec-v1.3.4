@@ -53,10 +53,6 @@ export class HomeComponent implements OnInit {
   }
 
   getAndSetValues() {
-    this.contentService.contentNews$.subscribe(posts => {
-      this.news = this.getSixPosts(posts);
-    });
-    
     this.contentService.contentPost$.subscribe(posts => {
       this.midia = this.getSixPosts(posts);
     });

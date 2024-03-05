@@ -60,6 +60,16 @@ export class TrabalheConoscoComponent implements OnInit {
 
   ];
 
+  educationLevel :string[] =  [
+    "Ensino Médio Incompleto",
+    "Ensino Médio Completo",
+    "Superior Incompleto",
+    "Superior Cursando",
+    "Superior Concluído",
+    "Pós-Graduação Incompleta",
+    "Pós-Graduação Cursando",
+    "Pós-Graduação Concluída"
+  ]
   processForms() {
     this.processingForms = true;
 

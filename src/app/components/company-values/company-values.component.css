@@ -1,3 +1,8 @@
 .content{
-    height:auto
+    height:auto;
+    width:100%;
+}
+.description{
+    margin:0!important;
+    padding: 0;
 }

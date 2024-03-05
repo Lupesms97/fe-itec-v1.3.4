@@ -51,6 +51,9 @@
   animation: bounce 1.5s ease-in infinite;
 
 }
+.gabi{
+  animation: buttonScale 1.0s ease-in-out infinite;
+}
 .scaleButtom:hover p{
   animation: buttonScale 1.0s ease-in-out infinite;
 }

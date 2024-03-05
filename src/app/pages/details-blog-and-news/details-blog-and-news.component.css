@@ -10,9 +10,8 @@
 }
 .img-style {
     width: 100%; /* Define a largura da imagem como 100% do seu contêiner pai */
-    height: 45vh; /* Define a altura mínima da imagem como 40% da altura da janela de visualização */
+    height: 45vh; /* Define a altura mínima da imagem como 45% da altura da janela de visualização */
     margin: 5rem 0; /* Define a margem superior e inferior da imagem como 5 vezes o tamanho padrão da fonte (rem), e 0 nas margens esquerda e direita */
-    overflow-y:hidden
 }
 
 .mt-10 {

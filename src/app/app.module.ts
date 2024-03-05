@@ -7,9 +7,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieService } from 'ngx-cookie-service';
 import { ModalComponent } from './components/modal/modal.component';
-import { CollaboratorNavbarComponent } from './shared/collaborator-navbar/collaborator-navbar.component';
-import { CollaboratorAdminNavbarComponent } from './shared/collaborator-admin-navbar/collaborator-admin-navbar.component';
+import ptBr from '@angular/common/locales/pt';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID } from '@angular/core';
 
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr);
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,7 @@ import { CollaboratorAdminNavbarComponent } from './shared/collaborator-admin-na
 
   ],
   providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
     CookieService
   ],
   bootstrap: [AppComponent]
