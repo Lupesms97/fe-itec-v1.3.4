@@ -48,6 +48,7 @@ export class ContentService {
   }
 
   public getPostbyId(id: string): Observable<ContentI> {
+    this.checkPost()
     return this.posts$.pipe(
       map(posts => posts.find(post => post.id === id)!)
     );
@@ -56,5 +57,17 @@ export class ContentService {
   public getTypeParameterOwner(): string {
     // Add a return statement to return an empty string as a default value
     return this.route.url;
+  }
+
+  private setPost(){
+    this.contentPost$.pipe(
+        map(posts => posts.filter(post => post.tag === 'Post'))
+    )
+  }
+
+  public checkPost(){
+    if(this.posts$.getValue().length===0){
+      this.refreshPosts();
+    }
   }
 }

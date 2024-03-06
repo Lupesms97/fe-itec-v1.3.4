@@ -59,7 +59,7 @@ export class DetailsBlogAndNewsComponent implements OnInit {
       case 'Blog':
         return '#2c61a3';
       case 'News':
-        return '#c95f94';
+        return '#0275E8';
       case 'Post':
         return '#5cb85c';
       default:

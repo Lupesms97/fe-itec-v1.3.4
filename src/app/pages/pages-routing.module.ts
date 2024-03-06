@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'', component: CoursesComponent},
   {path: 'blog', component: BlogNoticiasPostComponent},
   {path: 'noticias', component: BlogNoticiasPostComponent},
-  {path: 'posts', component: BlogNoticiasPostComponent},
+  {path: 'jornal', component: BlogNoticiasPostComponent},
   {path:'seja-nosso-aluno', component: OurStudentComponent},
   {path:'locais', component: LocaisComponent},
   {path:'institucional', component: InstutcionalComponent},

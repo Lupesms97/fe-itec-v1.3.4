@@ -30,11 +30,16 @@ export class BlogNoticiasPostComponent implements OnInit{
 
   constructor(private router: Router, private contentService:ContentService) {
     this.param = this.contentService.getTypeParameterOwner();
-    console.log(this.param);
+    this.contentService.checkPost()
 
+   }
+
+
+
+  ngOnInit(): void {
     let returnOfParam : string = this.getListOfPosts();
 
-    if(returnOfParam == 'posts'){
+    if(returnOfParam == 'jornal'){
       this.getListOfPost();
     }else if(returnOfParam == 'noticias'){
       this.getListOfNews();
@@ -50,11 +55,6 @@ export class BlogNoticiasPostComponent implements OnInit{
     }
     
     window.scrollTo(0, 0);
-   }
-
-
-
-  ngOnInit(): void {
     this.corDoBackground = this.setColor(this.param);
     
   }
@@ -112,9 +112,9 @@ export class BlogNoticiasPostComponent implements OnInit{
       this.title = "Notícias";
       return 'noticias'
       
-    }else if(this.param == '/posts'){
-      this.title = "Posts";
-      return 'posts'
+    }else if(this.param == '/jornal'){
+      this.title = "Jornal";
+      return 'jornal'
       
     }else{
       this.postsLoaded = false;
@@ -136,6 +136,8 @@ export class BlogNoticiasPostComponent implements OnInit{
         return '#2c61a3';
       case '/noticias':
         return '#5cb85c';
+      case '/jornal':
+          return '#0275E8';
       default:
         return '#0275E8';
     }

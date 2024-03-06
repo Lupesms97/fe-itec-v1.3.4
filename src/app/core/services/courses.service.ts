@@ -55,6 +55,9 @@ export class CoursesService {
   }
 
   public getPostbyId(id: string): Observable<CoursesI> {
+    if(this.cursos$.getValue().length===0){
+      this.refreshPosts();
+    }
     return this.cursos$.pipe(
       map(curso => curso.find(curso => curso.id === id)!)
     );
