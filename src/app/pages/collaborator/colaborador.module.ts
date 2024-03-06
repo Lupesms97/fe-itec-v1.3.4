@@ -39,11 +39,11 @@ import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
         {path:'', redirectTo: 'login', pathMatch: 'full'},
         {path:'login', component: LoginComponent},
         {path:'reset', component: ResetComponent},
-        {path:'home', component: HomeComponent, canActivate:  [loggedGuard]},
-        {path:'minha-carteira', component: MinhaCarteiraComponent,canActivate:  [loggedGuard]},
-        {path:'banco-de-candidatos', component: CandidateInformationBankComponent,canActivate:  [loggedGuard]},
-        {path:'dashboard', component: HomeComponent,canActivate:  [loggedGuard]},
-        {path:'resposta-ouvidoria', component: OmbudsmanComponent ,canActivate:  [loggedGuard] }
+        {path:'home', component: HomeComponent/* ,canActivate:  [loggedGuard] */},
+        {path:'minha-carteira', component: MinhaCarteiraComponent/* ,canActivate:  [loggedGuard] */},
+        {path:'banco-de-candidatos', component: CandidateInformationBankComponent/* ,canActivate:  [loggedGuard] */},
+        {path:'dashboard', component: HomeComponent/* ,canActivate:  [loggedGuard] */},
+        {path:'resposta-ouvidoria', component: OmbudsmanComponent /* ,canActivate:  [loggedGuard] */ }
         
       ]
     ),

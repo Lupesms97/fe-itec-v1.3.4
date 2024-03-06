@@ -74,7 +74,7 @@ corDoBackground="#464749"
             </div> 
             <div class="col-lg-4" >
               <label for="inputSetor" class="form-label">Escolaridade</label>
-              <select id="inputSetor" class="form-select" name="educationL" [(ngModel)]="forms.setor" required
+              <select id="inputSetor" class="form-select" name="educationL" [(ngModel)]="forms.education" required
                 #educationL="ngModel">
                 <option selected>Opções</option>
                 <option *ngFor="let level of educationLevel" value="{{level}}">{{level}}</option>

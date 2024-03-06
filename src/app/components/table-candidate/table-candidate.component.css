@@ -187,3 +187,9 @@ ul {
 .btn-custom{
   background-color:#2c64a4
   }
+  .btn-custom-search{
+    width:100%;
+    background-color:#ffffff;
+    color:#2c64a4;
+
+  }

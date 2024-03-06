@@ -23,7 +23,8 @@ export class TableCandidateComponent implements OnInit {
   searchForms: SearchFormsI = {
     polo: '',
     setor: '',
-    timeOfExperience: ''
+    timeOfExperience: '',
+    education:''
   }
 
   polosAvaliable = [
@@ -53,6 +54,17 @@ export class TableCandidateComponent implements OnInit {
     '+5 anos',
 
   ];
+  
+  educationLevel :string[] =  [
+    "Ensino Médio Incompleto",
+    "Ensino Médio Completo",
+    "Superior Incompleto",
+    "Superior Cursando",
+    "Superior Concluído",
+    "Pós-Graduação Incompleta",
+    "Pós-Graduação Cursando",
+    "Pós-Graduação Concluída"
+  ]
 
   constructor(private dataService: CurriculoService, private notificationService: NotificationService) { }
 
@@ -109,7 +121,7 @@ export class TableCandidateComponent implements OnInit {
   }
   submitForm() {
     let timeInString =  encodeURIComponent(this.searchForms.timeOfExperience) 
-    this.dataService.getSearchEmployee(this.searchForms.polo, this.searchForms.setor, timeInString);
+    this.dataService.getSearchEmployee(this.searchForms.polo, this.searchForms.setor, timeInString, this.searchForms.education);
 
     setTimeout(() => {
       if (this.dataService.totalElements$.value === 0) {

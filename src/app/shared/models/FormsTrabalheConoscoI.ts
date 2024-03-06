@@ -4,8 +4,8 @@ export interface FormsTrabalheConoscoI {
     polo:string,
     phone:string
     setor:string,
+    education:string
     curriculoFile:File
     lgpd:boolean
     timeOfExperience:string
-  
   }

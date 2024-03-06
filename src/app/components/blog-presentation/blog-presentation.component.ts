@@ -16,11 +16,13 @@ export class BlogPresentationComponent implements OnInit {
 
   constructor(private contentService: ContentService,
     private router:Router){
-    this.contentService.refreshPosts();
+    
   }
 
   ngOnInit(): void {
+    this.contentService.refreshPosts();
     this.getAndSetContent();
+    
   }
 
   getAndSetContent() {

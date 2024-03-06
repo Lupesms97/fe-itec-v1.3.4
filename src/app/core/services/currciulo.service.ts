@@ -91,8 +91,8 @@ previousPage() {
 
 
 
-  getSearchEmployee(polo?: string, setor?: string, timeOfExperience?: string) {
-    let url = this.getUrl(polo, setor, timeOfExperience);
+  getSearchEmployee(polo?: string, setor?: string, timeOfExperience?: string, education?: string) {
+    let url = this.getUrl(polo, setor, timeOfExperience,education);
     this.http.get<IEmployee[]>(`${this.API_URL}/search${url}`).pipe(
       tap((response: IEmployee[]) => {
         this.data$.next(response);
@@ -101,7 +101,7 @@ previousPage() {
     ).subscribe();
   }
 
-  private getUrl(polo?: string, setor?: string, timeOfExperience?: string): string {
+  private getUrl(polo?: string, setor?: string, timeOfExperience?: string, education?: string): string {
     const queryParams = [];
 
     if (polo) {
@@ -113,6 +113,10 @@ previousPage() {
     if (timeOfExperience) {
       queryParams.push(`timeOfExperience=${timeOfExperience}`);
     }
+    if (education) {
+      queryParams.push(`education=${education}`);
+    }
+    console.log(queryParams)
 
     return queryParams.length > 0 ? `?${queryParams.join('&')}` : '';
   }
@@ -131,6 +135,7 @@ previousPage() {
     formData.append('setor', forms.setor);
     formData.append('lgpd', forms.lgpd.toString());
     formData.append('timeOfExperience', forms.timeOfExperience);
+    formData.append('education', forms.education)
 
     return formData;
   }

@@ -26,6 +26,7 @@ export class TrabalheConoscoComponent implements OnInit {
     polo: '',
     phone: '',
     setor: '',
+    education:'',
     curriculoFile: new File([], ''),
     lgpd: false,
     timeOfExperience: ''

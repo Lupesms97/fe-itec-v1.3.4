@@ -20,9 +20,9 @@
 .title-style { 
     filter: brightness(100%) !important;
     color: white;
-    min-height: 10vh;
     height:auto;
     padding: 2.5vh;
+    position:absolute
     
 }
 p{
@@ -87,6 +87,10 @@ p{
 }
 @media(max-width: 768px){
     .title-style { 
-        width: 100%;
+        width:100%;
+        color: white;
+        height:auto;
+        position:static;
+        padding:1rem;
     }
 }

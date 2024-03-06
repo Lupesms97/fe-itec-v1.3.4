@@ -121,3 +121,15 @@ a:hover {
     transform: scale(1);
   }
 }
+
+@media(max-width:768px){
+  .footer-20192 .social li a {
+    width:20vw;
+    height:20vh;
+
+    & span{
+      width:100%;
+      height:100%;
+    }
+  }
+}
