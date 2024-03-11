@@ -12,11 +12,10 @@ import { IResponseLoginDto } from 'src/app/shared/models/IResponseLoginDto';
 import { IToken } from 'src/app/shared/models/IToken';
 import { EmailObjPasswordAndTokenDto } from 'src/app/shared/models/EmailObjPasswordAndTokenDto';
 import { IResponseReset } from 'src/app/shared/models/IResponseReset';
+import { environment } from 'src/app/environments/variables.environments';
 
 
-const TOKEN_KEY = '_tky-usr';
-const ROLES_KEY = '_rly-usr';
-const USER_NAME = 'name';
+
 
 @Injectable({
   providedIn: 'root',
@@ -29,7 +28,7 @@ export class AuthService {
   role$ = new BehaviorSubject<Role>(Role.UNDEFINED_ROLE);
   ouvidoria$ = new BehaviorSubject<boolean>(false);
 
-  private readonly API_URL = 'http://localhost:8082/v2/auth';
+  private readonly API_URL = environment.api_url_auth;
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -43,7 +42,7 @@ export class AuthService {
     private router: Router,
     private notifications: NotificationService
   ) {
-    const token = this.getToken(TOKEN_KEY);
+    const token = this.getToken(environment.TOKEN_KEY);
     if (token) {
       const decodedToken = this.decodeJwt(token);
       this.user.next(decodedToken);
@@ -148,10 +147,10 @@ export class AuthService {
  */
     this.user.next(obj);
   
-    this.setCookie(TOKEN_KEY, obj.token, 1);
+    this.setCookie(environment.TOKEN_KEY, obj.token, 1);
 
 
-    this.redirectToHome();
+    this.redirect(roles);
   }
   
 /*   private hastheAuth(acessInfo: { permission: string[]; availiableCompanies: string[]; }): boolean {
@@ -161,35 +160,40 @@ export class AuthService {
 
 
   getUserName(): string {
-    if(this.getToken(TOKEN_KEY)){
-      return this.decodeJwt(this.getToken(TOKEN_KEY)).name;
+    if(this.getToken(environment.TOKEN_KEY)){
+      return this.decodeJwt(this.getToken(environment.TOKEN_KEY)).name;
     }else{
-      return this.getToken(USER_NAME);
+      return this.getToken(environment.USER_NAME);
     }
      
   }
 
   getRoles(){
-    return this.getToken(ROLES_KEY);
+    return this.getToken(environment.ROLES_KEY);
   }
 
   private cleanInfo() {
     this.user.next(null);
-    this.cookieService.delete(TOKEN_KEY);
-    this.cookieService.delete(ROLES_KEY);
+    this.cookieService.delete(environment.TOKEN_KEY);
+    this.cookieService.delete(environment.ROLES_KEY);
   }
 
    private setNameRoleToken(name : string, roles: Role) {
 
     /* this.user.next(user); */
-    this.setCookie(ROLES_KEY, roles);
+    this.setCookie(environment.ROLES_KEY, roles);
     const tokenObj : IToken = { roles: roles, name: name}
     this.token$.next(tokenObj);
     this.role$.next(roles);
   }
 
-  private redirectToHome() {
-    this.router.navigate(['/colaborador/home'])
+  private redirect(roles: Role) {
+    if(roles.includes(Role.ADMIN)){
+      this.router.navigate(['colaborador/dashboard']);
+    }
+    else if(roles.includes(Role.USER)){
+      this.router.navigate(['colaborador/home']);
+    }
   }
 
   notificationToastSucess(){
