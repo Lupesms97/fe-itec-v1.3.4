@@ -41,8 +41,6 @@ export class BlogNoticiasPostComponent implements OnInit{
 
     if(returnOfParam == 'jornal'){
       this.getListOfPost();
-    }else if(returnOfParam == 'noticias'){
-      this.getListOfNews();
     }else if(returnOfParam == 'blog'){
       this.getListOfBlog();
     }else{
@@ -67,11 +65,11 @@ export class BlogNoticiasPostComponent implements OnInit{
     });
   }
  
-  getListOfNews() {
+/*   getListOfNews() {
     this.contentService.contentNews$.subscribe(posts => {
          this.posts = posts;
   });
-  }
+  } */
   getListOfBlog(){
     this.contentService.contentBlog$.subscribe(posts => {
       this.posts = posts.map(post => ({

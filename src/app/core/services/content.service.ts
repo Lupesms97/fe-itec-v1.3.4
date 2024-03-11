@@ -13,9 +13,9 @@ export class ContentService {
   
   private posts$: BehaviorSubject<ContentI[]> = new BehaviorSubject<ContentI[]>([]);
 
-  public contentNews$: Observable<ContentI[]> = this.posts$.pipe(
+/*   public contentNews$: Observable<ContentI[]> = this.posts$.pipe(
     map(posts => posts.filter(post => post.tag === 'News')),
-  );
+  ); */
   public contentBlog$: Observable<ContentI[]> = this.posts$.pipe(
     map(posts => posts.filter(post => post.tag === 'Blog'))
   );
@@ -25,7 +25,7 @@ export class ContentService {
   );
 
   constructor(private http: HttpClient, private route:Router) {
-    
+    this.refreshPosts()
   }
 
   private setPostsOnObservable(): void {

@@ -13,12 +13,11 @@ import { TrabalheConoscoComponent } from './work-with-us/trabalhe-conosco.compon
 import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
 
 const routes: Routes = [
-  { path:'', redirectTo: '', pathMatch: 'full' },
-  {path:'', component: HomeComponent},
+  { path:'', redirectTo: 'home', pathMatch: 'full' },
+  {path:'home', component: HomeComponent},
   {path:'conteudo/:id', component: DetailsBlogAndNewsComponent},
   {path:'cursos/:id', component: DetailsCoursesComponent},
   {path:'cursos', component: CoursesComponent},
-  {path:'', component: CoursesComponent},
   {path: 'blog', component: BlogNoticiasPostComponent},
   {path: 'noticias', component: BlogNoticiasPostComponent},
   {path: 'jornal', component: BlogNoticiasPostComponent},

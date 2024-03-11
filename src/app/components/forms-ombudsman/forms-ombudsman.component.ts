@@ -15,6 +15,7 @@ import { TypeToast } from 'src/app/shared/models/TypeToastE';
   styleUrls: ['./forms-ombudsman.component.css']
 })
 export class FormsOmbudsmanComponent {
+
   public processingForms: boolean = false;
 
 
@@ -37,39 +38,42 @@ export class FormsOmbudsmanComponent {
 
 
 
-  processForms() {
-    this.processingForms = true;
 
-  }
   public unprocessForms(type:TypeToast, titleInfo:string, messageInfo:string) {
     setTimeout(() => {
-      
-      this.notification.showToast(type, titleInfo, messageInfo);
       this.processingForms = false;
+      this.notification.showToast(type,titleInfo, messageInfo);
     }, 2000);
-
   }
+
+  processForms() {
+    this.processingForms = true;
+    setTimeout(() => {
+      this.processingForms = false;
+      this.unprocessForms(TypeToast.Success, 'Successo', 'Obrigado por nos permitir melhorar!');
+    }, 1000);
+  }
+  
 
   onSubmit(forms: NgForm) {
     this.service.send(forms.value).subscribe(
-      (response) => {
-        this.unprocessForms(
-          TypeToast.Success,
-          'Sucesso',
-          'Formulário enviado com sucesso'
-        );
-        forms.reset();
+      (response: HttpResponse<IResponseApi>) => {
+        if (response.status === 201) {
+          this.processForms();
+          
+        } else {
+          this.unprocessForms(TypeToast.Error, 'Error', 'Erro ao enviar seu formulário ' + response.body?.error);
+          
+          // Altera o estado de processingForms de volta para false
+        }
       },
       (error) => {
-        this.unprocessForms(
-          TypeToast.Error,
-          'Erro',
-          'Não foi possivel enviar o formulário no momento'
-        );
-      },
-      () => this.processingForms = false
+        this.unprocessForms(TypeToast.Error, 'Error', 'Não foi possível enviar o seu formulário no momento, tente novamente mais tarde');
+        // Altera o estado de processingForms de volta para false
+      }
     );
   }
+  
 
 
 

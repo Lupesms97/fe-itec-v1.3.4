@@ -17,7 +17,7 @@
     <div class="blog-content">
         <div class="row blog-row">
             <div class="col-lg-8 col-md-12 col-sm-12 blog-item blog-item0" (click)="goToPost(blogs[0].id)" 
-            style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{blogs[0].background}}') no-repeat center/cover; "
+            style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{blogs[0].background }}') no-repeat center/cover; "
             >
                 <h3 class="align-self-center title">
                     <a *ngIf="blogs && blogs.length > 0" (click)="goToPost(blogs[0].id)">

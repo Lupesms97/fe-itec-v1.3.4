@@ -194,13 +194,10 @@
         </div>
       </div>
       <div class="col-lg-12 pb-4">
-        <button
-          type="submit"
-          class="btn btn-forms-custom"
-          (click)="processForms()"
-          [disabled]="!infoForm.valid"
-        >
-          <p *ngIf="!processingForms">Enviar</p>
+        <button type="submit" class="btn btn-forms-custom"  [disabled]="!infoForm.valid">
+          <p *ngIf="!processingForms">
+            Enviar
+          </p>
           <p *ngIf="processingForms">
             <i class="fa fa-spinner fa-spin"></i>&nbsp; Enviando
           </p>

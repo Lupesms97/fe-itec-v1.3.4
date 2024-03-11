@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
 import { ContentService } from 'src/app/core/services/content.service';
@@ -14,14 +14,15 @@ import { ContentI } from 'src/app/shared/models/ContentI';
 export class BlogPresentationComponent implements OnInit {
   blogs: ContentI[] = [];
 
-  constructor(private contentService: ContentService,
-    private router:Router){
-    
+  private contentService: ContentService = inject(ContentService);
+  private router: Router = inject(Router);
+
+  constructor(){
+      this.getAndSetContent();
   }
 
   ngOnInit(): void {
-    this.contentService.refreshPosts();
-    this.getAndSetContent();
+    
     
   }
 
@@ -38,5 +39,13 @@ export class BlogPresentationComponent implements OnInit {
   }
   goToPageWithAll() {
     this.router.navigate(['/blog']);
+  }
+  getBackgroundImage(post: ContentI):string {
+    if(
+      post.background==null || post.background==""
+    ){
+      return "assets/fundocards.jpg";
+    }
+    return post.background;
   }
 }

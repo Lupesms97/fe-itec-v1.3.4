@@ -14,11 +14,18 @@ export class NavbarComponent {
 
   @Input() corDoBackground: string = '#2c64a4';
 
-  constructor() {
+  constructor(private router: Router) {
     
    }
 
   navigateTo(link:string){
     window.open(link, '_blank');
+  }
+  
+  getRouter(){
+    if(this.router.url === '/'){
+      return 'colaborador/login';
+    }
+    return '../colaborador/login'
   }
 }

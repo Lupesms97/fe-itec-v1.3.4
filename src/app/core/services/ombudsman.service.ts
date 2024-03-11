@@ -23,8 +23,8 @@ export class OmbudsmanService {
     
   }
 
-  send(forms: IOpinions): Observable<IResponseApi> {
-    return this.http.post<IResponseApi>(`${this.API_URL}/creatOpinion`, forms);
+  send(forms: IOpinions):  Observable<HttpResponse<IResponseApi>> {
+    return this.http.post<IResponseApi>(`${this.API_URL}/creatOpinion`, forms, { observe: 'response' } );
   }
 
 

@@ -105,7 +105,6 @@ export class OurCoursesComponent implements OnChanges{
   }
   
   getRouter(){
-    
     return this.router.url;
   }
 }
