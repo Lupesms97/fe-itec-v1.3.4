@@ -1,12 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ContentI } from '../../shared/models/ContentI';
 import { BehaviorSubject, Observable, ReplaySubject, map, tap } from 'rxjs';
 import { CoursesI } from '../../shared/models/CoursesI';
-import { ActivatedRoute, Router } from '@angular/router';
-// Remove the unused import
-// import { Router } from '@angular/router';
-// import { TypeNews } from '../shared/models/TypeNews';
+import { Router } from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +30,7 @@ export class CoursesService {
   );
 
   constructor(private http: HttpClient,private route: Router) {
-    
+    this.refreshPosts();
   }
 
   private setPostsOnObservable(): void {

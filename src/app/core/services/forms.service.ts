@@ -4,6 +4,7 @@ import { FormsI } from 'src/app/shared/models/FormsI';
 import {  Observable, map, switchMap } from 'rxjs';
 import { IFormsData } from 'src/app/shared/models/IFormsData';
 import { IFormsDataWithDateString } from 'src/app/shared/models/IFormsDataWithDateString';
+import { environment } from 'src/app/environments/variables.environments';
 
 
 
@@ -15,9 +16,7 @@ import { IFormsDataWithDateString } from 'src/app/shared/models/IFormsDataWithDa
 export class FormsService {
 
 
-  private readonly API_URL = 'http://localhost:8080/v1/prospects';
- 
-
+  private readonly API_URL = environment.api_url_forms;
 
   private dataWithOwnerId$: Observable<IFormsData[]> | undefined;
   private dataWithoutOwnerId$: Observable<IFormsData[]> | undefined;

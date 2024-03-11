@@ -10,11 +10,13 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { loggedGuard } from 'src/app/core/guard/logged.guard';
 import { CandidateInformationBankComponent } from './candidate-information-bank/candidate-information-bank.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { CollaboratorNavbarComponent } from 'src/app/shared/collaborator-navbar/collaborator-navbar.component';
 import { CollaboratorAdminNavbarComponent } from 'src/app/shared/collaborator-admin-navbar/collaborator-admin-navbar.component';
 import { ResetComponent } from './reset/reset.component';
 import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
+import { hasRequiredRoleGuard } from 'src/app/core/guard/has-required-role.guard';
+import { Role } from 'src/app/shared/models/ERole';
+import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 
 
 
@@ -25,11 +27,11 @@ import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
     NavbarAdminComponent,
     LoginComponent,
     CandidateInformationBankComponent,
-    DashboardComponent,
     CollaboratorNavbarComponent,
     CollaboratorAdminNavbarComponent,
     ResetComponent,
-    OmbudsmanComponent
+    OmbudsmanComponent,
+    DashboardPageComponent
   ],
   imports: [
     FormsModule,
@@ -39,12 +41,11 @@ import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
         {path:'', redirectTo: 'login', pathMatch: 'full'},
         {path:'login', component: LoginComponent},
         {path:'reset', component: ResetComponent},
-        {path:'home', component: HomeComponent/* ,canActivate:  [loggedGuard] */},
-        {path:'minha-carteira', component: MinhaCarteiraComponent/* ,canActivate:  [loggedGuard] */},
-        {path:'banco-de-candidatos', component: CandidateInformationBankComponent/* ,canActivate:  [loggedGuard] */},
-        {path:'dashboard', component: HomeComponent/* ,canActivate:  [loggedGuard] */},
-        {path:'resposta-ouvidoria', component: OmbudsmanComponent /* ,canActivate:  [loggedGuard] */ }
-        
+        {path:'home', component: HomeComponent,canActivate:  [loggedGuard, hasRequiredRoleGuard], data:{role:[ Role.USER]}},
+        {path:'minha-carteira', component: MinhaCarteiraComponent,canActivate:  [loggedGuard, hasRequiredRoleGuard], data:{role:[ Role.USER]}},
+        {path:'banco-de-candidatos', component: CandidateInformationBankComponent,canActivate:  [loggedGuard, hasRequiredRoleGuard], data:{role:[Role.ADMIN]}},
+        {path:'dashboard', component: DashboardPageComponent,canActivate:  [loggedGuard, hasRequiredRoleGuard], data:{role:[Role.ADMIN]}},
+        {path:'resposta-ouvidoria', component: OmbudsmanComponent ,canActivate:  [loggedGuard, hasRequiredRoleGuard], data:{role:[Role.ADMIN]} }
       ]
     ),
     NgxPaginationModule,

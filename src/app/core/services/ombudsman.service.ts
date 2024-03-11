@@ -1,20 +1,17 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { EmployeeResponse } from 'src/app/shared/models/EmployeeResponse';
-import { FormsTrabalheConoscoI } from 'src/app/shared/models/FormsTrabalheConoscoI';
 import { IOpinionsResponse } from 'src/app/shared/models/IOpinionsResponse';
 import { IResponseApi } from 'src/app/shared/models/IResponseApi';
-import { AuthService } from './auth.service';
 import { IOpinions } from 'src/app/shared/models/IOpinions';
 import { IOpinionsApiResponse } from 'src/app/shared/models/IOpinionsApiResponse';
+import { environment } from 'src/app/environments/variables.environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OmbudsmanService {
-  private readonly API_URL = 'http://localhost:8080/v1/opinions';
+  private readonly API_URL = environment.api_url_ombudsman;
 
 
   private data$: BehaviorSubject<IOpinionsResponse[]> = new BehaviorSubject<IOpinionsResponse[]>([]);
@@ -36,8 +33,6 @@ export class OmbudsmanService {
     this.http.get<IOpinionsApiResponse>(`${this.API_URL}/getOpinions?size=${size}&page=${page}`).pipe(
       tap((response: IOpinionsApiResponse) => {
         this.data$.next(response.content);
-        console.log(response.content)
-        console.log(this.data$.value)
         this.totalPage$.next(response.totalPages - 1);
         this.totalElements$.next(response.totalElements);
       })

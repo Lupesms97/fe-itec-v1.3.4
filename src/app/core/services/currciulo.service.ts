@@ -1,16 +1,15 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ContentI } from '../../shared/models/ContentI';
 import { BehaviorSubject, Observable, ReplaySubject, map, of, tap } from 'rxjs';
-import { Router } from '@angular/router';
 import { FormsTrabalheConoscoI } from 'src/app/shared/models/FormsTrabalheConoscoI';
 import { CookieService } from 'ngx-cookie-service';
 import { IResponseApi } from 'src/app/shared/models/IResponseApi';
 import { IEmployee } from 'src/app/shared/models/IEmployee.model';
 import { EmployeeResponse } from 'src/app/shared/models/EmployeeResponse';
 import { AuthService } from './auth.service';
+import { environment } from 'src/app/environments/variables.environments';
 
-const TOKEN_KEY = '_tky-usr';
+
 
 
 @Injectable({
@@ -18,8 +17,7 @@ const TOKEN_KEY = '_tky-usr';
 })
 export class CurriculoService {
 
-  private readonly API_URL = 'http://localhost:8080/v1/employees';
-
+  private readonly API_URL = environment.api_url_curriculo;
 
   private data$: BehaviorSubject<IEmployee[]> = new BehaviorSubject<IEmployee[]>([]);
   token = ''
@@ -29,7 +27,7 @@ export class CurriculoService {
   totalElements$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
   constructor(private http: HttpClient, private cookie: CookieService, private auth:AuthService) {
-    this.token = auth.getToken(TOKEN_KEY);
+    this.token = auth.getToken(environment.TOKEN_KEY);
     this.getPaginateData();
   }
 

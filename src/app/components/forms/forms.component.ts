@@ -49,11 +49,12 @@ export class FormsComponent implements OnInit {
     private notification: NotificationService,
     private coursesService: CoursesService
   ) {
-    this.setCourseNamesOnNameList()
+
   }
 
   ngOnInit(): void {
     this.polosAvaliable = this.showPoloWhereCourseAreAvaliable(this.tag)
+    this.setCourseNamesOnNameList()
   }
 
   cursos: string[] = [];

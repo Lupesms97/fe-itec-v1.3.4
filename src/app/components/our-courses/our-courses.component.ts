@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { CoursesService } from 'src/app/core/services/courses.service';
@@ -9,7 +9,7 @@ import { CoursesI } from 'src/app/shared/models/CoursesI';
   templateUrl: './our-courses.component.html',
   styleUrls: ['./our-courses.component.css']
 })
-export class OurCoursesComponent {
+export class OurCoursesComponent implements OnChanges{
   cursosTecnico: CoursesI[] = [];
   cursosLivres: CoursesI[] = [];
   cursosProfissionalizantes: CoursesI[] = [];
@@ -22,12 +22,15 @@ export class OurCoursesComponent {
   constructor(private router:Router,
     private coursesService: CoursesService) {
       this.getAndSetValues();
-      this.coursesService.refreshPosts();
+      
 
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    
   }
 
 
-
+  
   activateTab(tabId: string): void {
     // Mapeia o ID da tab para a cor desejada
     const colorMap: { [key: string]: string } = {
