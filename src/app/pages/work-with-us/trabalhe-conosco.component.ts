@@ -126,12 +126,8 @@ export class TrabalheConoscoComponent implements OnInit {
 
   onFileChange(event: any) {
   const fileList = event.target.files;
-  console.log(this.fileToSend);
-/*   console.log(fileList);
   const input = event.target as HTMLInputElement;
-  console.log(input);
   const label = event.currentTarget.files[0]
-  console.log(label); */
 
   if (fileList.length > 0) {
     const curriculoFile: File = fileList[0];

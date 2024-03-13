@@ -1,6 +1,6 @@
 .desktop .carousel-inner img {
-    margin-top:-2vh;
-    height: 85vh;
+    margin-top:-1%;
+    height: 85%;
     overflow-y:hidden
 }
 .mobile .carousel-inner img {
@@ -31,3 +31,4 @@
 .carousel-thumbnail.active {
     opacity: 0.7; /* Definir a opacidade desejada para a miniatura ativa */
 }
+

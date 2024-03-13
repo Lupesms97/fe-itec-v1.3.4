@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'seja-nosso-aluno', component: OurStudentComponent},
   {path:'locais', component: LocaisComponent},
   {path:'institucional', component: InstutcionalComponent},
-  {path:'trabalheConsoco', component: TrabalheConoscoComponent},
+  {path:'trabalhe-consoco', component: TrabalheConoscoComponent},
   {path:'ouvidoria', component: OmbudsmanComponent},
 ];
 

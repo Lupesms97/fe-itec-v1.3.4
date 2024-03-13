@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class OurStudentComponent {
 
   constructor() {    window.scrollTo(0, 0);}
+
+
 }
